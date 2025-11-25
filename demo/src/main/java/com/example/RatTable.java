@@ -14,26 +14,31 @@ public class RatTable extends Table {
     private int twoMineFields;
     private int threeMineFields;
     private Rat rat;
-
+    private List<Position> shortestPath;
     public RatTable(int rownumber, int columnumber, int mineNumber) {
         super(rownumber, columnumber, mineNumber);
         oneMineFields = allMines / 2;
         twoMineFields = allMines / 4;
         threeMineFields = allMines / 4;
     }
-    
+    public void  setRat(Position firstPosition){
+        rat= new Rat(firstPosition);
+    }
     private List<Position> getNeighborsWrapAround(Position currentPosition) {
         List<Position> neighborPositions = new ArrayList<>();
         int[][] neighborIndexes = { { -1, -1 }, { -1, 0 }, { -1, 1 }, { 0, -1 }, { 0, 1 }, { 1, -1 }, { 1, 0 },
                 { 1, 1 } };
         for (int[] d : neighborIndexes) {
-            Position neighborPosition = new Position((currentPosition.getRow() + d[0])%rows,
-                    (currentPosition.getColumn() + d[1])%columns);
+            Position neighborPosition = new Position((currentPosition.getRow() + d[0]+rows)%rows,
+                    (currentPosition.getColumn() + d[1]+columns)%columns);
             neighborPositions.add(neighborPosition);
         }
         return neighborPositions;
     }
-
+    @Override
+    public  List<Position> getNeighborPositions(Position p){
+        return getNeighborsWrapAround(p);
+    }
     // In this case, if a field is on the border of the Table, its neighbor will be
     // from the other side of the table.
     // This can be done with the
@@ -52,7 +57,6 @@ public class RatTable extends Table {
         } 
       }
     }
-
     @Override
     public void selectingMines(ArrayList<Field> availableFields) {
         Collections.shuffle(availableFields);
@@ -79,7 +83,7 @@ public class RatTable extends Table {
 
     }
     //BFS search for shortest path.
-    public List<Position> findShortestPath(){
+    public List <Position> findShortestPath(){
       Queue<Position> queue= new LinkedList<>();
       Map<Position,Position> parent= new HashMap<>();
       Set<Position> visited= new HashSet<>();
@@ -90,28 +94,52 @@ public class RatTable extends Table {
         if(current.equals(rat.getGoalPosition()))
             return reconstructPath(parent);
         for(Position next : getNeighbors(current)){
-            if(!visited.contains(current)){
+            if(!visited.contains(next)){
                 queue.add(next);
-                visited.add(current);
+                visited.add(next);
                 parent.put(next,current);
             }
         }
       }
-      return new ArrayList<>(); //no path found
+      return new ArrayList<>();
 
+    }
+    //Setting the shortest path up with the list found in the findTheshortestPath method.
+    public void setShortestPath(){
+        shortestPath=findShortestPath();
+    }
+
+    public void moveByOne(List<Position> path,Set<Field> visited){
+      
+      if(path.size()>1){
+        rat.setCurrentPosition(path.get(1));
+        Field field= getFieldByPosition(rat.getCurrentPosition());
+        if(field.getIsMine()&&!field.getFlagged()) field.setFlagged(true);
+        if(!field.getIsMine()&&!field.getRevealed()) {
+            field.setRevealed(true);
+            RevealNeighborsOfEmptyFields(field, visited);
+        }
+        path.removeFirst();
+      }
+    }
+
+    public List<Position> getShortestPath(){
+        return shortestPath;
+    }
+    public Rat getRat(){
+        return rat;
     }
     @Override
     public int getOneMineFields() {
         return oneMineFields;
     }
 
-    @Override
     public int getTwoMineFields() {
         return twoMineFields;
     }
 
-    @Override
-    public int getThreeMineFields() {
+    public int getThreeMineFields(){
         return threeMineFields;
     }
+
 }

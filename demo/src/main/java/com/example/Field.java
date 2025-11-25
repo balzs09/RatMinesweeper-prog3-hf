@@ -54,10 +54,13 @@ public class Field {
     return flagged;
   }
   public boolean getRevealed(){
-    getRevealed();
+    return revealed;
   }
   public void setRevealed(boolean revealed){
     this.revealed=revealed;
+  }
+  public void setFlagged(boolean flagged){
+    this.flagged=flagged;
   }
 
 }

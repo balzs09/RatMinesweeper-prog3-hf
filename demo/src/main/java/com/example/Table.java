@@ -1,12 +1,15 @@
 package com.example;
 
 import java.util.List;
+import java.util.Set;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public abstract class Table {
     protected int rows;
     protected int columns;
     protected List<Field> fields = new ArrayList<Field>();
+    protected Set<Field> revealedFields= new HashSet<Field>();
     protected int allMines;
 
     public Table(int rowNumber, int columnNumber, int mineNumber) {
@@ -23,7 +26,13 @@ public abstract class Table {
     public Field getFieldByPosition(Position p) {
         return fields.get(p.getRow() * columns + p.getColumn());
     }
-
+    
+    public  Position getPositionByField(Field f) {
+        for(int i=0;i<fields.size();i++){
+            if(fields.get(i).equals(f)) return new Position(i/columns, i%columns);
+        }
+        return new Position(-1,-1);
+    }
     public List<Position> getNeighbors(Position currentPosition) {
         List<Position> neighborPositions = new ArrayList<>();
         int[][] neighborIndexes = { { -1, -1 }, { -1, 0 }, { -1, 1 }, { 0, -1 }, { 0, 1 }, { 1, -1 }, { 1, 0 },
@@ -35,7 +44,7 @@ public abstract class Table {
         }
         return neighborPositions;
     }
-
+    public abstract List<Position> getNeighborPositions(Position p);
     // This function checks the neighbors of the fields that are not a mine.
     public abstract void checkNeighbors();
 
@@ -54,18 +63,33 @@ public abstract class Table {
         }
         return availableFields;
     }
-
+    
     public abstract void selectingMines(ArrayList<Field> availableFields);
-
+    
+    public void RevealNeighborsOfEmptyFields(Field f,Set<Field> visited){
+        if(visited.contains(f)) return;
+        visited.add(f);
+        if(f.getNumberOfNeighbors()==0){
+            List<Position> neighborPositions= getNeighbors(getPositionByField(f));
+            for(Position neighbor :neighborPositions){
+               Field neighborField=getFieldByPosition(neighbor);
+              if(!neighborField.getFlagged()) neighborField.setRevealed(true);
+              RevealNeighborsOfEmptyFields(neighborField,visited);
+            }
+        }
+    }
     public int getAllMines() {
         return allMines;
     }
 
     public abstract int getOneMineFields();
 
-    // Relevant in the RatTable class
-    public abstract int getTwoMineFields();
+    public int getRows(){
+        return rows;
+    }
+    public int getColumns(){
+        return columns;
+    }
 
-    public abstract int getThreeMineFields();
 
 }

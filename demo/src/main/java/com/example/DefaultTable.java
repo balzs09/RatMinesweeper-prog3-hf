@@ -2,6 +2,7 @@ package com.example;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class DefaultTable extends Table {
     public DefaultTable(int rows, int columns, int allMines) {
@@ -24,7 +25,7 @@ public class DefaultTable extends Table {
                             currentPosition.getColumn() + d[1]);
                     if (neighborPosition.getRow() >= 0 && neighborPosition.getRow() < rows
                             && neighborPosition.getColumn() >= 0 && neighborPosition.getColumn() < columns) {
-                        if (getByPosition(neighborPosition).getIsMine())
+                        if (getFieldByPosition(neighborPosition).getIsMine())
                             mineNeighbors++;
                     }
                 }
@@ -33,7 +34,10 @@ public class DefaultTable extends Table {
 
         }
     }
-
+    @Override
+    public List<Position> getNeighborPositions(Position p){
+        return getNeighbors(p);
+    }
     @Override
     public void selectingMines(ArrayList<Field> availableFields) {
 
@@ -48,13 +52,4 @@ public class DefaultTable extends Table {
         return allMines;
     }
 
-    @Override
-    public int getTwoMineFields() {
-        return 0;
-    }
-
-    @Override
-    public int getThreeMineFields() {
-        return 0;
-    }
 }
