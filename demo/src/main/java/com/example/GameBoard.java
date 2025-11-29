@@ -32,7 +32,11 @@ public class GameBoard extends JPanel {
   private int getBoardPositionY(int row) {
     return row * getCellHeight();
   }
+  public void handleClicks(MouseClicks click, Position pos){
+    controller.mouseChoser(click, controller.getTable().getFieldByPosition(pos));
+    repaint();
 
+  }
   public Position getCellFromCoordinates(int x, int y) {
     int row = y / getCellHeight();
     int column = x / getCellWidth();
@@ -112,9 +116,7 @@ public class GameBoard extends JPanel {
     }
   }
   //Draws the cell for a number field. 
-  public void drawNumberCell(Graphics g, Field numberField, int boardPositionX, int boardPositionY){
-    g.setColor(Color.GRAY);
-    int neighborNumber= numberField.getNumberOfNeighbors();
+  public void drawNumberCell(Graphics g, int neighborNumber, int boardPositionX, int boardPositionY){
     if(neighborNumber>0){
       g.setColor(getNumberColor(neighborNumber));
       g.setFont(g.getFont().deriveFont(18f));
@@ -127,8 +129,31 @@ public class GameBoard extends JPanel {
     }
   }
   //Draws the flags in the cell 
-  public void drawFlags (Graphics g, Field numberField, int boardPositionX, int boardPositionY){
-    
+  //A zászlók oválisok által vannak felrajzolva, a könnyebb láthatóság érdekében.
+  public void drawFlags (Graphics g, int flagNumber, int boardPositionX, int boardPositionY, Color background){
+     g.setColor(background);
+    g.fillRect(boardPositionX, boardPositionY, getCellWidth(), getCellHeight());
+    int size=getCellWidth()/5;
+    int spacing= size+2;
+    for(int i=0;i<flagNumber;i++){
+      if(i==0) g.setColor(Color.RED);
+      if(i==1) g.setColor(Color.BLUE);
+      if(i==2) g.setColor(Color.GREEN);
+      g.fillOval(boardPositionX + spacing*i + 2, boardPositionY + getCellHeight()/2 - size/2, size, size);
+
+    }
+  }
+
+  public void drawBomb( Graphics g, int boardPositionX, int boardPositionY, Color background){
+    int width = getCellWidth();
+    int height = getCellHeight();
+    g.setColor(background);
+    g.fillRect(boardPositionX, boardPositionY, width, height);
+    g.setColor(Color.BLACK);
+    int size=Math.min(width,height)/2;
+    int bombX= boardPositionX+(width-size)/2;
+    int bombY= boardPositionY+(height-size)/2;
+    g.fillOval(bombX,bombY,size,size);
   }
   public void drawCell(int row, int column, Graphics g, Field field) {
     int boardPositionX = getBoardPositionX(column);
@@ -138,10 +163,14 @@ public class GameBoard extends JPanel {
       g.fillRect(boardPositionX, boardPositionY, getCellWidth(), getCellHeight());
     }
     
-    if(field.getRevealed()&&!field.getIsMine()) drawNumberCell(g,field,boardPositionX,boardPositionY);
-    if(field.getFlagged()) drawFlags();
+    if(field.getRevealed()&&!field.getIsMine()) drawNumberCell(g,field.getNumberOfNeighbors(),boardPositionX,boardPositionY);
+    if(field.getFlagged()) drawFlags(g,field.getFlags(),boardPositionX,boardPositionY,Color.LIGHT_GRAY);
+    if(field.getRevealed()&&field.getIsMine()) drawBomb(g,boardPositionX,boardPositionY,Color.RED);
+    if(!field.getRevealed()&&!field.getFlagged()&&!controller.getActiveGame()&&field.getIsMine()) 
+      drawBomb(g,boardPositionX,boardPositionY,Color.LIGHT_GRAY);
+    if(!controller.getBomb()&&field.getFlagged()&&field.getFlags()!=field.getMineNumber())
+      drawFlags(g, field.getFlags(), boardPositionX, boardPositionY, Color.RED);
   }
-
   public GameController getController() {
     return controller;
   }

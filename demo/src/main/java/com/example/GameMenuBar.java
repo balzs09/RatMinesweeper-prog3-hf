@@ -1,6 +1,9 @@
 package com.example;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+
+import java.awt.event.MouseAdapter;
+
 import javax.swing.JMenu;
 public class GameMenuBar extends JMenuBar {
     public GameMenuBar(){
@@ -11,6 +14,7 @@ public class GameMenuBar extends JMenuBar {
         difficultyMenu.add(new JMenuItem("Easy"));
         difficultyMenu.add(new JMenuItem("Medium"));
         difficultyMenu.add(new JMenuItem("Hard"));
+        difficultyMenu.addActionListener(new MouseAdapter());
         JMenu gameModeMenu= new JMenu("Gamemode");
         gameModeMenu.add(new JMenuItem("Default"));
         gameModeMenu.add(new JMenuItem("Rat"));
