@@ -4,7 +4,9 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.SwingUtilities;
 public class GameMouseAdapter extends MouseAdapter {
+    private GameController controller;
     private GameBoard board;
+    
     public GameMouseAdapter(GameBoard board){
         this.board=board;
     }

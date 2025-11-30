@@ -10,9 +10,10 @@ public class GameController {
   private GameModes gameMode;
   private Table gameTable;
   private GameBoard board;
-  private boolean bombActivated = false;
-  private boolean gameStarted = false;
-  private boolean winner = false;
+  private GameWindow window;
+  private boolean bombActivated;
+  private boolean tableGenerated;
+  private boolean winner;
   private int remainingMines;
   // All mines that are not flagged yet
   // How many mines are unflagged, if the flagging is correct:
@@ -20,9 +21,11 @@ public class GameController {
   private int unflaggedTwoMines;
   private int unflaggedThreeMines;
 
-  public GameController(Difficulties dif, GameModes mode, Table gamTable) {
-    difficulty = dif;
+  public GameController(GameModes mode, Difficulties dif, GameBoard board, GameWindow window) {
     gameMode = mode;
+    difficulty = dif;
+    this.board = board;
+    this.window = window;
   }
 
   // This function returns with the number of lines and columns for each
@@ -38,8 +41,10 @@ public class GameController {
 
   // This function starts a game and it initalizes the size of the table by the
   // difficulty chosen.
-  public void startGame() {
-    gameStarted=true;
+  public void setGameTable() {
+    bombActivated = false;
+    winner = false;
+    tableGenerated = false;
     int parameters[] = getTableParametersForDifficulty();
     int rows = parameters[0];
     int columns = parameters[1];
@@ -75,17 +80,16 @@ public class GameController {
   public void numberChoser(Field selectedField) {
     if (selectedField.getRevealed() == false) {
       selectedField.setRevealed(true);
-      if (selectedField.getNumberOfNeighbors() == 0)
-        revealNeighborsOfEmptyFields(selectedField, new HashSet<>());
-      if (gameMode == GameModes.RAT) {
-        List<Position> path = ((RatTable) gameTable).getShortestPath();
-        ((RatTable) gameTable).moveByOne(path);
-      }
-      if (selectedField.getIsMine() == true) {
+      if (selectedField.getIsMine() == false) {
+        if (selectedField.getNumberOfNeighbors() == 0)
+          revealNeighborsOfEmptyFields(selectedField, new HashSet<>());
+        if (gameMode == GameModes.RAT) {
+          List<Position> path = ((RatTable) gameTable).getShortestPath();
+          /* ((RatTable) gameTable).moveByOne(path); */
+        }
+      } else
         bombActivated = true;
-      }
       board.rePaintCell(gameTable.getPositionByField(selectedField));
-
     }
   }
 
@@ -120,20 +124,23 @@ public class GameController {
   }
 
   public void mineChoser(Field selectedField) {
+    Position currentPosition = gameTable.getPositionByField(selectedField);
     if (selectedField.getRevealed() == false) {
       selectedField.incrementFlags(gameMode);
       if (gameMode == GameModes.DEFAULT)
         defaultMineChoser(selectedField);
       else
         ratMineChoser(selectedField);
+      window.updateMines(unflaggedOneMines, 1);
     } else {
       ((RatTable) gameTable).getRat().setGoal(gameTable.getPositionByField(selectedField));
       ((RatTable) gameTable).setShortestPath();
     }
+    board.rePaintCell(currentPosition);
   }
 
   public void generateTable(Position selectedPosition) {
-    startGame();
+    tableGenerated = true;
     ArrayList<Field> availableFields = gameTable.getavailableFields(selectedPosition);
     gameTable.selectingMines(availableFields);
     gameTable.checkNeighbors();
@@ -143,51 +150,62 @@ public class GameController {
 
   }
 
-  public void repaintMissingBombsAndWrongFlags(){
-    for(int row=0;row<gameTable.getRows();row++){
-        for(int column=0;column<gameTable.getColumns();column++){
-          Position currentPosition = new Position(row, column);
-           Field currentField= gameTable.getFieldByPosition(currentPosition);
-           if(!currentField.getFlagged()&& currentField.getIsMine()||currentField.getFlags()!=currentField.getMineNumber()) 
-            board.rePaintCell( currentPosition);
-        }
+  public void repaintMissingBombsAndWrongFlags() {
+    for (int row = 0; row < gameTable.getRows(); row++) {
+      for (int column = 0; column < gameTable.getColumns(); column++) {
+        Position currentPosition = new Position(row, column);
+        Field currentField = gameTable.getFieldByPosition(currentPosition);
+        if ((!currentField.getFlagged() && currentField.getIsMine())
+            || (currentField.getFlags() != currentField.getMineNumber()))
+          board.rePaintCell(currentPosition);
+      }
+    }
   }
 
-  public boolean isEveryFieldSelected(){
-    for(int row=0;row<gameTable.getRows();row++){
-        for(int column=0;column<gameTable.getColumns();column++){
-          Field currentField= gameTable.getFieldByPosition(new Position(row, column));
-          if(!currentField.getRevealed()&&!currentField.getFlagged()) return false;
-        }
+  public boolean isEveryFieldSelected() {
+    for (int row = 0; row < gameTable.getRows(); row++) {
+      for (int column = 0; column < gameTable.getColumns(); column++) {
+        Field currentField = gameTable.getFieldByPosition(new Position(row, column));
+        if (!currentField.getRevealed() && !currentField.getFlagged())
+          return false;
       }
-      return true;
-   }
+    }
+    return true;
+  }
 
   public void setWinner() {
-    if(bombActivated==true){
+    if (bombActivated == true) {
       repaintMissingBombsAndWrongFlags();
-      winner=false;
+      winner = false;
+      window.stopTimer();
+      return;
     }
-    if(remainingMines==0&&isEveryFieldSelected()){
-      winner=true;
+    if (remainingMines == 0 && isEveryFieldSelected()) {
+      winner = true;
+      window.stopTimer();
     }
   }
-  public boolean getWinner(){
+
+  public boolean getWinner() {
     return winner;
   }
 
   public void mouseChoser(MouseClicks click, Field slectedField) {
-    if (click == MouseClicks.LEFT){
-      if(!getGameStarted()) generateTable(gameTable.getPositionByField(slectedField));
-      numberChoser(slectedField);
+    if (bombActivated || winner)
+      return;
+    else {
+      if (click == MouseClicks.LEFT) {
+        if (!getTableGenerated())
+          generateTable(gameTable.getPositionByField(slectedField));
+        numberChoser(slectedField);
+      } else if (click == MouseClicks.RIGHT)
+        mineChoser(slectedField);
+      setWinner();
     }
-    else if (click == MouseClicks.RIGHT)
-      mineChoser(slectedField);
-    setWinner();
   }
 
-  public boolean getGameStarted() {
-    return gameStarted;
+  public boolean getTableGenerated() {
+    return tableGenerated;
   }
 
   public boolean getBombActivated() {
@@ -195,6 +213,18 @@ public class GameController {
   }
 
   public Table getTable() {
-    return getTable();
+    return gameTable;
+  }
+
+  public int getUnflaggedOneMines() {
+    return unflaggedOneMines;
+  }
+
+  public int getUnflaggedTwoMines() {
+    return unflaggedTwoMines;
+  }
+
+  public int getUnflaggedThreeMines() {
+    return unflaggedThreeMines;
   }
 }

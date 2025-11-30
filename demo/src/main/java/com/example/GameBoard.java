@@ -1,22 +1,20 @@
 package com.example;
 
 import javax.swing.JPanel;
-import javax.swing.JTable;
-import java.awt.GridLayout;
 import java.awt.Rectangle;
-import java.awt.event.MouseEvent;
 import java.awt.Color;
 import java.awt.Graphics;
 
 public class GameBoard extends JPanel {
   private GameController controller;
-  private boolean initialized;
+  private boolean initialized=false;
 
-  public GameBoard(GameController cr) {
-    controller = cr;
+  public GameBoard() {
     addMouseListener(new GameMouseAdapter(this));
   }
-
+ public void setGameController(GameController controller){
+   this.controller=controller;
+ }
   private int getCellWidth() {
     return getWidth() / controller.getTable().getColumns();
   }
@@ -32,11 +30,7 @@ public class GameBoard extends JPanel {
   private int getBoardPositionY(int row) {
     return row * getCellHeight();
   }
-  public void handleClicks(MouseClicks click, Position pos){
-    controller.mouseChoser(click, controller.getTable().getFieldByPosition(pos));
-    repaint();
 
-  }
   public Position getCellFromCoordinates(int x, int y) {
     int row = y / getCellHeight();
     int column = x / getCellWidth();
@@ -62,7 +56,6 @@ public class GameBoard extends JPanel {
 
 
   public void initializeBoard(Graphics g){
-      drawBorders(g);
       for (int i = 0; i < controller.getTable().getRows(); i++) {
         for (int j = 0; j < controller.getTable().getColumns(); j++) {
           Position paintedPos = new Position(i, j);
@@ -76,6 +69,7 @@ public class GameBoard extends JPanel {
   @Override
   public void paintComponent(Graphics g) {
     super.paintComponent(g);
+    if(controller== null) return;
     if (initialized == false) initializeBoard(g);
     else{
           Rectangle clip= g.getClipBounds();
@@ -90,6 +84,7 @@ public class GameBoard extends JPanel {
             }
           }
     }
+    drawBorders(g);
   }
   //Gives the color of the number given as parameter
   //There are 9 colors, if the neigborNumber is bigger than 9, it will have thes same color as the rest, when divided by 9.
@@ -166,9 +161,9 @@ public class GameBoard extends JPanel {
     if(field.getRevealed()&&!field.getIsMine()) drawNumberCell(g,field.getNumberOfNeighbors(),boardPositionX,boardPositionY);
     if(field.getFlagged()) drawFlags(g,field.getFlags(),boardPositionX,boardPositionY,Color.LIGHT_GRAY);
     if(field.getRevealed()&&field.getIsMine()) drawBomb(g,boardPositionX,boardPositionY,Color.RED);
-    if(!field.getRevealed()&&!field.getFlagged()&&!controller.getActiveGame()&&field.getIsMine()) 
+    if(!field.getRevealed()&&!field.getFlagged()&&controller.getBombActivated()&&field.getIsMine()) 
       drawBomb(g,boardPositionX,boardPositionY,Color.LIGHT_GRAY);
-    if(!controller.getBomb()&&field.getFlagged()&&field.getFlags()!=field.getMineNumber())
+    if(controller.getBombActivated()&&field.getFlagged()&&field.getFlags()!=field.getMineNumber())
       drawFlags(g, field.getFlags(), boardPositionX, boardPositionY, Color.RED);
   }
   public GameController getController() {

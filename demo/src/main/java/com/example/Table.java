@@ -40,6 +40,8 @@ public abstract class Table {
         for (int[] d : neighborIndexes) {
             Position neighborPosition = new Position(currentPosition.getRow() + d[0],
                     currentPosition.getColumn() + d[1]);
+            if (neighborPosition.getRow() >= 0 && neighborPosition.getRow() < rows
+                            && neighborPosition.getColumn() >= 0 && neighborPosition.getColumn() < columns)
             neighborPositions.add(neighborPosition);
         }
         return neighborPositions;
