@@ -56,7 +56,7 @@ public abstract class Table {
     public ArrayList<Field> getavailableFields(Position selectedPosition) {
         ArrayList<Field> availableFields = new ArrayList<>(fields);
         availableFields.remove(getFieldByPosition(selectedPosition));
-        List<Position> neighbors = getNeighbors(selectedPosition);
+        List<Position> neighbors = getNeighborPositions(selectedPosition);
         for (Position neighborPosition : neighbors) {
             if (neighborPosition.getRow() >= 0 && neighborPosition.getRow() < rows
                     && neighborPosition.getColumn() >= 0 && neighborPosition.getColumn() < columns)
@@ -68,9 +68,10 @@ public abstract class Table {
     
     public abstract void selectingMines(ArrayList<Field> availableFields);
     
-    public void RevealNeighborsOfEmptyFields(Field f,Set<Field> visited){
-        if(visited.contains(f)) return;
-        visited.add(f);
+    public void RevealNeighborsOfEmptyFields(Field f,Set<Position> visited){
+        Position fieldPosition= getPositionByField(f);
+        if(visited.contains(fieldPosition)) return;
+        visited.add(fieldPosition);
         if(f.getNumberOfNeighbors()==0){
             List<Position> neighborPositions= getNeighbors(getPositionByField(f));
             for(Position neighbor :neighborPositions){

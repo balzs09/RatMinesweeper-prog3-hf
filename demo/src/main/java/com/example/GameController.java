@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.io.File;
 
 public class GameController {
   private Difficulties difficulty;
@@ -77,15 +78,43 @@ public class GameController {
     }
   }
 
+  public void moveByOne(List<Position> path, Set<Position> visited) {
+
+    if (path.size() > 1) {
+      Rat rat = ((RatTable) gameTable).getRat();
+      rat.setCurrentPosition(path.get(1));
+      Field field = gameTable.getFieldByPosition(rat.getCurrentPosition());
+      if (field.getIsMine() && !field.getFlagged()) {
+        field.setFlagged(true);
+        for (int i = 0; i < field.getMineNumber(); i++){
+          field.incrementFlags(GameModes.RAT);
+          ratMineChoser(field);
+        }
+      }
+      if (!field.getIsMine() && !field.getRevealed()) {
+        field.setRevealed(true);
+        if (field.getNumberOfNeighbors() == 0)
+          gameTable.RevealNeighborsOfEmptyFields(field, visited);
+      }
+      path.removeFirst();
+    }
+    visited.clear();
+  }
+
   public void numberChoser(Field selectedField) {
+    if(selectedField.getFlagged()) return;
     if (selectedField.getRevealed() == false) {
       selectedField.setRevealed(true);
       if (selectedField.getIsMine() == false) {
         if (selectedField.getNumberOfNeighbors() == 0)
           revealNeighborsOfEmptyFields(selectedField, new HashSet<>());
         if (gameMode == GameModes.RAT) {
+          Position initialRatPosition = ((RatTable) gameTable).getRat().getCurrentPosition();
+          board.rePaintCell(initialRatPosition);
           List<Position> path = ((RatTable) gameTable).getShortestPath();
-          /* ((RatTable) gameTable).moveByOne(path); */
+          moveByOne(path, new HashSet<>());
+          Position currentRatPosition = ((RatTable) gameTable).getRat().getCurrentPosition();
+          board.rePaintCell(currentRatPosition);
         }
       } else
         bombActivated = true;
@@ -103,6 +132,7 @@ public class GameController {
       if (selectedField.getIsMine())
         remainingMines++;
     }
+    window.updateMines(unflaggedOneMines, 1);
   }
 
   public void ratMineChoser(Field selectedField) {
@@ -121,6 +151,9 @@ public class GameController {
     else if (selectedField.getMineNumber() == selectedField.getFlags() - 1 ||
         selectedField.getMineNumber() == 3 && selectedField.getFlags() == 0)
       remainingMines++;
+    window.updateMines(unflaggedOneMines, 1);
+    window.updateMines(unflaggedTwoMines, 2);
+    window.updateMines(unflaggedThreeMines, 3);
   }
 
   public void mineChoser(Field selectedField) {
@@ -131,8 +164,9 @@ public class GameController {
         defaultMineChoser(selectedField);
       else
         ratMineChoser(selectedField);
-      window.updateMines(unflaggedOneMines, 1);
-    } else {
+    } else if (gameMode == GameModes.RAT) {
+      Position initialCheesePosition = ((RatTable) gameTable).getRat().getGoalPosition();
+      board.rePaintCell(initialCheesePosition);
       ((RatTable) gameTable).getRat().setGoal(gameTable.getPositionByField(selectedField));
       ((RatTable) gameTable).setShortestPath();
     }
@@ -144,9 +178,10 @@ public class GameController {
     ArrayList<Field> availableFields = gameTable.getavailableFields(selectedPosition);
     gameTable.selectingMines(availableFields);
     gameTable.checkNeighbors();
-    if (gameMode == GameModes.RAT)
+    if (gameMode == GameModes.RAT) {
       ((RatTable) gameTable).setRat(selectedPosition);
-    Field selectField = gameTable.getFieldByPosition(selectedPosition);
+      ((RatTable) gameTable).setShortestPath();
+    }
 
   }
 
@@ -178,11 +213,15 @@ public class GameController {
       repaintMissingBombsAndWrongFlags();
       winner = false;
       window.stopTimer();
+      window.writeMessageAfterLosing();
       return;
     }
     if (remainingMines == 0 && isEveryFieldSelected()) {
       winner = true;
       window.stopTimer();
+      window.refreshHighscoreArea();
+      File outputFile = window.getHighscoreManager().getTextFileByModeAndDifficulty(gameMode, difficulty);
+      window.saveHighscoreAfterWin(window.getTimePassed(), outputFile);
     }
   }
 
@@ -226,5 +265,9 @@ public class GameController {
 
   public int getUnflaggedThreeMines() {
     return unflaggedThreeMines;
+  }
+
+  public GameModes getGameMode() {
+    return gameMode;
   }
 }

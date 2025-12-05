@@ -2,9 +2,6 @@ package com.example;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
-
-import java.awt.event.MouseAdapter;
-
 import javax.swing.JMenu;
 public class GameMenuBar extends JMenuBar {
     private Difficulties selectedDifficulty = null;

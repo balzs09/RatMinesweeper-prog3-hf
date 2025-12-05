@@ -1,5 +1,7 @@
 package com.example;
 
+
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -34,10 +36,12 @@ public class DefaultTable extends Table {
 
         }
     }
+
     @Override
-    public List<Position> getNeighborPositions(Position p){
+    public List<Position> getNeighborPositions(Position p) {
         return getNeighbors(p);
     }
+
     @Override
     public void selectingMines(ArrayList<Field> availableFields) {
 
