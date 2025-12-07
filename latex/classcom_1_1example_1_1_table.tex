@@ -1,0 +1,248 @@
+\doxysection{com.\+example.\+Table Class Reference}
+\hypertarget{classcom_1_1example_1_1_table}{}\label{classcom_1_1example_1_1_table}\index{com.example.Table@{com.example.Table}}
+Inheritance diagram for com.\+example.\+Table\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1example_1_1_table}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1_table_aca3fb295482ecb671a668d8ce596fbf3}{Table}} (int row\+Number, int column\+Number, int mine\+Number)
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} \mbox{\hyperlink{classcom_1_1example_1_1_table_a13ec713266f8a5e5ffef6861f3096e34}{get\+Field\+By\+Position}} (\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} p)
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} \mbox{\hyperlink{classcom_1_1example_1_1_table_aa103ec03fa8a5c0436c00dfd91b40ff6}{get\+Position\+By\+Field}} (\mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} f)
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1_table_aef00d073fb940e0b4fa32d099477fa86}{get\+Neighbors}} (\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} current\+Position)
+\item 
+abstract List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1_table_ab65ff2b944b2e8723a9f949f772a1f57}{get\+Neighbor\+Positions}} (\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} p)
+\item 
+abstract void \mbox{\hyperlink{classcom_1_1example_1_1_table_adfc24d157a8a24c766f01a56d2cec062}{check\+Neighbors}} ()
+\item 
+Array\+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1_table_acbeb695a048871d3d601208186df3813}{getavailable\+Fields}} (\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} selected\+Position)
+\item 
+abstract void \mbox{\hyperlink{classcom_1_1example_1_1_table_a9e11dd7b6a7fcbcb4e1d03329634ca44}{selecting\+Mines}} (Array\+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} $>$ available\+Fields)
+\item 
+int \mbox{\hyperlink{classcom_1_1example_1_1_table_a677b91f59215f21cc9ed63ec1679fe9c}{get\+All\+Mines}} ()
+\item 
+abstract int \mbox{\hyperlink{classcom_1_1example_1_1_table_aaffef83ce1f24f09dbc48a1ef13cd6e1}{get\+One\+Mine\+Fields}} ()
+\item 
+int \mbox{\hyperlink{classcom_1_1example_1_1_table_acecf074149118a48bccf0965177cf188}{get\+Rows}} ()
+\item 
+int \mbox{\hyperlink{classcom_1_1example_1_1_table_a3d080b93fd89ee4740ed08557937b427}{get\+Columns}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcom_1_1example_1_1_table_aefacdcddf1900b41e8ab15e1fbe21360}\label{classcom_1_1example_1_1_table_aefacdcddf1900b41e8ab15e1fbe21360} 
+int {\bfseries rows}
+\item 
+\Hypertarget{classcom_1_1example_1_1_table_a65fdff9316d1e79e552b8684b5067014}\label{classcom_1_1example_1_1_table_a65fdff9316d1e79e552b8684b5067014} 
+int {\bfseries columns}
+\item 
+\Hypertarget{classcom_1_1example_1_1_table_ad0c481f1358b85dd0529337f84de6070}\label{classcom_1_1example_1_1_table_ad0c481f1358b85dd0529337f84de6070} 
+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} $>$ {\bfseries fields} = new Array\+List$<$\mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}}$>$()
+\item 
+\Hypertarget{classcom_1_1example_1_1_table_a47849dd9367427edbf6c3480535a9365}\label{classcom_1_1example_1_1_table_a47849dd9367427edbf6c3480535a9365} 
+int {\bfseries all\+Mines}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{classcom_1_1example_1_1_table_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1example_1_1_table_aca3fb295482ecb671a668d8ce596fbf3}\index{com.example.Table@{com.example.Table}!Table@{Table}}
+\index{Table@{Table}!com.example.Table@{com.example.Table}}
+\doxysubsubsection{\texorpdfstring{Table()}{Table()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_table_aca3fb295482ecb671a668d8ce596fbf3} 
+com.\+example.\+Table.\+Table (\begin{DoxyParamCaption}\item[{int}]{row\+Number}{, }\item[{int}]{column\+Number}{, }\item[{int}]{mine\+Number}{}\end{DoxyParamCaption})}
+
+A tábla osztály konstruktora. A tagváltozók megkapják a paraméterben átadott érékeket. A tábla méretéhez igazodva minden pozícióhoz hozzáadódik egy új, bomba nélküli mező.
+
+
+\begin{DoxyParams}{Parameters}
+{\em row\+Number} & sorok száma \\
+\hline
+{\em column\+Number} & oszlopok száma \\
+\hline
+{\em mine\+Number} & bombák száma \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1example_1_1_table_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1_table_adfc24d157a8a24c766f01a56d2cec062}\index{com.example.Table@{com.example.Table}!checkNeighbors@{checkNeighbors}}
+\index{checkNeighbors@{checkNeighbors}!com.example.Table@{com.example.Table}}
+\doxysubsubsection{\texorpdfstring{checkNeighbors()}{checkNeighbors()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_table_adfc24d157a8a24c766f01a56d2cec062} 
+abstract void com.\+example.\+Table.\+check\+Neighbors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Ez a metódus a \doxylink{classcom_1_1example_1_1_default_table}{Default\+Table} és \doxylink{classcom_1_1example_1_1_rat_table}{Rat\+Table} osztályokban van megvalósítva. Ellenőrzi, hogy egy mező szomszédjaiban összsen hány bomba található. 
+
+Reimplemented in \mbox{\hyperlink{classcom_1_1example_1_1_default_table_a8568cb966551ead3ded095baf1159069}{com.\+example.\+Default\+Table}}, and \mbox{\hyperlink{classcom_1_1example_1_1_rat_table_aacfc8c709163735c7869c527fc6ed217}{com.\+example.\+Rat\+Table}}.
+
+\Hypertarget{classcom_1_1example_1_1_table_a677b91f59215f21cc9ed63ec1679fe9c}\index{com.example.Table@{com.example.Table}!getAllMines@{getAllMines}}
+\index{getAllMines@{getAllMines}!com.example.Table@{com.example.Table}}
+\doxysubsubsection{\texorpdfstring{getAllMines()}{getAllMines()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_table_a677b91f59215f21cc9ed63ec1679fe9c} 
+int com.\+example.\+Table.\+get\+All\+Mines (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Ez a metódus felfedi az üres mezővel szomszédos mezőket. Abban az esetben, ha a szomszédos mező már be van jelölve zászlóként, a mező nem lesz felfedve. Ha a szomszédok közül is van egy mező amely üres, annak szomszédait is felfedi A visited set-\/ben tárolja a megtalált üres mezőket. Ez azért szükséges, hogy ugyanarra a mezőre ne legyen többször elvégezve a metódus, végtelen ciklust generálva.
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & kiválasztott üres mező \\
+\hline
+{\em visited} & azon üres mezők, amelyekre a függvény már meg volt hívva. Visszatér a bombát tartalmazó mezők számával\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bombát tartalmazó mezők száma 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1example_1_1_table_acbeb695a048871d3d601208186df3813}\index{com.example.Table@{com.example.Table}!getavailableFields@{getavailableFields}}
+\index{getavailableFields@{getavailableFields}!com.example.Table@{com.example.Table}}
+\doxysubsubsection{\texorpdfstring{getavailableFields()}{getavailableFields()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_table_acbeb695a048871d3d601208186df3813} 
+Array\+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} $>$ com.\+example.\+Table.\+getavailable\+Fields (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}}}]{selected\+Position}{}\end{DoxyParamCaption})}
+
+Visszatér azokkal a mezőkkel amelyek nem szomszédosak a paraméterként kiválasztottal. Egy új available\+Fields lista megkapja a fields lista elemeit. Innen törlődnek a meagdott pozícióval szomszédos pozíciókhoz tartozó mezők. Valamint törlődik a megadott pozícióhoz tartozó mezők is
+
+
+\begin{DoxyParams}{Parameters}
+{\em selected\+Position} & a kiválasztott mező \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+összes mező-\/(kiválasztott+szomszédok) listája 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1example_1_1_table_a3d080b93fd89ee4740ed08557937b427}\index{com.example.Table@{com.example.Table}!getColumns@{getColumns}}
+\index{getColumns@{getColumns}!com.example.Table@{com.example.Table}}
+\doxysubsubsection{\texorpdfstring{getColumns()}{getColumns()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_table_a3d080b93fd89ee4740ed08557937b427} 
+int com.\+example.\+Table.\+get\+Columns (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+A függvény visszatér a tábla oszlopainak számával
+
+\begin{DoxyReturn}{Returns}
+tábla oszlopainak száma 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1example_1_1_table_a13ec713266f8a5e5ffef6861f3096e34}\index{com.example.Table@{com.example.Table}!getFieldByPosition@{getFieldByPosition}}
+\index{getFieldByPosition@{getFieldByPosition}!com.example.Table@{com.example.Table}}
+\doxysubsubsection{\texorpdfstring{getFieldByPosition()}{getFieldByPosition()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_table_a13ec713266f8a5e5ffef6861f3096e34} 
+\mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} com.\+example.\+Table.\+get\+Field\+By\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}}}]{p}{}\end{DoxyParamCaption})}
+
+Visszatér a mezővel a field listából a pozíció alapján
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & a mező pozíciója \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a fieldben taláható mező, amely megfelel a pozíciónak 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1example_1_1_table_ab65ff2b944b2e8723a9f949f772a1f57}\index{com.example.Table@{com.example.Table}!getNeighborPositions@{getNeighborPositions}}
+\index{getNeighborPositions@{getNeighborPositions}!com.example.Table@{com.example.Table}}
+\doxysubsubsection{\texorpdfstring{getNeighborPositions()}{getNeighborPositions()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_table_ab65ff2b944b2e8723a9f949f772a1f57} 
+abstract List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$ com.\+example.\+Table.\+get\+Neighbor\+Positions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}}}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Ez a metódus a \doxylink{classcom_1_1example_1_1_default_table}{Default\+Table} és \doxylink{classcom_1_1example_1_1_rat_table}{Rat\+Table} osztályokban van megvalósítva. Mindkét estetben a játékmód táblájának megfelelő pozíciókkal tér vissza.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & jelenlegi pozíció, melynek szeretnénk megtudni a szomszédjait \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+szomszédpozíciók listája 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classcom_1_1example_1_1_default_table_aeeebcd9996b79d7e9cf154193ac3f399}{com.\+example.\+Default\+Table}}, and \mbox{\hyperlink{classcom_1_1example_1_1_rat_table_abad6be44ce265863e54257fa75c40bdf}{com.\+example.\+Rat\+Table}}.
+
+\Hypertarget{classcom_1_1example_1_1_table_aef00d073fb940e0b4fa32d099477fa86}\index{com.example.Table@{com.example.Table}!getNeighbors@{getNeighbors}}
+\index{getNeighbors@{getNeighbors}!com.example.Table@{com.example.Table}}
+\doxysubsubsection{\texorpdfstring{getNeighbors()}{getNeighbors()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_table_aef00d073fb940e0b4fa32d099477fa86} 
+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$ com.\+example.\+Table.\+get\+Neighbors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}}}]{current\+Position}{}\end{DoxyParamCaption})}
+
+Ez a metódus egy pozícióval szomszédos pozíciókkal tér vissza. Abban az esetben, ha a szomszédos pozíció szerepel a táblán (nem lépi túl a tábla méreteit) hozzáadódik a szomszéd pozíciók listához.
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Position} & jelenlegi pozició, melynek szeretnénk megtudni a szomszédjait \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+szomszédpozíciók listája 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1example_1_1_table_aaffef83ce1f24f09dbc48a1ef13cd6e1}\index{com.example.Table@{com.example.Table}!getOneMineFields@{getOneMineFields}}
+\index{getOneMineFields@{getOneMineFields}!com.example.Table@{com.example.Table}}
+\doxysubsubsection{\texorpdfstring{getOneMineFields()}{getOneMineFields()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_table_aaffef83ce1f24f09dbc48a1ef13cd6e1} 
+abstract int com.\+example.\+Table.\+get\+One\+Mine\+Fields (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Ez a metódus a \doxylink{classcom_1_1example_1_1_default_table}{Default\+Table} és \doxylink{classcom_1_1example_1_1_rat_table}{Rat\+Table} osztályokban van megvalósítva. A függvény visszatér az egyetlen bombát tartalmazó mezők számával
+
+\begin{DoxyReturn}{Returns}
+az egyetlen bombát tartalmazó mezők száma 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classcom_1_1example_1_1_default_table_a10626441bfc2c6e7f9fd4ab286218a47}{com.\+example.\+Default\+Table}}, and \mbox{\hyperlink{classcom_1_1example_1_1_rat_table_a33ecae22587c2ee0287e01e86f254b08}{com.\+example.\+Rat\+Table}}.
+
+\Hypertarget{classcom_1_1example_1_1_table_aa103ec03fa8a5c0436c00dfd91b40ff6}\index{com.example.Table@{com.example.Table}!getPositionByField@{getPositionByField}}
+\index{getPositionByField@{getPositionByField}!com.example.Table@{com.example.Table}}
+\doxysubsubsection{\texorpdfstring{getPositionByField()}{getPositionByField()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_table_aa103ec03fa8a5c0436c00dfd91b40ff6} 
+\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} com.\+example.\+Table.\+get\+Position\+By\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}}}]{f}{}\end{DoxyParamCaption})}
+
+Visszatér a mező pozíciójával. A fields listában keresi meg a paraméterként megadott mezőt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & a mező \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a mezőhöz tartozó pozíció; amennyiben nem található meg a mező a fields listában, (-\/1,-\/1) pozícióval tér vissza. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1example_1_1_table_acecf074149118a48bccf0965177cf188}\index{com.example.Table@{com.example.Table}!getRows@{getRows}}
+\index{getRows@{getRows}!com.example.Table@{com.example.Table}}
+\doxysubsubsection{\texorpdfstring{getRows()}{getRows()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_table_acecf074149118a48bccf0965177cf188} 
+int com.\+example.\+Table.\+get\+Rows (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+A függvény visszatér a tábla sorainak számával
+
+\begin{DoxyReturn}{Returns}
+tábla sorainak száma 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1example_1_1_table_a9e11dd7b6a7fcbcb4e1d03329634ca44}\index{com.example.Table@{com.example.Table}!selectingMines@{selectingMines}}
+\index{selectingMines@{selectingMines}!com.example.Table@{com.example.Table}}
+\doxysubsubsection{\texorpdfstring{selectingMines()}{selectingMines()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_table_a9e11dd7b6a7fcbcb4e1d03329634ca44} 
+abstract void com.\+example.\+Table.\+selecting\+Mines (\begin{DoxyParamCaption}\item[{Array\+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} $>$}]{available\+Fields}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Ez a metódus a \doxylink{classcom_1_1example_1_1_default_table}{Default\+Table} és \doxylink{classcom_1_1example_1_1_rat_table}{Rat\+Table} osztályokban van megvalósítva. Kiválasztja azokat a mezőket, amelyek bombát tartalmaznak. A bombát tartalmazó mezők között nem lehet olyan, ami az elsőként kiválasztott pozíció szomszédja.
+
+
+\begin{DoxyParams}{Parameters}
+{\em available\+Fields} & az elérhető pozíciók \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classcom_1_1example_1_1_default_table_a5dd94fa6cd8b1b0ac180621308e14b2a}{com.\+example.\+Default\+Table}}, and \mbox{\hyperlink{classcom_1_1example_1_1_rat_table_a4dcd5884fbfeba885494bd3aeb57112c}{com.\+example.\+Rat\+Table}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+demo/src/main/java/com/example/Table.\+java\end{DoxyCompactItemize}

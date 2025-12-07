@@ -1,0 +1,142 @@
+\doxysection{com.\+example.\+Game\+Controller Class Reference}
+\hypertarget{classcom_1_1example_1_1_game_controller}{}\label{classcom_1_1example_1_1_game_controller}\index{com.example.GameController@{com.example.GameController}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1_game_controller_a7a122b353ed1eb754f9f21bebdab0776}{Game\+Controller}} (\mbox{\hyperlink{enumcom_1_1example_1_1_game_modes}{Game\+Modes}} mode, \mbox{\hyperlink{enumcom_1_1example_1_1_difficulties}{Difficulties}} dif, \mbox{\hyperlink{classcom_1_1example_1_1_game_board}{Game\+Board}} board, \mbox{\hyperlink{classcom_1_1example_1_1_game_window}{Game\+Window}} window)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1_game_controller_a76311602aede14719cf85da4e2e968a4}{set\+Game\+Table}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1_game_controller_aab769ec1b40ad27ddca38bed38f96bbd}{reveal\+Neighbors\+Of\+Empty\+Fields}} (\mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} f, Set$<$ \mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} $>$ visited)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1_game_controller_addf14a3dc1d77d59b32934244f0e0ef0}{move\+By\+One}} (List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$ path)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1_game_controller_acd2f31435104c227c38c2b535ba20da3}{number\+Choser}} (\mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} selected\+Field)
+\item 
+\Hypertarget{classcom_1_1example_1_1_game_controller_a5540e5635a94a94973f1380672cc1a37}\label{classcom_1_1example_1_1_game_controller_a5540e5635a94a94973f1380672cc1a37} 
+void {\bfseries default\+Mine\+Choser} (\mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} selected\+Field)
+\item 
+\Hypertarget{classcom_1_1example_1_1_game_controller_a055cd1688ea2fc0de5b93aad01838f7f}\label{classcom_1_1example_1_1_game_controller_a055cd1688ea2fc0de5b93aad01838f7f} 
+void {\bfseries rat\+Mine\+Choser} (\mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} selected\+Field)
+\item 
+\Hypertarget{classcom_1_1example_1_1_game_controller_a21430baaabd71f8b77b52c9d4875927e}\label{classcom_1_1example_1_1_game_controller_a21430baaabd71f8b77b52c9d4875927e} 
+void {\bfseries mine\+Choser} (\mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} selected\+Field)
+\item 
+\Hypertarget{classcom_1_1example_1_1_game_controller_a60d033d5d53bc45250e978206e2ce038}\label{classcom_1_1example_1_1_game_controller_a60d033d5d53bc45250e978206e2ce038} 
+void {\bfseries generate\+Table} (\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} selected\+Position)
+\item 
+\Hypertarget{classcom_1_1example_1_1_game_controller_aeb5340bbfaa94e0fb8b0e399ab8964a0}\label{classcom_1_1example_1_1_game_controller_aeb5340bbfaa94e0fb8b0e399ab8964a0} 
+void {\bfseries repaint\+Missing\+Bombs\+And\+Wrong\+Flags} ()
+\item 
+\Hypertarget{classcom_1_1example_1_1_game_controller_affd93953662cc649346d739600f04d38}\label{classcom_1_1example_1_1_game_controller_affd93953662cc649346d739600f04d38} 
+boolean {\bfseries is\+Every\+Field\+Selected} ()
+\item 
+\Hypertarget{classcom_1_1example_1_1_game_controller_aed9e32351ed8ece08d5f0306c333fdd4}\label{classcom_1_1example_1_1_game_controller_aed9e32351ed8ece08d5f0306c333fdd4} 
+void {\bfseries set\+Winner} ()
+\item 
+\Hypertarget{classcom_1_1example_1_1_game_controller_ab3af81f29cb466e08e0f0358f59133e0}\label{classcom_1_1example_1_1_game_controller_ab3af81f29cb466e08e0f0358f59133e0} 
+boolean {\bfseries get\+Winner} ()
+\item 
+\Hypertarget{classcom_1_1example_1_1_game_controller_af10c5e730c4ad4c07d27cc667c3cf69f}\label{classcom_1_1example_1_1_game_controller_af10c5e730c4ad4c07d27cc667c3cf69f} 
+void {\bfseries mouse\+Choser} (\mbox{\hyperlink{enumcom_1_1example_1_1_mouse_clicks}{Mouse\+Clicks}} click, \mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} slected\+Field)
+\item 
+\Hypertarget{classcom_1_1example_1_1_game_controller_acaecd20a0136b7daedae5822404f994f}\label{classcom_1_1example_1_1_game_controller_acaecd20a0136b7daedae5822404f994f} 
+boolean {\bfseries get\+Table\+Generated} ()
+\item 
+\Hypertarget{classcom_1_1example_1_1_game_controller_a35c13bc030a94761382daaf19e0fb900}\label{classcom_1_1example_1_1_game_controller_a35c13bc030a94761382daaf19e0fb900} 
+boolean {\bfseries get\+Bomb\+Activated} ()
+\item 
+\Hypertarget{classcom_1_1example_1_1_game_controller_a3a324d9d44958d4ad5fef2ef0a64e680}\label{classcom_1_1example_1_1_game_controller_a3a324d9d44958d4ad5fef2ef0a64e680} 
+\mbox{\hyperlink{classcom_1_1example_1_1_table}{Table}} {\bfseries get\+Table} ()
+\item 
+\Hypertarget{classcom_1_1example_1_1_game_controller_a9bc37fc74bdeeb2686cb27dc22756044}\label{classcom_1_1example_1_1_game_controller_a9bc37fc74bdeeb2686cb27dc22756044} 
+int {\bfseries get\+Unflagged\+One\+Mines} ()
+\item 
+\Hypertarget{classcom_1_1example_1_1_game_controller_a2086a40042e472f298154eee7215dbf1}\label{classcom_1_1example_1_1_game_controller_a2086a40042e472f298154eee7215dbf1} 
+int {\bfseries get\+Unflagged\+Two\+Mines} ()
+\item 
+\Hypertarget{classcom_1_1example_1_1_game_controller_a8876aa5b53e9d2f414c62fae217c9276}\label{classcom_1_1example_1_1_game_controller_a8876aa5b53e9d2f414c62fae217c9276} 
+int {\bfseries get\+Unflagged\+Three\+Mines} ()
+\item 
+\Hypertarget{classcom_1_1example_1_1_game_controller_a2643c7fc33088f1c19536c2ed3da2625}\label{classcom_1_1example_1_1_game_controller_a2643c7fc33088f1c19536c2ed3da2625} 
+\mbox{\hyperlink{enumcom_1_1example_1_1_game_modes}{Game\+Modes}} {\bfseries get\+Game\+Mode} ()
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{classcom_1_1example_1_1_game_controller_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1example_1_1_game_controller_a7a122b353ed1eb754f9f21bebdab0776}\index{com.example.GameController@{com.example.GameController}!GameController@{GameController}}
+\index{GameController@{GameController}!com.example.GameController@{com.example.GameController}}
+\doxysubsubsection{\texorpdfstring{GameController()}{GameController()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_controller_a7a122b353ed1eb754f9f21bebdab0776} 
+com.\+example.\+Game\+Controller.\+Game\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumcom_1_1example_1_1_game_modes}{Game\+Modes}}}]{mode}{, }\item[{\mbox{\hyperlink{enumcom_1_1example_1_1_difficulties}{Difficulties}}}]{dif}{, }\item[{\mbox{\hyperlink{classcom_1_1example_1_1_game_board}{Game\+Board}}}]{board}{, }\item[{\mbox{\hyperlink{classcom_1_1example_1_1_game_window}{Game\+Window}}}]{window}{}\end{DoxyParamCaption})}
+
+A \doxylink{classcom_1_1example_1_1_game_controller}{Game\+Controller} osztály konstruktora, beállítja a megfelelő tagváltozókat a paraméterként kapott értékekre.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & a játékmód \\
+\hline
+{\em dif} & a játék nehézségi szintje \\
+\hline
+{\em board} & a játékhoz tartozó játéktábla panel \\
+\hline
+{\em window} & az ablak amelyen megjelenik a játék \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1example_1_1_game_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1_game_controller_addf14a3dc1d77d59b32934244f0e0ef0}\index{com.example.GameController@{com.example.GameController}!moveByOne@{moveByOne}}
+\index{moveByOne@{moveByOne}!com.example.GameController@{com.example.GameController}}
+\doxysubsubsection{\texorpdfstring{moveByOne()}{moveByOne()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_controller_addf14a3dc1d77d59b32934244f0e0ef0} 
+void com.\+example.\+Game\+Controller.\+move\+By\+One (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$}]{path}{}\end{DoxyParamCaption})}
+
+A metódus által a táblán az egér lép egyet a paraméterként megadott úton. Ha olyan mezőre lép amely nem tartalmaz bombát és nem volt még felfedve, se bejelölve azt felfedi. Ha üres mezőre lép az üres mezőnek szomszédait is felfedi Ha olyan mezőre lép amely tartalmaz bombát, de nem volt még bejelölve, a mezőn található bombák számával bejelöli. A bejelöletlen mezők száma is csökken ha ilyen mezőre lép az egér. A pozíció amelyre lépett az egér ki lesz törölve az út listából.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & az út pozícióinak listája, amelyen kell lépkedjen az egér \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1example_1_1_game_controller_acd2f31435104c227c38c2b535ba20da3}\index{com.example.GameController@{com.example.GameController}!numberChoser@{numberChoser}}
+\index{numberChoser@{numberChoser}!com.example.GameController@{com.example.GameController}}
+\doxysubsubsection{\texorpdfstring{numberChoser()}{numberChoser()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_controller_acd2f31435104c227c38c2b535ba20da3} 
+void com.\+example.\+Game\+Controller.\+number\+Choser (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}}}]{selected\+Field}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em selected\+Field} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1example_1_1_game_controller_aab769ec1b40ad27ddca38bed38f96bbd}\index{com.example.GameController@{com.example.GameController}!revealNeighborsOfEmptyFields@{revealNeighborsOfEmptyFields}}
+\index{revealNeighborsOfEmptyFields@{revealNeighborsOfEmptyFields}!com.example.GameController@{com.example.GameController}}
+\doxysubsubsection{\texorpdfstring{revealNeighborsOfEmptyFields()}{revealNeighborsOfEmptyFields()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_controller_aab769ec1b40ad27ddca38bed38f96bbd} 
+void com.\+example.\+Game\+Controller.\+reveal\+Neighbors\+Of\+Empty\+Fields (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}}}]{f}{, }\item[{Set$<$ \mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} $>$}]{visited}{}\end{DoxyParamCaption})}
+
+Ez a metódus felfedi az üres mezővel szomszédos mezőket. Abban az esetben, ha a szomszédos mező már be van jelölve zászlóként, a mező nem lesz felfedve. Ha a szomszédok közül is van egy mező amely üres, annak szomszédait is felfedi A visited set-\/ben tárolja a megtalált üres mezőket. Ez azért szükséges, hogy ugyanarra a mezőre ne legyen többször elvégezve a metódus, végtelen ciklust generálva.
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & kiválasztott üres mező \\
+\hline
+{\em visited} & azon üres mezők, amelyekre a függvény már meg volt hívva. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1example_1_1_game_controller_a76311602aede14719cf85da4e2e968a4}\index{com.example.GameController@{com.example.GameController}!setGameTable@{setGameTable}}
+\index{setGameTable@{setGameTable}!com.example.GameController@{com.example.GameController}}
+\doxysubsubsection{\texorpdfstring{setGameTable()}{setGameTable()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_controller_a76311602aede14719cf85da4e2e968a4} 
+void com.\+example.\+Game\+Controller.\+set\+Game\+Table (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Ez a metódus elíndit egy új játékot . A játéktábla megkapja a játék nehézségéhez tartozó sor, oszlop és bobmbaszámot. Minden játék elején az aktivált bomba, nyertes és legenerált tábla logikai változók hamis értékűek lesznek. Default játékmód esetén a játék kezdetén a bejelöletlen bomba mezők száma egyenlő lesz az összes bomba számával. \doxylink{classcom_1_1example_1_1_rat}{Rat} játékmód esetén külön jelenik meg a bejelöletlen mezők amelyek egy, kettő és három bombát tartalmaznak. Mindegyik azt kapja meg értékként, hogy eredetileg külün-\/külön mennyi van belőlük a táblában. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+demo/src/main/java/com/example/Game\+Controller.\+java\end{DoxyCompactItemize}

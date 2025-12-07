@@ -10,44 +10,93 @@ public class GameBoard extends JPanel {
   private GameController controller;
   private boolean initialized = false;
 
+  /**
+   * Gameboard osztály konstruktora
+   * Hozzáadja az egérkattintások kezelését.
+   * 
+   */
   public GameBoard() {
     addMouseListener(new GameMouseAdapter(this));
 
   }
 
+  /**
+   * Beállítja a játéktábla panelhez tartozó játékvezérlőt.
+   * 
+   * @param controller játékvezérlő
+   */
   public void setGameController(GameController controller) {
     this.controller = controller;
   }
 
+  /**
+   * Visszatér a cellák szélességével.
+   * 
+   * @return cellák szélessége
+   */
   private int getCellWidth() {
     return getWidth() / controller.getTable().getColumns();
   }
 
+  /**
+   * Visszatér a cellák magasságával.
+   * 
+   * @return cellák magassága
+   */
   private int getCellHeight() {
     return getHeight() / controller.getTable().getRows();
   }
 
+  /**
+   * Visszatér a tábla oszlopának a panelen belüli X koordinátájával.
+   * 
+   * @param column tábla oszlopa
+   * @return az X-koordináta panelen belül
+   */
   private int getBoardPositionX(int column) {
     return column * getCellWidth();
   }
 
+  /**
+   * Visszatér a tábla sorának a panelen belüli Y koordinátájával.
+   * 
+   * @param row tábla sora
+   * @return az Y-koordináta panelen belül
+   */
   private int getBoardPositionY(int row) {
     return row * getCellHeight();
   }
 
+  /**
+   * Ez a metódus visszatér azzal a pozícióval, ami a panelen belüli
+   * koordinátákhoz tartozik.
+   * 
+   * @param x az X-koordináta panelen belül
+   * @param y az Y-koordináta panelen belül
+   * @return a koordinátákhoz tartozó pozíció
+   */
   public Position getCellFromCoordinates(int x, int y) {
     int row = y / getCellHeight();
     int column = x / getCellWidth();
     return new Position(row, column);
   }
-
+  
+  /**
+   * Egy pozícióhoz tartozó cellát újrafest.
+   * 
+   * @param pos mező pozíciója a táblán
+   */
   public void rePaintCell(Position pos) {
-
     int boardPositionX = getBoardPositionX(pos.getColumn());
     int boardPositionY = getBoardPositionY(pos.getRow());
     repaint(boardPositionX, boardPositionY, getCellWidth(), getCellHeight());
   }
-
+  
+  /**
+   * Ez a metódus berajzolja a panelen a cellák széleit fekete színúre.
+   * 
+   * @param g a grafikus objektum, amire rajzolunk
+   */
   public void drawBorders(Graphics g) {
     int rows = controller.getTable().getRows();
     int columns = controller.getTable().getColumns();
@@ -57,7 +106,13 @@ public class GameBoard extends JPanel {
     for (int j = 0; j < columns; j++)
       g.drawLine(j * getCellWidth(), 0, j * getCellWidth(), rows * getCellHeight());
   }
-
+  
+  /**
+   * Ez a metódus berajzol minden mezőt a panelre a kezdeti
+   * állapot alapján.
+   * 
+   * @param g a grafikus objektum, amire rajzolunk
+   */
   public void initializeBoard(Graphics g) {
     for (int i = 0; i < controller.getTable().getRows(); i++) {
       for (int j = 0; j < controller.getTable().getColumns(); j++) {
@@ -68,7 +123,16 @@ public class GameBoard extends JPanel {
     }
     initialized = true;
   }
-
+  
+  /**
+   * Ez a metódus felel a komponensek kirajzolásáért.
+   * Elsőnek meghívja a JPanel paintComponent metódusát.
+   * Ezután ha panel nem volt még inicializálva minden mezőt berajzol.
+   * Ha a panel már inicializálva van csak azokat cellákat rajzolja meg.
+   * amelyek a repaint által érintett területbe beleesnek.
+   * 
+   * @param g a grafikus objektum, amire rajzolunk
+   */
   @Override
   public void paintComponent(Graphics g) {
     super.paintComponent(g);
@@ -91,10 +155,15 @@ public class GameBoard extends JPanel {
     }
     drawBorders(g);
   }
-
-  // Gives the color of the number given as parameter
-  // There are 9 colors, if the neigborNumber is bigger than 8, it will have thes
-  // same color as the rest, when divided by 8.
+  
+  /**
+   * A szomszédos bombák száma alapján visszatér egy színnel.
+   * Összesen 8 szín van, így a számot 8-cal kell maradékosan osztani, ahhoz
+   * hogy megkapjuk a hozzá tartozó színt.
+   * 
+   * @param neighborNumber szomszédos bombák száma
+   * @return mező színe
+   */
   private Color getNumberColor(int neighborNumber) {
     switch (neighborNumber % 8) {
       case 1:
@@ -115,7 +184,15 @@ public class GameBoard extends JPanel {
         return Color.BLACK;
     }
   }
-
+  
+  /**
+   * Ez a metódus felrajzolja a mező szomszédos bombáinak számát a panelre. 
+   * 
+   * @param g a grafikus objektum, amire rajzolunk
+   * @param number a szomszédos bombák száma
+   * @param boardPositionX a cella X-koordinátája a panelen
+   * @param boardPositionY a cella Y-koordinátája a panelen
+   */
   public void drawNumber(Graphics g, int number, int boardPositionX, int boardPositionY) {
     String numberText = String.valueOf(number);
     int numberTextWidth = g.getFontMetrics().stringWidth(numberText);
@@ -126,7 +203,16 @@ public class GameBoard extends JPanel {
 
   }
 
-  // Draws the cell for a number field.
+  /**
+   * Ez a metódus abban az esetben, ha a szomszédos bombák száma legalább 1,
+   * kirajzolja a panelre a számot.
+   * A szám színe a getNumberColor metódus által visszaadott lesz.
+   * 
+   * @param g a grafikus objektum, amire rajzolunk
+   * @param neighborNumber a szomszédos bombák száma
+   * @param boardPositionX a cella X-koordinátája a panelen
+   * @param boardPositionY a cella Y-koordinátája a panelen
+   */
   public void drawNumberCell(Graphics g, int neighborNumber, int boardPositionX, int boardPositionY) {
     if (neighborNumber > 0) {
       g.setColor(getNumberColor(neighborNumber));
@@ -135,8 +221,18 @@ public class GameBoard extends JPanel {
     }
   }
 
-  // Draws the flags in the cell
-  // A zászlók oválisok által vannak felrajzolva, a könnyebb láthatóság érdekében.
+  /**
+   * Ez a metódus kirajzolja mezőkhöz tartozó zászlókat.
+   * Ha több zászló is van egy mezőben, a zászlók színe különbözik.
+   * A zászlóhoz tartozik egy fekete tartórúd is.
+   * A cella háttérszíne a paraméterként megkapott szín lesz.
+   * 
+   * @param g a grafikus objektum, amire rajzolunk
+   * @param flagNumber a zászlók száma
+   * @param boardPositionX a cella X-koordinátája a panelen
+   * @param boardPositionY a cella Y-koordinátája a panelen
+   * @param background a cella hátterének színe
+   */
   public void drawFlags(Graphics g, int flagNumber, int boardPositionX, int boardPositionY, Color background) {
     g.setColor(background);
     g.fillRect(boardPositionX, boardPositionY, getCellWidth(), getCellHeight());
@@ -163,7 +259,21 @@ public class GameBoard extends JPanel {
       g.fillPolygon(xs, ys, 3);
     }
   }
-
+  
+  /**
+   * Ez a metódus kirajzol egy bomba mezőt.
+   * Erre akkor van szükség, ha egy bomba helytelenül
+   * biztonságos mezőnek lett bejelölve.
+   * Minden esetben egy bomba van a cellába berajzolva.
+   * A bombák belsejében szerepel, hogy a cella hány bombát tartalmaz.
+   * A cella háttérszíne a paraméterként megkapott szín lesz.
+   * 
+   * @param g a grafikus objektum, amire rajzolunk
+   * @param boardPositionX a cella X-koordinátája a panelen
+   * @param boardPositionY a cella Y-koordinátája a panelen
+   * @param background a cella hátterének színe
+   * @param mineNumber a cellában szereplő bombák száma
+   */
   public void drawBomb(Graphics g, int boardPositionX, int boardPositionY, Color background, int mineNumber) {
     int width = getCellWidth();
     int height = getCellHeight();
@@ -182,7 +292,16 @@ public class GameBoard extends JPanel {
       g.setColor(Color.PINK);
     drawNumber(g, mineNumber, boardPositionX, boardPositionY);
   }
-
+  
+  /**
+   * Ez a metódus sajtot rajzol arra a pozícióra,
+   * ami a RAT objektumnak a célpozíciója.
+   * A sajt kirajzolásához 2D-s grafika van alkalmazva.
+   * 
+   * @param g a grafikus objektum, amire rajzolunk
+   * @param x a cella X-koordinátája a panelen
+   * @param y a cella Y-koordinátája a panelen
+   */
   public void drawCheese(Graphics g, int x, int y) {
     int width = getCellWidth();
     int height = getCellHeight();
@@ -196,7 +315,15 @@ public class GameBoard extends JPanel {
     g2.fillOval(x + width / 2, y + height / 2, width / 9, height / 9);
     g2.fillOval(x + width / 3, y + height / 3, width / 8, height / 8);
   }
-
+  
+  /**
+   * Ez a metódus az egeret rajzolja ki, a RAT objektum
+   * jelenlegi pozíciójára
+   * Az egér feje, fülei, szemei és orra van a panelre felrajzolva.
+   * @param g a grafikus objektum, amire rajzolunk
+   * @param x a cella X-koordinátája a panelen
+   * @param y a cella Y-koordinátája a panelen
+   */
   public void drawMouse(Graphics g, int x, int y) {
     Graphics2D g2 = (Graphics2D) g;
     int width = getCellWidth();
@@ -224,7 +351,18 @@ public class GameBoard extends JPanel {
     int noseY = headY + headH * 2 / 3;
     g2.fillOval(noseX, noseY, noseSize, noseSize);
   }
-
+  
+  /**
+   * Ez a metódus választja ki, hogy mi igaz a megadott mezőre
+   * és ez alapján, mit kell a panelre felrajzolni.
+   * Ha a játékos vesztett, a biztonságos mezőnek nézett bomba
+   * és a helytelen számú zászlóval bejelölt mező piros színű hátteret kapnak.
+   * 
+   * @param row a kijelölt mező sora
+   * @param column a kijelölt mező oszlopa
+   * @param g a grafikus objeltum amire rajzolunk
+   * @param field a kijelölt mező
+   */
   public void drawCell(int row, int column, Graphics g, Field field) {
 
     int boardPositionX = getBoardPositionX(column);
@@ -245,14 +383,18 @@ public class GameBoard extends JPanel {
     if (field.getRevealed() && !field.getIsMine())
       drawNumberCell(g, field.getNumberOfNeighbors(), boardPositionX, boardPositionY);
     if (field.getRevealed() && field.getIsMine())
-      drawBomb(g, boardPositionX, boardPositionY, Color.RED,field.getMineNumber());
+      drawBomb(g, boardPositionX, boardPositionY, Color.RED, field.getMineNumber());
     if (!field.getRevealed() && !field.getFlagged() && controller.getBombActivated() && field.getIsMine())
-      drawBomb(g, boardPositionX, boardPositionY, Color.LIGHT_GRAY,field.getMineNumber());
+      drawBomb(g, boardPositionX, boardPositionY, Color.LIGHT_GRAY, field.getMineNumber());
     if (controller.getBombActivated() && field.getFlagged() && field.getFlags() != field.getMineNumber())
       drawFlags(g, field.getFlags(), boardPositionX, boardPositionY, Color.RED);
 
   }
-
+  /**
+   * Visszatéríti a játékpanelhez tartozó játékvezérlőt.
+   * 
+   * @return játékpanelhez tartozó játékvezérlő
+   */
   public GameController getController() {
     return controller;
   }

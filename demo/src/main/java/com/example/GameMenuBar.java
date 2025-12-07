@@ -7,7 +7,14 @@ public class GameMenuBar extends JMenuBar {
     private Difficulties selectedDifficulty = null;
     private GameModes selectedGameMode = null;
     private GameWindow window;
-
+    /**
+     * Ez a metódus egy új JMenu-t generál, amely neve "Difficulties"
+     * Ehhez  a könnyű, közepes és nehéz  nehézségi szintek vannak hozzáadva.
+     * Minden menüponthoz hozzárendeli a megfelelő egérkattintás kezelést,
+     * amely beállítja a kiválasztott nehézséget.
+     * 
+     * @return a létrehozott JMenu objektum
+     */
     public JMenu getDifficultyMenu(){
         JMenu difficultyMenu = new JMenu("Difficulty");
         JMenuItem easyItem = new JMenuItem("Easy");
@@ -22,6 +29,14 @@ public class GameMenuBar extends JMenuBar {
         return difficultyMenu;
     }
     
+    /**
+     * Ez a metódus egy új JMenu-t generál, amely neve "Gamemode"
+     * Ehhez a default és rat játékmód van hozzáadva.
+     * Mindkettő menüponthoz hozzárendeli a megfelelő egérkattintás kezelést,
+     * amely beállítja a kiválasztott játékmódot.
+     * 
+     * @return a létrehozott JMenu objektum
+     */
     public JMenu getGameModeMenu(){
         JMenu gameModeMenu= new JMenu("Gamemode");
         JMenuItem defaultItem= new JMenuItem("Default");
@@ -32,6 +47,15 @@ public class GameMenuBar extends JMenuBar {
         gameModeMenu.add(ratItem);
         return gameModeMenu;
     }
+    /**
+     * Ha a nehézségi szint, vagy a játékmód nincs kiválasztva 
+     * megjelenik egy hibaüzenet.
+     * A metódus ebben az esetben true értékkel tér vissza.
+     * Ha mindkettő ki van választva false értékkel tér vissza.
+     * 
+     * @return true, ha valamelyik nincs kiválasztva
+     *         false, ha mindkettő ki van választva
+     */
     public boolean modeOrDifficultyIsNotSelected(){
         if (selectedDifficulty == null || selectedGameMode == null) {
             JOptionPane.showMessageDialog(null,
@@ -41,6 +65,13 @@ public class GameMenuBar extends JMenuBar {
         }
         return false;
     }
+    /**
+     * Ez a metódus egy új JMenuItem-et generál, amely neve "Gamemode".
+     * Ha a nehézségi szint és játékmód is ki van választva, 
+     * a menüpontra kattintva elindul egy új játék.
+     * 
+     * @return a létrehozott JMenuItem objektum
+     */
     public JMenuItem getNewGameMenuItem(){
         JMenuItem newGameItem= new JMenuItem("New Game");
         newGameItem.addActionListener(e ->{
@@ -49,6 +80,11 @@ public class GameMenuBar extends JMenuBar {
         });
         return newGameItem;
     }
+    /**
+     * Létrehozza a GameMenuBar objektumot és hozzáadja a menüpontokat.
+     * 
+     * @param window az ablak amelyen szerepel a menü
+     */
     public GameMenuBar(GameWindow window){
        this.window=window;
        add(getDifficultyMenu());

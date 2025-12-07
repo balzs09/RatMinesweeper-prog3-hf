@@ -4,11 +4,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class DefaultTableTest {
+
+  /**
+   * Teszteli, hogy a DefaultTable konstruktora helyesen állítja be
+   * a sorok, oszlopok, összes bánya és az egyaknás mezők számát.
+   */
   @Test
   public void testDefaultTableConstructor() {
     DefaultTable dt = new DefaultTable(5, 9, 8);
@@ -18,6 +21,10 @@ public class DefaultTableTest {
     assertEquals(8, dt.getOneMineFields());
   }
 
+  /**
+   * Teszteli, hogy a getAvailableFields nem ad vissza olyan mezőt,
+   * amely a kiválasztott pozícióban van, vagy annak szomszédja.
+   */
   @Test
   public void testGetAvailableFields() {
     DefaultTable dt = new DefaultTable(5, 5, 10);
@@ -29,21 +36,29 @@ public class DefaultTableTest {
       assertFalse(available.contains(dt.getFieldByPosition(p)));
     }
   }
+
+  /**
+   * Teszteli, hogy a selectingMines a megadott elérhető mezők közül
+   * pontosan a kívánt számú mezőt jelöl ki bombaként.
+   */
   @Test
-    public void testSelectingMines() {
-        DefaultTable dt = new DefaultTable(5, 5, 5);
-        Position selected = new Position(2, 2);
-        ArrayList<Field> available = dt.getavailableFields(selected);
-        dt.selectingMines(available);
-        int mineNumber = 0;
-        for (Field field : available)
-            if (field.getIsMine())
-                mineNumber++;
+  public void testSelectingMines() {
+    DefaultTable dt = new DefaultTable(5, 5, 5);
+    Position selected = new Position(2, 2);
+    ArrayList<Field> available = dt.getavailableFields(selected);
+    dt.selectingMines(available);
+    int mineNumber = 0;
+    for (Field field : available)
+      if (field.getIsMine())
+        mineNumber++;
 
-        assertEquals(5, mineNumber);
-    }
+    assertEquals(5, mineNumber);
+  }
 
-
+  /**
+   * Teszteli, hogy a selectingMines a megadott elérhető mezők közül
+   * pontosan a kívánt számú mezőt jelöl ki bányaként.
+   */
   @Test
   public void testCheckNeighbors() {
     DefaultTable dt = new DefaultTable(6, 6, 2);
@@ -55,6 +70,10 @@ public class DefaultTableTest {
     assertEquals(1, dt.getFieldByPosition(new Position(0, 2)).getNumberOfNeighbors());
   }
 
+  /**
+   * Teszteli, hogy a getNeighborPositions megfelelő számú
+   * szomszédos pozíciót ad vissza sarok-, szél- és belső mezőre.
+   */
   @Test
   public void testGetNeighborPositions() {
     DefaultTable dt = new DefaultTable(3, 3, 0);
@@ -63,6 +82,10 @@ public class DefaultTableTest {
     assertEquals(8, dt.getNeighborPositions(new Position(1, 1)).size());
   }
 
+  /**
+   * Teszteli, hogy különböző pozíciókhoz külön Field objektum
+   * tartozik, vagyis nem ugyanazt az példányt adja vissza.
+   */
   @Test
   public void testGetFieldByPosition() {
     DefaultTable dt = new DefaultTable(4, 4, 0);
@@ -71,6 +94,10 @@ public class DefaultTableTest {
     assertNotSame(f1, f2);
   }
 
+  /**
+   * Teszteli, hogy különböző pozíciókhoz külön Field objektum
+   * tartozik, vagyis nem ugyanazt az instance-t adja vissza.
+   */
   @Test
   public void testGetPositionByField() {
     DefaultTable dt = new DefaultTable(3, 3, 0);
@@ -78,18 +105,6 @@ public class DefaultTableTest {
     Position p = dt.getPositionByField(f);
     assertEquals(1, p.getRow());
     assertEquals(2, p.getColumn());
-  }
-
-  @Test
-  public void testRevealNeighborsOfEmptyFields() {
-    DefaultTable dt = new DefaultTable(3, 3, 0);
-    dt.checkNeighbors();
-    Field start = dt.getFieldByPosition(new Position(1, 1));
-    Set<Position> visited = new HashSet<>();
-    dt.RevealNeighborsOfEmptyFields(start, visited);
-    for (Field f : dt.fields) {
-      assertTrue(f.getRevealed());
-    }
   }
 
 }

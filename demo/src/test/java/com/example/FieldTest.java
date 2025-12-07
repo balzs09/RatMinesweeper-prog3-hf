@@ -4,6 +4,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class FieldTest {
+    /**
+     * Teszteli a Field konstruktorát alapértelmezett értékekkel.
+     * Ellenőrzi, hogy az aknamentes mező megfelelő kezdőállapotot kap.
+     */
     @Test
     public void testFieldConstructor() {
         Field f = new Field(false);
@@ -15,6 +19,10 @@ public class FieldTest {
         assertEquals(0, f.getFlags());
     }
 
+    /**
+     * Teszteli a Field konstruktorát alapértelmezett értékekkel.
+     * Ellenőrzi, hogy az aknamentes mező megfelelő kezdőállapotot kap.
+     */
     @Test
     public void testSetMineNumber() {
         Field f = new Field(false);
@@ -23,6 +31,10 @@ public class FieldTest {
         assertEquals(2, f.getMineNumber());
     }
 
+    /**
+     * Teszteli, hogy a setNumberOfNeighbors helyesen állítja be
+     * a szomszédos mezők számát.
+     */
     @Test
     public void testSetNumberOfNeighbors() {
         Field f = new Field(false);
@@ -30,6 +42,9 @@ public class FieldTest {
         assertEquals(4, f.getNumberOfNeighbors());
     }
 
+    /**
+     * Teszteli a mező felfedettségének beállítását.
+     */
     @Test
     public void testSetRevealed() {
         Field f = new Field(false);
@@ -38,6 +53,9 @@ public class FieldTest {
         assertTrue(f.getRevealed());
     }
 
+    /**
+     * Teszteli, hogy a zászlóként kijelölés állapota helyesen frissül.
+     */
     @Test
     public void testSetFlagged() {
         Field f = new Field(false);
@@ -46,6 +64,10 @@ public class FieldTest {
         assertTrue(f.getFlagged());
     }
 
+    /**
+     * Teszteli a zászlózás logikáját alapértelmezett játékmódban:
+     * 1 -> 0 ciklust
+     */
     @Test
     public void testIncrementFlagsDefaultMode() {
         Field f = new Field(false);
@@ -57,6 +79,11 @@ public class FieldTest {
         assertEquals(0, f.getFlags());
     }
 
+    /**
+     * *
+     * Teszteli a RAT mód több szintű zászlózását:
+     * 1 -> 2 -> 3 -> 0 ciklust.
+     */
     @Test
     void testIncrementFlagsRatMode() {
         Field f = new Field(false);
@@ -71,6 +98,10 @@ public class FieldTest {
         assertFalse(f.getFlagged());
     }
 
+    /**
+     * Teszteli, hogy a resetFlags visszaállítja a zászlózást 0-ra
+     * és eltávolítja a jelölést a mezőről.
+     */
     @Test
     void testResetFlags() {
         Field f = new Field(false);

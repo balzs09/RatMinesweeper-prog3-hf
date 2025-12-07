@@ -4,6 +4,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PositionTest {
+
+    /**
+     * Teszteli, hogy a Position konstruktor a megadott
+     * sor- és oszlopszámot helyesen állítja be.
+     */
     @Test
     public void testPositionConstructorInitialValues() {
         Position pos = new Position(0, 0);
@@ -11,6 +16,11 @@ public class PositionTest {
         assertEquals(0, pos.getColumn());
     }
 
+    /**
+     * Teszteli a Position equals metódusát.
+     * Azonos koordinátákkal rendelkező pozíciók legyenek egyenlőek,
+     * eltérők pedig ne.
+     */
     @Test
     public void testEquals() {
         Position pos1 = new Position(1, 1);
@@ -20,6 +30,10 @@ public class PositionTest {
         assertFalse(pos1.equals(pos2));
     }
 
+    /**
+     * Teszteli, hogy azonos pozíciók azonos hashCode értéket kapnak,
+     * míg különböző pozíciók különbözőt.
+     */
     @Test
     public void testHashCode() {
         Position pos1 = new Position(1, 1);
