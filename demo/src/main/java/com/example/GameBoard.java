@@ -6,6 +6,22 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
+/**
+ * @brief A GameBoard osztály felelős a játéktábla vizuális megjelenítéséért.
+ * 
+ * Feladata a cellák, szomszédos bombák száma, zászlók, bombák,
+ * egér és sajt kirajzolása a panelen.
+ * Kezeli a repaint-et a változások szerint, és a felhasználó kattintásaira 
+ * reagál, a GameController logikáját használva.
+ * 
+ * Kapcsolódó osztályok:
+ * - GameMouseAdapter: Az egérkattintásra való reagálás
+ * - GameController: a játék logikájának kezelése
+ * - Field: a játéktábla mezői
+ * - Position: a mezők pozícióinak kezelése
+ * - RatTable, Rat: RAT játékmódhoz tartozó egér és célpozíció
+ * - GameModes, Difficulties: játékmód és nehézségi szint információk
+ */
 public class GameBoard extends JPanel {
   private GameController controller;
   private boolean initialized = false;

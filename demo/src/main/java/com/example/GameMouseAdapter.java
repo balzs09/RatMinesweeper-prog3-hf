@@ -4,6 +4,17 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.SwingUtilities;
 
+/**
+ * @brief A GameMouseAdapter kezeli az egér kattintásokat a játéktáblán.
+ *
+ * Feladata, hogy a GameBoard panelen történt egér eseményeket a 
+ * GameController megfelelő metódusaihoz továbbítsa.
+ *
+ * Kapcsolódó osztályok:
+ * - GameBoard: a panel, amin az adapter figyeli az egér eseményeket
+ * - MouseClicks: az egérgombok típusát reprezentáló enum
+ * - Position: a kattintás helyének táblabeli koordinátái
+ */
 public class GameMouseAdapter extends MouseAdapter {
     private GameBoard board;
 

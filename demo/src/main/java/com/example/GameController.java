@@ -6,6 +6,32 @@ import java.util.List;
 import java.util.Set;
 import java.io.File;
 
+/**
+ * @brief A GameController osztály kezeli a játék logikáját és a játéktábla
+ *        állapotát.
+ * 
+ *        Az osztály felelős a játék indításáért, a tábla létrehozásáért, az
+ *        egér
+ *        mozgásáért (RAT mód), a mezők felfedéséért és a bombák kezeléséért.
+ *        Kezeli a győzelem és veszteség logikáját, a bejelölt és be nem jelölt
+ *        bombákat,
+ *        valamint frissíti a játékablak felületét a változásoknak megfelelően.
+ * 
+ *        Fő funkciók:
+ *        - Játéktábla létrehozása a nehézségi szintnek megfelelő paraméterekkel
+ *        - Üres mezők automatikus felfedése
+ *        - Egér lépése RAT módban
+ *        - Bejelölt bombák és helyes/hibás zászlók kezelése
+ *        - Győzelem és veszteség logika, ranglista frissítés
+ *        - Interakciók a felhasználóval (bal/jobb egérgomb)
+ *
+ *        Kapcsolódó osztályok és típusok:
+ *        - GameBoard, GameWindow: a felület és a vizuális megjelenítés kezelése
+ *        - Table, DefaultTable, RatTable: a játék logikai táblája
+ *        - Field: egy mező a táblán
+ *        - Rat, Position: egér pozíciójának kezelése RAT módban
+ *        - GameModes, Difficulties: a játékmód és nehézségi szint beállítása
+ */
 public class GameController {
   private Difficulties difficulty;
   private GameModes gameMode;
@@ -329,7 +355,7 @@ public class GameController {
   }
 
   /**
-   * A metódus leállítja az idő számlálását a játék ablakában.
+   * A metódus leállítja az idő számlálását a játék ablakában, ha véget ért a játék.
    * Abban az esetben ha a bomba már aktiválva van, a metódus a nyerést hamisra
    * állítja.
    * A ki nem rajzolt bombákat és rosszul bejelölt mezőket újrarajzolja.
@@ -340,14 +366,16 @@ public class GameController {
    * 
    */
   public void setWinner() {
-    window.stopTimer();
     if (bombActivated == true) {
+      window.stopTimer();
       repaintMissingBombsAndWrongFlags();
       winner = false;
       window.writeMessageAfterLosing();
+      
       return;
     }
     if (remainingMines == 0 && isEveryFieldSelected()) {
+      window.stopTimer();
       winner = true;
       window.refreshHighscoreArea();
       File outputFile = window.getHighscoreManager().getTextFileByModeAndDifficulty(gameMode, difficulty);
@@ -361,7 +389,7 @@ public class GameController {
    * Bal gomb esetén, ha a tábla még nincs létrehozva előbb a táblát létrehozza.
    * Minden gombnyomásra ellenőrzi, hogy vége-e a játéknak.
    * 
-   * @param click gombnyomás típusa(jobb vagy bal)
+   * @param click        gombnyomás típusa(jobb vagy bal)
    * @param slectedField kibálasztott mező
    */
   public void mouseChoser(MouseClicks click, Field slectedField) {

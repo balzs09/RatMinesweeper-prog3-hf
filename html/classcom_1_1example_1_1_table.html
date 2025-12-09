@@ -91,14 +91,17 @@ $(function(){initNavTree('classcom_1_1example_1_1_table.html','','classcom_1_1ex
   <div class="headertitle"><div class="title">com.example.Table Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Absztrakt táblaosztály az aknakereső játékhoz.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for com.example.Table:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classcom_1_1example_1_1_table.png" usemap="#com_2Eexample_2ETable_map" alt=""/>
   <map id="com_2Eexample_2ETable_map" name="com_2Eexample_2ETable_map">
-<area href="classcom_1_1example_1_1_default_table.html" alt="com.example.DefaultTable" shape="rect" coords="0,56,160,80"/>
-<area href="classcom_1_1example_1_1_rat_table.html" alt="com.example.RatTable" shape="rect" coords="170,56,330,80"/>
+<area href="classcom_1_1example_1_1_default_table.html" title="A klasszikus aknakereső játékmód tábláját megvalósító osztály." alt="com.example.DefaultTable" shape="rect" coords="0,56,160,80"/>
+<area href="classcom_1_1example_1_1_rat_table.html" title="A wrap-around logikával működő aknakereső tábla, amelyet a Rat játékmód használ." alt="com.example.RatTable" shape="rect" coords="170,56,330,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -128,7 +131,11 @@ List&lt; <a class="el" href="classcom_1_1example_1_1_field.html">Field</a> &gt;&
 <tr class="memitem:a47849dd9367427edbf6c3480535a9365" id="r_a47849dd9367427edbf6c3480535a9365"><td class="memItemLeft" align="right" valign="top"><a id="a47849dd9367427edbf6c3480535a9365" name="a47849dd9367427edbf6c3480535a9365"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>allMines</b></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Absztrakt táblaosztály az aknakereső játékhoz. </p>
+<p>A <a class="el" href="classcom_1_1example_1_1_table.html" title="Absztrakt táblaosztály az aknakereső játékhoz.">Table</a> osztály reprezentál egy játékteret, amely sorokból és oszlopokból áll, <br  />
+ és mezőket (<a class="el" href="classcom_1_1example_1_1_field.html" title="A Field osztály a játék egy mezőjét reprezentálja.">Field</a>) tartalmaz. Emellett tartalmazza azt is, hogy hány bombamező szerepel a táblában. Az osztály felelős a mezők tárolásáért, szomszédsági viszonyok kezeléséért, valamint a bombák elhelyezésének logikájáért. A konkrét játékmódok (<a class="el" href="classcom_1_1example_1_1_default_table.html" title="A klasszikus aknakereső játékmód tábláját megvalósító osztály.">DefaultTable</a>, <a class="el" href="classcom_1_1example_1_1_rat_table.html" title="A wrap-around logikával működő aknakereső tábla, amelyet a Rat játékmód használ.">RatTable</a>) ebből az osztályból származnak, és megvalósítják a játékmód-specifikus funkciókat, mint például a szomszédpozíciók meghatározása vagy a bombák kijelölése. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aca3fb295482ecb671a668d8ce596fbf3" name="aca3fb295482ecb671a668d8ce596fbf3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca3fb295482ecb671a668d8ce596fbf3">&#9670;&#160;</a></span>Table()</h2>
 
@@ -187,7 +194,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>allMines</b></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Ez a metódus a <a class="el" href="classcom_1_1example_1_1_default_table.html">DefaultTable</a> és <a class="el" href="classcom_1_1example_1_1_rat_table.html">RatTable</a> osztályokban van megvalósítva. Ellenőrzi, hogy egy mező szomszédjaiban összsen hány bomba található. </p>
+<p>Ez a metódus a <a class="el" href="classcom_1_1example_1_1_default_table.html" title="A klasszikus aknakereső játékmód tábláját megvalósító osztály.">DefaultTable</a> és <a class="el" href="classcom_1_1example_1_1_rat_table.html" title="A wrap-around logikával működő aknakereső tábla, amelyet a Rat játékmód használ.">RatTable</a> osztályokban van megvalósítva. Ellenőrzi, hogy egy mező szomszédjaiban összsen hány bomba található. </p>
 
 <p>Reimplemented in <a class="el" href="classcom_1_1example_1_1_default_table.html#a8568cb966551ead3ded095baf1159069">com.example.DefaultTable</a>, and <a class="el" href="classcom_1_1example_1_1_rat_table.html#aacfc8c709163735c7869c527fc6ed217">com.example.RatTable</a>.</p>
 
@@ -310,7 +317,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>allMines</b></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Ez a metódus a <a class="el" href="classcom_1_1example_1_1_default_table.html">DefaultTable</a> és <a class="el" href="classcom_1_1example_1_1_rat_table.html">RatTable</a> osztályokban van megvalósítva. Mindkét estetben a játékmód táblájának megfelelő pozíciókkal tér vissza.</p>
+<p>Ez a metódus a <a class="el" href="classcom_1_1example_1_1_default_table.html" title="A klasszikus aknakereső játékmód tábláját megvalósító osztály.">DefaultTable</a> és <a class="el" href="classcom_1_1example_1_1_rat_table.html" title="A wrap-around logikával működő aknakereső tábla, amelyet a Rat játékmód használ.">RatTable</a> osztályokban van megvalósítva. Mindkét estetben a játékmód táblájának megfelelő pozíciókkal tér vissza.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td>jelenlegi pozíció, melynek szeretnénk megtudni a szomszédjait </td></tr>
@@ -370,7 +377,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>allMines</b></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Ez a metódus a <a class="el" href="classcom_1_1example_1_1_default_table.html">DefaultTable</a> és <a class="el" href="classcom_1_1example_1_1_rat_table.html">RatTable</a> osztályokban van megvalósítva. A függvény visszatér az egyetlen bombát tartalmazó mezők számával</p>
+<p>Ez a metódus a <a class="el" href="classcom_1_1example_1_1_default_table.html" title="A klasszikus aknakereső játékmód tábláját megvalósító osztály.">DefaultTable</a> és <a class="el" href="classcom_1_1example_1_1_rat_table.html" title="A wrap-around logikával működő aknakereső tábla, amelyet a Rat játékmód használ.">RatTable</a> osztályokban van megvalósítva. A függvény visszatér az egyetlen bombát tartalmazó mezők számával</p>
 <dl class="section return"><dt>Returns</dt><dd>az egyetlen bombát tartalmazó mezők száma </dd></dl>
 
 <p>Reimplemented in <a class="el" href="classcom_1_1example_1_1_default_table.html#a10626441bfc2c6e7f9fd4ab286218a47">com.example.DefaultTable</a>, and <a class="el" href="classcom_1_1example_1_1_rat_table.html#a33ecae22587c2ee0287e01e86f254b08">com.example.RatTable</a>.</p>
@@ -443,7 +450,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>allMines</b></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Ez a metódus a <a class="el" href="classcom_1_1example_1_1_default_table.html">DefaultTable</a> és <a class="el" href="classcom_1_1example_1_1_rat_table.html">RatTable</a> osztályokban van megvalósítva. Kiválasztja azokat a mezőket, amelyek bombát tartalmaznak. A bombát tartalmazó mezők között nem lehet olyan, ami az elsőként kiválasztott pozíció szomszédja.</p>
+<p>Ez a metódus a <a class="el" href="classcom_1_1example_1_1_default_table.html" title="A klasszikus aknakereső játékmód tábláját megvalósító osztály.">DefaultTable</a> és <a class="el" href="classcom_1_1example_1_1_rat_table.html" title="A wrap-around logikával működő aknakereső tábla, amelyet a Rat játékmód használ.">RatTable</a> osztályokban van megvalósítva. Kiválasztja azokat a mezőket, amelyek bombát tartalmaznak. A bombát tartalmazó mezők között nem lehet olyan, ami az elsőként kiválasztott pozíció szomszédja.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">availableFields</td><td>az elérhető pozíciók </td></tr>

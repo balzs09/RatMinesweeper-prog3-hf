@@ -1,5 +1,10 @@
 \doxysection{com.\+example.\+Game\+Window Class Reference}
-\hypertarget{classcom_1_1example_1_1_game_window}{}\label{classcom_1_1example_1_1_game_window}\index{com.example.GameWindow@{com.example.GameWindow}}
+\label{classcom_1_1example_1_1_game_window}\index{com.example.GameWindow@{com.example.GameWindow}}
+
+
+A játék főablaka, amely tartalmazza a menüt, a játékpanelt, az információs panelt és a ranglistát.  
+
+
 Inheritance diagram for com.\+example.\+Game\+Window\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,34 +14,158 @@ Inheritance diagram for com.\+example.\+Game\+Window\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_window_a3792c1568a6a7fb40e0ba8648e908f13}\label{classcom_1_1example_1_1_game_window_a3792c1568a6a7fb40e0ba8648e908f13} 
-void {\bfseries set\+Info\+Panel} (\mbox{\hyperlink{enumcom_1_1example_1_1_game_modes}{Game\+Modes}} mode)
+void \textbf{ set\+Info\+Panel} (\textbf{ Game\+Modes} mode)
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_window_ac9432fa8053d5b7cd069f75c57bac7de}\label{classcom_1_1example_1_1_game_window_ac9432fa8053d5b7cd069f75c57bac7de} 
-void {\bfseries refresh\+Highscore\+Area} ()
+void \textbf{ refresh\+Highscore\+Area} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_window_a9f14710afdd32f3c1f91b39fa7c3cd1c}\label{classcom_1_1example_1_1_game_window_a9f14710afdd32f3c1f91b39fa7c3cd1c} 
-void {\bfseries save\+Highscore\+After\+Win} (int time\+Passed, File output\+File)
+void \textbf{ save\+Highscore\+After\+Win} (int time\+Passed, File output\+File)
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_window_a7ba7319ff55eec0e7e578cd84440bd24}\label{classcom_1_1example_1_1_game_window_a7ba7319ff55eec0e7e578cd84440bd24} 
-void {\bfseries write\+Message\+After\+Losing} ()
+void \textbf{ write\+Message\+After\+Losing} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_window_ae820a56bfb3f9860e1346eb7d521fed8}\label{classcom_1_1example_1_1_game_window_ae820a56bfb3f9860e1346eb7d521fed8} 
-void {\bfseries stop\+Timer} ()
+\textbf{ Game\+Window} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_window_a5ce5f16b44cd646a604fe2a9a73a487e}\label{classcom_1_1example_1_1_game_window_a5ce5f16b44cd646a604fe2a9a73a487e} 
-void {\bfseries update\+Mines} (int remaining\+Mines, int flagnumber)
+void \textbf{ stop\+Timer} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_window_aa3a6def4ebb0fb2c21a93636f9a0d967}\label{classcom_1_1example_1_1_game_window_aa3a6def4ebb0fb2c21a93636f9a0d967} 
-void {\bfseries start\+New\+Game} (\mbox{\hyperlink{enumcom_1_1example_1_1_game_modes}{Game\+Modes}} mode, \mbox{\hyperlink{enumcom_1_1example_1_1_difficulties}{Difficulties}} dif)
+void \textbf{ update\+Mines} (int remaining\+Mines, int flagnumber)
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_window_a60598ea4e29bcaf154f1ac1e8901dbbe}\label{classcom_1_1example_1_1_game_window_a60598ea4e29bcaf154f1ac1e8901dbbe} 
-\mbox{\hyperlink{classcom_1_1example_1_1_highscore_manager}{Highscore\+Manager}} {\bfseries get\+Highscore\+Manager} ()
+void \textbf{ start\+New\+Game} (\textbf{ Game\+Modes} mode, \textbf{ Difficulties} dif)
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_window_a5f937782f603a39a72f6808cc09f222b}\label{classcom_1_1example_1_1_game_window_a5f937782f603a39a72f6808cc09f222b} 
-int {\bfseries get\+Time\+Passed} ()
+\textbf{ Highscore\+Manager} \textbf{ get\+Highscore\+Manager} ()
+\item 
+int \textbf{ get\+Time\+Passed} ()
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A játék főablaka, amely tartalmazza a menüt, a játékpanelt, az információs panelt és a ranglistát. 
+
+Feladata\+:
+\begin{DoxyItemize}
+\item A \doxyref{Game\+Board}{p.}{classcom_1_1example_1_1_game_board} és \doxyref{Game\+Controller}{p.}{classcom_1_1example_1_1_game_controller} összekapcsolása.
+\item Az eltelt idő és a be nem jelölt bombák számának megjelenítése.
+\item A \doxyref{Highscore\+Manager}{p.}{classcom_1_1example_1_1_highscore_manager} kezelése, játékos eredmények mentése és megjelenítése.
+\item Új játék indítása a kiválasztott nehézségi szint és játékmód alapján.
+\end{DoxyItemize}
+
+Kapcsolódó osztályok\+:
+\begin{DoxyItemize}
+\item \doxyref{Game\+Board}{p.}{classcom_1_1example_1_1_game_board}\+: a játékmezők kirajzolása.
+\item \doxyref{Game\+Controller}{p.}{classcom_1_1example_1_1_game_controller}\+: a játék logikájának vezérlése.
+\item \doxyref{Game\+Menu\+Bar}{p.}{classcom_1_1example_1_1_game_menu_bar}\+: a játék menüje, innen lehet indítani új játékot.
+\item \doxyref{Highscore\+Manager}{p.}{classcom_1_1example_1_1_highscore_manager}\+: a legjobb eredmények kezelése. 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{com.example.GameWindow@{com.example.GameWindow}!GameWindow@{GameWindow}}
+\index{GameWindow@{GameWindow}!com.example.GameWindow@{com.example.GameWindow}}
+\doxysubsubsection{GameWindow()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_window_a3e108560f20bafe750560bd8861e48ee} 
+com.\+example.\+Game\+Window.\+Game\+Window (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+A \doxyref{Game\+Window}{p.}{classcom_1_1example_1_1_game_window} osztály konstruktora. Hozzáadja az ablakhoz a game\+Menu\+Bar, infopanel, side\+Panel és game\+Board objektumokat. Az ablak nagy részét a játékpanel teszi ki. Az infopanel a felső részre kerül, a side\+Panel az ablak jobb oldalára. Kilépést az X-\/et megnyomva lehet végrehajtani. 
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{com.example.GameWindow@{com.example.GameWindow}!getHighscoreManager@{getHighscoreManager}}
+\index{getHighscoreManager@{getHighscoreManager}!com.example.GameWindow@{com.example.GameWindow}}
+\doxysubsubsection{getHighscoreManager()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_window_a60598ea4e29bcaf154f1ac1e8901dbbe} 
+\textbf{ Highscore\+Manager} com.\+example.\+Game\+Window.\+get\+Highscore\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Ez a metódus visszatéríti az ablakhoz tartozó High\+Score\+Manager objektumot.
+
+\begin{DoxyReturn}{Returns}
+jelenlegi játékhoz tartozó High\+Score\+Manager objektum 
+\end{DoxyReturn}
+\index{com.example.GameWindow@{com.example.GameWindow}!getTimePassed@{getTimePassed}}
+\index{getTimePassed@{getTimePassed}!com.example.GameWindow@{com.example.GameWindow}}
+\doxysubsubsection{getTimePassed()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_window_a5f937782f603a39a72f6808cc09f222b} 
+int com.\+example.\+Game\+Window.\+get\+Time\+Passed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Ez a metódus visszatéríti az eltelt időt másodpercben
+
+\begin{DoxyReturn}{Returns}
+az eltelt idő másodpercben 
+\end{DoxyReturn}
+\index{com.example.GameWindow@{com.example.GameWindow}!refreshHighscoreArea@{refreshHighscoreArea}}
+\index{refreshHighscoreArea@{refreshHighscoreArea}!com.example.GameWindow@{com.example.GameWindow}}
+\doxysubsubsection{refreshHighscoreArea()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_window_ac9432fa8053d5b7cd069f75c57bac7de} 
+void com.\+example.\+Game\+Window.\+refresh\+Highscore\+Area (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Ez a metódus frissíti a ranglista megjelenítését. Általa az új játékos eredménye is bekerül. \index{com.example.GameWindow@{com.example.GameWindow}!saveHighscoreAfterWin@{saveHighscoreAfterWin}}
+\index{saveHighscoreAfterWin@{saveHighscoreAfterWin}!com.example.GameWindow@{com.example.GameWindow}}
+\doxysubsubsection{saveHighscoreAfterWin()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_window_a9f14710afdd32f3c1f91b39fa7c3cd1c} 
+void com.\+example.\+Game\+Window.\+save\+Highscore\+After\+Win (\begin{DoxyParamCaption}\item[{int}]{time\+Passed}{, }\item[{File}]{output\+File}{}\end{DoxyParamCaption})}
+
+Ez a metódus elmenti a nyertes eredmlnyt, ha az benne van a legjobb 10-\/ben. Ha nincs név beírva akkor a név helyére Anonymus kerül. Meghívja a legjobb eredmények hozzáadási metódusát. Ez akkor adja hozzá, ha a legjobb 10 idő között van. Ha hozzáadás után szerepel az új eredmény a legjobb eredmények listájában a legjobb eredmények frissülnek az ablakban és elmenti az eredményeket egy bináris fájlban. Más eredmény jelenik meg, ha bekerül a játékos a top 10-\/be, mint ha nem kerülne be.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+Passed} & az eltelt idő másodpercben \\
+\hline
+{\em output\+File} & a kimeneti bináris fájl \\
+\hline
+\end{DoxyParams}
+\index{com.example.GameWindow@{com.example.GameWindow}!setInfoPanel@{setInfoPanel}}
+\index{setInfoPanel@{setInfoPanel}!com.example.GameWindow@{com.example.GameWindow}}
+\doxysubsubsection{setInfoPanel()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_window_a3792c1568a6a7fb40e0ba8648e908f13} 
+void com.\+example.\+Game\+Window.\+set\+Info\+Panel (\begin{DoxyParamCaption}\item[{\textbf{ Game\+Modes}}]{mode}{}\end{DoxyParamCaption})}
+
+Ez a metódus beállítja az info\+Panelt, ezen szerepel az eltelt idő és a bejelöletlen bombák száma. RAT játékmód esetén az is felkerül, hogy hány két és három bombát tartalmazó bejelöletlen mező van.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & a kiválasztott játékmód \\
+\hline
+\end{DoxyParams}
+\index{com.example.GameWindow@{com.example.GameWindow}!startNewGame@{startNewGame}}
+\index{startNewGame@{startNewGame}!com.example.GameWindow@{com.example.GameWindow}}
+\doxysubsubsection{startNewGame()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_window_aa3a6def4ebb0fb2c21a93636f9a0d967} 
+void com.\+example.\+Game\+Window.\+start\+New\+Game (\begin{DoxyParamCaption}\item[{\textbf{ Game\+Modes}}]{mode}{, }\item[{\textbf{ Difficulties}}]{dif}{}\end{DoxyParamCaption})}
+
+Ez a metódus elindít egy új játékot Felrajzolja a játékpanel kezdeti állapotát Elkezdi az idő számolását. Beolvassa az eddigi eredményeket ebben a játékmódban és nehézségben
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & a játékmód \\
+\hline
+{\em dif} & a játék nehézsége \\
+\hline
+\end{DoxyParams}
+\index{com.example.GameWindow@{com.example.GameWindow}!stopTimer@{stopTimer}}
+\index{stopTimer@{stopTimer}!com.example.GameWindow@{com.example.GameWindow}}
+\doxysubsubsection{stopTimer()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_window_ae820a56bfb3f9860e1346eb7d521fed8} 
+void com.\+example.\+Game\+Window.\+stop\+Timer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Ez a metódus megállítja az eltelt idő számítását. \index{com.example.GameWindow@{com.example.GameWindow}!updateMines@{updateMines}}
+\index{updateMines@{updateMines}!com.example.GameWindow@{com.example.GameWindow}}
+\doxysubsubsection{updateMines()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_window_a5ce5f16b44cd646a604fe2a9a73a487e} 
+void com.\+example.\+Game\+Window.\+update\+Mines (\begin{DoxyParamCaption}\item[{int}]{remaining\+Mines}{, }\item[{int}]{flagnumber}{}\end{DoxyParamCaption})}
+
+Frissiti a be nem jelölt bombát tartalmazó mezők számát az ablakban.
+
+
+\begin{DoxyParams}{Parameters}
+{\em remaining\+Mines} & be nem jelölt bombák száma \\
+\hline
+{\em flagnumber} & bomba típusa(1-\/normál, 2-\/dupla, 3-\/tripla) \\
+\hline
+\end{DoxyParams}
+\index{com.example.GameWindow@{com.example.GameWindow}!writeMessageAfterLosing@{writeMessageAfterLosing}}
+\index{writeMessageAfterLosing@{writeMessageAfterLosing}!com.example.GameWindow@{com.example.GameWindow}}
+\doxysubsubsection{writeMessageAfterLosing()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_window_a7ba7319ff55eec0e7e578cd84440bd24} 
+void com.\+example.\+Game\+Window.\+write\+Message\+After\+Losing (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Ez a metódus vesztes játék után ír ki üzenetet. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

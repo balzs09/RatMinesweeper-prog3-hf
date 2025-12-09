@@ -1,27 +1,71 @@
 \doxysection{com.\+example.\+Field\+Test Class Reference}
-\hypertarget{classcom_1_1example_1_1_field_test}{}\label{classcom_1_1example_1_1_field_test}\index{com.example.FieldTest@{com.example.FieldTest}}
+\label{classcom_1_1example_1_1_field_test}\index{com.example.FieldTest@{com.example.FieldTest}}
+
+
+A \doxyref{Field}{p.}{classcom_1_1example_1_1_field} osztály metódusainak tesztelésért felelős osztály.  
+
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classcom_1_1example_1_1_field_test_af85c3e550c4d3aee3a65fc4e512931ef}\label{classcom_1_1example_1_1_field_test_af85c3e550c4d3aee3a65fc4e512931ef} 
-void {\bfseries test\+Field\+Constructor} ()
+void \textbf{ test\+Field\+Constructor} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_field_test_af6f12c3be83e7d87049ad4fa8ebae002}\label{classcom_1_1example_1_1_field_test_af6f12c3be83e7d87049ad4fa8ebae002} 
-void {\bfseries test\+Set\+Mine\+Number} ()
+void \textbf{ test\+Set\+Mine\+Number} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_field_test_a2c1421d88d0b51c53f0d524f9f00c440}\label{classcom_1_1example_1_1_field_test_a2c1421d88d0b51c53f0d524f9f00c440} 
-void {\bfseries test\+Set\+Number\+Of\+Neighbors} ()
+void \textbf{ test\+Set\+Number\+Of\+Neighbors} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_field_test_a35ed6241e92a2825d0bb8b8f0f953c2f}\label{classcom_1_1example_1_1_field_test_a35ed6241e92a2825d0bb8b8f0f953c2f} 
-void {\bfseries test\+Set\+Revealed} ()
+void \textbf{ test\+Set\+Revealed} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_field_test_aff8835edec839481d7778d638dc63b8a}\label{classcom_1_1example_1_1_field_test_aff8835edec839481d7778d638dc63b8a} 
-void {\bfseries test\+Set\+Flagged} ()
+void \textbf{ test\+Set\+Flagged} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_field_test_a07d9dba6390e3259907269eee6bda21a}\label{classcom_1_1example_1_1_field_test_a07d9dba6390e3259907269eee6bda21a} 
-void {\bfseries test\+Increment\+Flags\+Default\+Mode} ()
+void \textbf{ test\+Increment\+Flags\+Default\+Mode} ()
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A \doxyref{Field}{p.}{classcom_1_1example_1_1_field} osztály metódusainak tesztelésért felelős osztály. 
+
+Ez az osztály a \doxyref{Field}{p.}{classcom_1_1example_1_1_field} osztály metódusainak helyes működését vizsgálja, beleértve a zászlókezelést, a szomszédos bombák számát és a mezők állapotát meghatározó logikát. 
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{com.example.FieldTest@{com.example.FieldTest}!testFieldConstructor@{testFieldConstructor}}
+\index{testFieldConstructor@{testFieldConstructor}!com.example.FieldTest@{com.example.FieldTest}}
+\doxysubsubsection{testFieldConstructor()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_test_af85c3e550c4d3aee3a65fc4e512931ef} 
+void com.\+example.\+Field\+Test.\+test\+Field\+Constructor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli a \doxyref{Field}{p.}{classcom_1_1example_1_1_field} konstruktorát alapértelmezett értékekkel. Ellenőrzi, hogy az aknamentes mező megfelelő kezdőállapotot kap. \index{com.example.FieldTest@{com.example.FieldTest}!testIncrementFlagsDefaultMode@{testIncrementFlagsDefaultMode}}
+\index{testIncrementFlagsDefaultMode@{testIncrementFlagsDefaultMode}!com.example.FieldTest@{com.example.FieldTest}}
+\doxysubsubsection{testIncrementFlagsDefaultMode()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_test_a07d9dba6390e3259907269eee6bda21a} 
+void com.\+example.\+Field\+Test.\+test\+Increment\+Flags\+Default\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli a zászlózás logikáját alapértelmezett játékmódban\+: 1 -\/$>$ 0 ciklust \index{com.example.FieldTest@{com.example.FieldTest}!testSetFlagged@{testSetFlagged}}
+\index{testSetFlagged@{testSetFlagged}!com.example.FieldTest@{com.example.FieldTest}}
+\doxysubsubsection{testSetFlagged()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_test_aff8835edec839481d7778d638dc63b8a} 
+void com.\+example.\+Field\+Test.\+test\+Set\+Flagged (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy a zászlóként kijelölés állapota helyesen frissül. \index{com.example.FieldTest@{com.example.FieldTest}!testSetMineNumber@{testSetMineNumber}}
+\index{testSetMineNumber@{testSetMineNumber}!com.example.FieldTest@{com.example.FieldTest}}
+\doxysubsubsection{testSetMineNumber()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_test_af6f12c3be83e7d87049ad4fa8ebae002} 
+void com.\+example.\+Field\+Test.\+test\+Set\+Mine\+Number (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli a \doxyref{Field}{p.}{classcom_1_1example_1_1_field} konstruktorát alapértelmezett értékekkel. Ellenőrzi, hogy az aknamentes mező megfelelő kezdőállapotot kap. \index{com.example.FieldTest@{com.example.FieldTest}!testSetNumberOfNeighbors@{testSetNumberOfNeighbors}}
+\index{testSetNumberOfNeighbors@{testSetNumberOfNeighbors}!com.example.FieldTest@{com.example.FieldTest}}
+\doxysubsubsection{testSetNumberOfNeighbors()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_test_a2c1421d88d0b51c53f0d524f9f00c440} 
+void com.\+example.\+Field\+Test.\+test\+Set\+Number\+Of\+Neighbors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy a set\+Number\+Of\+Neighbors helyesen állítja be a szomszédos mezők számát. \index{com.example.FieldTest@{com.example.FieldTest}!testSetRevealed@{testSetRevealed}}
+\index{testSetRevealed@{testSetRevealed}!com.example.FieldTest@{com.example.FieldTest}}
+\doxysubsubsection{testSetRevealed()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_test_a35ed6241e92a2825d0bb8b8f0f953c2f} 
+void com.\+example.\+Field\+Test.\+test\+Set\+Revealed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli a mező felfedettségének beállítását. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

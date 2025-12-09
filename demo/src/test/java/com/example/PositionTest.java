@@ -3,6 +3,14 @@ package com.example;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * @brief A Position osztály működését ellenőrző JUnit tesztosztály.
+ * 
+ * Teszteli a Position konstruktorát, az equals metódust és a hashCode metódust.
+ * Ellenőrzi, hogy a sor- és oszlopszámok helyesen kerülnek beállításra,
+ * azonos koordinátájú pozíciók egyenlőek legyenek, és a hashCode
+ * értékek megfeleljenek az equals metódus logikájának.
+ */
 public class PositionTest {
 
     /**

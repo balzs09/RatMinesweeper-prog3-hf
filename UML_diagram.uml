@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>C:/Users/nagya/programozas/prog3_hf</OriginalElement>
+  <nodes>
+    <node x="219.51963283358305" y="1025.0525037481257">com.example.Main</node>
+    <node x="1103.088032383808" y="578.0957781109446">com.example.GameMenuBar</node>
+    <node x="1005.1904797601197" y="1687.170644677661">com.example.Rat</node>
+    <node x="782.7547826086953" y="1294.1545127436282">com.example.Position</node>
+    <node x="2150.0138590704646" y="81.58100749625186">com.example.GameController</node>
+    <node x="2659.61108245877" y="1248.9962518740629">com.example.DefaultTable</node>
+    <node x="-339.8122242878556" y="755.4328335832083">com.example.HighscoreManager</node>
+    <node x="-152.2930460269867" y="1041.5621385307345">com.example.HighscoreEntry</node>
+    <node x="2121.702586206896" y="872.1626686656673">com.example.Table</node>
+    <node x="132.1070587706152" y="-22.960171514242518">com.example.GameMouseAdapter</node>
+    <node x="1528.524914167916" y="174.7971994002997">com.example.GameModes</node>
+    <node x="2739.970149325336" y="-43.765393703148504">com.example.MouseClicks</node>
+    <node x="2173.2062323838068" y="1416.4817091454272">com.example.Field</node>
+    <node x="1447.328410794602" y="1112.6562218890554">com.example.RatTable</node>
+    <node x="436.7075130434785" y="793.9002698650673">com.example.GameWindow</node>
+    <node x="1762.726379460269" y="784.8234158920538">com.example.Difficulties</node>
+    <node x="576.9563619190404" y="44.2324017991005">com.example.GameBoard</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.example.Rat" target="com.example.Position" relationship="TO_ONE">
+      <point x="-128.5" y="-0.0" />
+      <point x="879.7547826086953" y="1754.670644677661" />
+      <point x="0.0" y="67.5" />
+    </edge>
+    <edge source="com.example.GameWindow" target="com.example.GameBoard" relationship="TO_ONE">
+      <point x="166.5" y="-0.0" />
+      <point x="686.3385547226393" y="945.4002698650673" />
+      <point x="686.3385547226393" y="291.7324017991005" />
+      <point x="-164.5" y="-0.0" />
+    </edge>
+    <edge source="com.example.GameMouseAdapter" target="com.example.GameBoard" relationship="TO_ONE">
+      <point x="0.0" y="-31.5" />
+      <point x="260.6070587706152" y="127.77441919040513" />
+      <point x="567.5574428785654" y="127.77441919040513" />
+      <point x="567.5574428785654" y="241.44582908545522" />
+      <point x="588.0320695652224" y="241.44582908545522" />
+      <point x="-153.42429235381803" y="0.2977991004476621" />
+    </edge>
+    <edge source="com.example.GameController" target="com.example.Table" relationship="TO_ONE">
+      <point x="194.5" y="-20.0" />
+      <point x="2459.65382668666" y="333.08100749625186" />
+      <point x="2459.65382668666" y="495.57207796101807" />
+      <point x="2878.240421289355" y="495.57207796101807" />
+      <point x="2878.240421289355" y="830.5498140929528" />
+      <point x="2291.702586206896" y="830.5498140929528" />
+      <point x="0.0" y="151.5" />
+    </edge>
+    <edge source="com.example.GameController" target="com.example.GameModes" relationship="TO_ONE">
+      <point x="20.0" y="-271.5" />
+      <point x="2192.279289955031" y="81.58100749625186" />
+      <point x="2192.279289955031" y="227.3121739130434" />
+      <point x="1826.0009441529235" y="227.3121739130434" />
+      <point x="1826.0009441529235" y="218.2971994002997" />
+      <point x="-112.0" y="-0.0" />
+    </edge>
+    <edge source="com.example.GameController" target="com.example.Difficulties" relationship="TO_ONE">
+      <point x="0.0" y="271.5" />
+      <point x="2344.5138590704646" y="696.2989505247378" />
+      <point x="1869.226379460269" y="696.2989505247378" />
+      <point x="0.0" y="-43.5" />
+    </edge>
+    <edge source="com.example.Table" target="com.example.Field" relationship="TO_MANY">
+      <point x="170.0" y="-0.0" />
+      <point x="2291.702586206896" y="1023.6626686656673" />
+      <point x="2291.702586206896" y="1591.9817091454272" />
+      <point x="-131.5" y="-0.0" />
+    </edge>
+    <edge source="com.example.GameBoard" target="com.example.GameController" relationship="TO_ONE">
+      <point x="5.0" y="-247.5" />
+      <point x="746.4563619190404" y="65.02335232383803" />
+      <point x="1294.8564542728634" y="65.02335232383803" />
+      <point x="1294.8564542728634" y="134.42578110944518" />
+      <point x="2339.5138590704646" y="134.42578110944518" />
+      <point x="-5.0" y="-271.5" />
+    </edge>
+    <edge source="com.example.GameController" target="com.example.GameBoard" relationship="TO_ONE">
+      <point x="5.0" y="-271.5" />
+      <point x="2349.5138590704646" y="-68.29903448275866" />
+      <point x="736.4563619190404" y="-68.29903448275866" />
+      <point x="-5.0" y="-247.5" />
+    </edge>
+    <edge source="com.example.GameMenuBar" target="com.example.Difficulties" relationship="TO_ONE">
+      <point x="-151.5" y="-0.0" />
+      <point x="1795.487646176911" y="645.5957781109446" />
+      <point x="1795.487646176911" y="828.3234158920538" />
+      <point x="106.5" y="-0.0" />
+    </edge>
+    <edge source="com.example.HighscoreManager" target="com.example.HighscoreEntry" relationship="TO_MANY">
+      <point x="0.0" y="-79.5" />
+      <point x="-121.8122242878556" y="931.5586614692652" />
+      <point x="-66.7930460269867" y="931.5586614692652" />
+      <point x="0.0" y="43.5" />
+    </edge>
+    <edge source="com.example.RatTable" target="com.example.Position" relationship="TO_MANY">
+      <point x="-205.0" y="-0.0" />
+      <point x="1291.169892653663" y="1300.1562218890554" />
+      <point x="1291.169892653663" y="1373.5487256371814" />
+      <point x="1158.2794602698648" y="1373.5487256371814" />
+      <point x="1158.2794602698648" y="1361.6545127436282" />
+      <point x="97.0" y="-0.0" />
+    </edge>
+    <edge source="com.example.RatTable" target="com.example.Rat" relationship="TO_ONE">
+      <point x="0.0" y="187.5" />
+      <point x="1652.328410794602" y="1410.0451649175413" />
+      <point x="1364.4039730134928" y="1410.0451649175413" />
+      <point x="1364.4039730134928" y="1549.0101949025486" />
+      <point x="1064.059265367316" y="1549.0101949025486" />
+      <point x="1064.059265367316" y="1622.5137631184407" />
+      <point x="1114.871889055472" y="1622.5137631184407" />
+      <point x="1114.871889055472" y="1600.1129310344827" />
+      <point x="1133.6904797601196" y="1600.1129310344827" />
+      <point x="0.0" y="-67.5" />
+    </edge>
+    <edge source="com.example.GameMenuBar" target="com.example.GameModes" relationship="TO_ONE">
+      <point x="151.5" y="-0.0" />
+      <point x="1297.9460653673164" y="645.5957781109446" />
+      <point x="1297.9460653673164" y="223.3799820089941" />
+      <point x="1640.524914167916" y="223.3799820089941" />
+      <point x="0.0" y="43.5" />
+    </edge>
+    <edge source="com.example.RatTable" target="com.example.Table" relationship="GENERALIZATION">
+      <point x="205.0" y="-0.0" />
+      <point x="1857.328410794602" y="1023.6626686656673" />
+      <point x="-170.0" y="-0.0" />
+    </edge>
+    <edge source="com.example.DefaultTable" target="com.example.Table" relationship="GENERALIZATION">
+      <point x="0.0" y="67.5" />
+      <point x="2829.61108245877" y="931.9220389805098" />
+      <point x="2291.702586206896" y="931.9220389805098" />
+      <point x="0.0" y="-151.5" />
+    </edge>
+    <edge source="com.example.GameMenuBar" target="com.example.GameWindow" relationship="TO_ONE">
+      <point x="5.0" y="-67.5" />
+      <point x="1259.588032383808" y="1004.8320281859069" />
+      <point x="608.2075130434785" y="1004.8320281859069" />
+      <point x="5.0" y="-0.0" />
+    </edge>
+    <edge source="com.example.GameWindow" target="com.example.GameMenuBar" relationship="TO_ONE">
+      <point x="-5.0" y="-0.0" />
+      <point x="598.2075130434785" y="1015.25" />
+      <point x="1249.588032383808" y="1015.25" />
+      <point x="-5.0" y="-67.5" />
+    </edge>
+    <edge source="com.example.GameWindow" target="com.example.GameController" relationship="TO_ONE">
+      <point x="0.0" y="-5.0" />
+      <point x="700.4393415292303" y="940.4002698650673" />
+      <point x="700.4393415292303" y="860.3083478260872" />
+      <point x="1521.3363118440777" y="860.3083478260872" />
+      <point x="1521.3363118440777" y="348.08100749625186" />
+      <point x="194.5" y="-5.0" />
+    </edge>
+    <edge source="com.example.GameController" target="com.example.GameWindow" relationship="TO_ONE">
+      <point x="194.5" y="5.0" />
+      <point x="2144.1036977511303" y="358.08100749625186" />
+      <point x="2144.1036977511303" y="364.10295652173915" />
+      <point x="2039.3217847076485" y="364.10295652173915" />
+      <point x="2039.3217847076485" y="968.7066386806594" />
+      <point x="1160.433379310345" y="968.7066386806594" />
+      <point x="1160.433379310345" y="975.6924557721138" />
+      <point x="808.4354038980539" y="975.6924557721138" />
+      <point x="808.4354038980539" y="945.4002698650673" />
+      <point x="781.9388281859116" y="945.4002698650673" />
+      <point x="781.9388281859116" y="950.4002698650673" />
+      <point x="0.0" y="5.0" />
+    </edge>
+    <edge source="com.example.GameWindow" target="com.example.HighscoreManager" relationship="TO_ONE">
+      <point x="0.0" y="-151.5" />
+      <point x="603.2075130434785" y="687.6431574212893" />
+      <point x="-121.8122242878556" y="687.6431574212893" />
+      <point x="0.0" y="79.5" />
+    </edge>
+  </edges>
+  <settings layout="Orthogonal Groups" zoom="0.3400892288081583" showDependencies="true" x="951.7577907046566" y="920.3270239880053" />
+  <SelectedNodes>
+    <node>com.example.Difficulties</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

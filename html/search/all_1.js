@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['defaulttable_0',['DefaultTable',['../classcom_1_1example_1_1_default_table.html',1,'com.example.DefaultTable'],['../classcom_1_1example_1_1_default_table.html#a5a26458dc8de5c17bc117cbf4d2eb88b',1,'com.example.DefaultTable.DefaultTable()']]],
-  ['defaulttabletest_1',['DefaultTableTest',['../classcom_1_1example_1_1_default_table_test.html',1,'com::example']]],
-  ['difficulties_2',['Difficulties',['../enumcom_1_1example_1_1_difficulties.html',1,'com::example']]]
+  ['checkneighbors_0',['checkNeighbors',['../classcom_1_1example_1_1_default_table.html#a8568cb966551ead3ded095baf1159069',1,'com.example.DefaultTable.checkNeighbors()'],['../classcom_1_1example_1_1_rat_table.html#aacfc8c709163735c7869c527fc6ed217',1,'com.example.RatTable.checkNeighbors()'],['../classcom_1_1example_1_1_table.html#adfc24d157a8a24c766f01a56d2cec062',1,'com.example.Table.checkNeighbors()']]]
 ];

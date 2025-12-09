@@ -1,30 +1,79 @@
 \doxysection{com.\+example.\+Rat\+Table\+Test Class Reference}
-\hypertarget{classcom_1_1example_1_1_rat_table_test}{}\label{classcom_1_1example_1_1_rat_table_test}\index{com.example.RatTableTest@{com.example.RatTableTest}}
+\label{classcom_1_1example_1_1_rat_table_test}\index{com.example.RatTableTest@{com.example.RatTableTest}}
+
+
+A \doxyref{Rat\+Table}{p.}{classcom_1_1example_1_1_rat_table} osztály múködését ellenőrző JUnit tesztosztály.  
+
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classcom_1_1example_1_1_rat_table_test_a7f39a07717945eccab665424805dbcbc}\label{classcom_1_1example_1_1_rat_table_test_a7f39a07717945eccab665424805dbcbc} 
-void {\bfseries test\+Rat\+Table\+Constructor\+Initial\+Values} ()
+void \textbf{ test\+Rat\+Table\+Constructor\+Initial\+Values} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_rat_table_test_a386a0e981af6b04492e0a5c16aeda6e2}\label{classcom_1_1example_1_1_rat_table_test_a386a0e981af6b04492e0a5c16aeda6e2} 
-void {\bfseries test\+Set\+Rat} ()
+void \textbf{ test\+Set\+Rat} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_rat_table_test_a0d21ccd2477bc6ce7f1df3fb1f153b12}\label{classcom_1_1example_1_1_rat_table_test_a0d21ccd2477bc6ce7f1df3fb1f153b12} 
-void {\bfseries test\+Get\+Neighbor\+Positions} ()
+void \textbf{ test\+Get\+Neighbor\+Positions} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_rat_table_test_ad3672ad5d585af832e1ffca0c6093e32}\label{classcom_1_1example_1_1_rat_table_test_ad3672ad5d585af832e1ffca0c6093e32} 
-void {\bfseries test\+Check\+Neighbors} ()
+void \textbf{ test\+Check\+Neighbors} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_rat_table_test_aec3100b29b6dc8cdb16cb4f93c48eaf7}\label{classcom_1_1example_1_1_rat_table_test_aec3100b29b6dc8cdb16cb4f93c48eaf7} 
-void {\bfseries test\+Selecting\+Mines} ()
+void \textbf{ test\+Selecting\+Mines} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_rat_table_test_acafad17c227a81c723e9078b262992d9}\label{classcom_1_1example_1_1_rat_table_test_acafad17c227a81c723e9078b262992d9} 
-void {\bfseries test\+Get\+Right\+Direction\+Neighbors} ()
+void \textbf{ test\+Get\+Right\+Direction\+Neighbors} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_rat_table_test_a1d2efda00a011846809336ee73c6f9c0}\label{classcom_1_1example_1_1_rat_table_test_a1d2efda00a011846809336ee73c6f9c0} 
-void {\bfseries test\+Rat\+Movement\+Simple} ()
+void \textbf{ test\+Rat\+Movement\+Simple} ()
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A \doxyref{Rat\+Table}{p.}{classcom_1_1example_1_1_rat_table} osztály múködését ellenőrző JUnit tesztosztály. 
+
+Teszteli többek között a konstruktor működését, a bombák helyes kiválasztását, a wrap-\/around működő szomszédszámlálást. Emellett teszteli a táblához tartozó egér helyes elhelyezését és a legegyszerűbb egérmozgás helyességét, beleértve a célhoz vezető útvonal helyes kiszámítását. 
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{com.example.RatTableTest@{com.example.RatTableTest}!testCheckNeighbors@{testCheckNeighbors}}
+\index{testCheckNeighbors@{testCheckNeighbors}!com.example.RatTableTest@{com.example.RatTableTest}}
+\doxysubsubsection{testCheckNeighbors()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_test_ad3672ad5d585af832e1ffca0c6093e32} 
+void com.\+example.\+Rat\+Table\+Test.\+test\+Check\+Neighbors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy a check\+Neighbors helyesen számolja ki a szomszédos mezők aknaszámát a beállított bombák alapján. \index{com.example.RatTableTest@{com.example.RatTableTest}!testGetNeighborPositions@{testGetNeighborPositions}}
+\index{testGetNeighborPositions@{testGetNeighborPositions}!com.example.RatTableTest@{com.example.RatTableTest}}
+\doxysubsubsection{testGetNeighborPositions()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_test_a0d21ccd2477bc6ce7f1df3fb1f153b12} 
+void com.\+example.\+Rat\+Table\+Test.\+test\+Get\+Neighbor\+Positions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy a \doxyref{Rat\+Table}{p.}{classcom_1_1example_1_1_rat_table} konstruktora helyesen állítja be a sorok, oszlopok, összes bánya és a különböző típusú aknamezők számát. \index{com.example.RatTableTest@{com.example.RatTableTest}!testGetRightDirectionNeighbors@{testGetRightDirectionNeighbors}}
+\index{testGetRightDirectionNeighbors@{testGetRightDirectionNeighbors}!com.example.RatTableTest@{com.example.RatTableTest}}
+\doxysubsubsection{testGetRightDirectionNeighbors()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_test_acafad17c227a81c723e9078b262992d9} 
+void com.\+example.\+Rat\+Table\+Test.\+test\+Get\+Right\+Direction\+Neighbors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy az egér cél irányába eső szomszédos pozíciók valóban közelebb kerülnek a célhoz sor-\/ és oszlopirányban. \index{com.example.RatTableTest@{com.example.RatTableTest}!testRatMovementSimple@{testRatMovementSimple}}
+\index{testRatMovementSimple@{testRatMovementSimple}!com.example.RatTableTest@{com.example.RatTableTest}}
+\doxysubsubsection{testRatMovementSimple()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_test_a1d2efda00a011846809336ee73c6f9c0} 
+void com.\+example.\+Rat\+Table\+Test.\+test\+Rat\+Movement\+Simple (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy az egér cél irányába eső szomszédos pozíciók valóban közelebb kerülnek a célhoz sor-\/ és oszlopirányban. \index{com.example.RatTableTest@{com.example.RatTableTest}!testRatTableConstructorInitialValues@{testRatTableConstructorInitialValues}}
+\index{testRatTableConstructorInitialValues@{testRatTableConstructorInitialValues}!com.example.RatTableTest@{com.example.RatTableTest}}
+\doxysubsubsection{testRatTableConstructorInitialValues()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_test_a7f39a07717945eccab665424805dbcbc} 
+void com.\+example.\+Rat\+Table\+Test.\+test\+Rat\+Table\+Constructor\+Initial\+Values (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy a \doxyref{Rat\+Table}{p.}{classcom_1_1example_1_1_rat_table} konstruktora helyesen állítja be a sorok, oszlopok, összes bánya és a különböző típusú aknamezők számát. \index{com.example.RatTableTest@{com.example.RatTableTest}!testSelectingMines@{testSelectingMines}}
+\index{testSelectingMines@{testSelectingMines}!com.example.RatTableTest@{com.example.RatTableTest}}
+\doxysubsubsection{testSelectingMines()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_test_aec3100b29b6dc8cdb16cb4f93c48eaf7} 
+void com.\+example.\+Rat\+Table\+Test.\+test\+Selecting\+Mines (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy a bombák kiválasztása megfelelően történik\+: a mezők aknaszámai és a mezők száma helyesen alakul. \index{com.example.RatTableTest@{com.example.RatTableTest}!testSetRat@{testSetRat}}
+\index{testSetRat@{testSetRat}!com.example.RatTableTest@{com.example.RatTableTest}}
+\doxysubsubsection{testSetRat()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_test_a386a0e981af6b04492e0a5c16aeda6e2} 
+void com.\+example.\+Rat\+Table\+Test.\+test\+Set\+Rat (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy a set\+Rat metódus megfelelően beállítja az egér aktuális és célpozícióját. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

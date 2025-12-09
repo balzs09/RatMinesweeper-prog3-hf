@@ -9,7 +9,21 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.HashSet;
-
+/**
+ * @brief A wrap-around  logikával működő aknakereső tábla,
+ * amelyet a Rat játékmód használ.
+ *
+ * A RatTable a Table absztrakt osztály speciális implementációja, ahol a tábla
+ * szélei összeérnek (wrap-around), így minden mezőnek nyolc szomszédja van akkor is,
+ * ha a tábla szélén található. 
+ * A mezőkben lehet akár több darab bomba is(1, 2 vagy 3 lehet),
+ * és ezek arányai az összes bombamező számától függően vannak kiosztva.
+ *
+ * Az osztály tartalmaz egy Rat objektumot, amelynek célpozíciójához a tábla
+ * képes meghatározni a legrövidebb utat BFS algoritmus segítségével.  
+ * A legrövidebb út meghatározása figyelembe veszi a cél felé "helyes irányban"
+ * található szomszédos pozíciókat is.
+ */
 public class RatTable extends Table {
     private int oneMineFields;
     private int twoMineFields;

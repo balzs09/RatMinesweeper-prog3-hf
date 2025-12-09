@@ -1,30 +1,39 @@
 \doxysection{com.\+example.\+Rat Class Reference}
-\hypertarget{classcom_1_1example_1_1_rat}{}\label{classcom_1_1example_1_1_rat}\index{com.example.Rat@{com.example.Rat}}
+\label{classcom_1_1example_1_1_rat}\index{com.example.Rat@{com.example.Rat}}
+
+
+A \doxyref{Rat}{p.}{classcom_1_1example_1_1_rat} osztály az egér pozícióját kezeli a játéktáblán.  
+
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classcom_1_1example_1_1_rat_a9f85b9566c072eb3148997b19dfd9eda}{Rat}} (\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} current\+Position)
+\textbf{ Rat} (\textbf{ Position} current\+Position)
 \item 
-void \mbox{\hyperlink{classcom_1_1example_1_1_rat_aa12538ae0e57c22245c735987826b35f}{set\+Goal}} (\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} goal\+Position)
+void \textbf{ set\+Goal} (\textbf{ Position} goal\+Position)
 \item 
-void \mbox{\hyperlink{classcom_1_1example_1_1_rat_a03363782b87752ab25bd2d60c836d251}{set\+Current\+Position}} (\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} current\+Position)
+void \textbf{ set\+Current\+Position} (\textbf{ Position} current\+Position)
 \item 
-\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} \mbox{\hyperlink{classcom_1_1example_1_1_rat_ae5c28a7f394113537145e79d8aef4fe0}{get\+Current\+Position}} ()
+\textbf{ Position} \textbf{ get\+Current\+Position} ()
 \item 
-\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} \mbox{\hyperlink{classcom_1_1example_1_1_rat_a2de3cc2eef3f83e3f377c43fa137233a}{get\+Goal\+Position}} ()
+\textbf{ Position} \textbf{ get\+Goal\+Position} ()
 \end{DoxyCompactItemize}
 
 
-\label{doc-constructors}
-\Hypertarget{classcom_1_1example_1_1_rat_doc-constructors}
-\doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classcom_1_1example_1_1_rat_a9f85b9566c072eb3148997b19dfd9eda}\index{com.example.Rat@{com.example.Rat}!Rat@{Rat}}
-\index{Rat@{Rat}!com.example.Rat@{com.example.Rat}}
-\doxysubsubsection{\texorpdfstring{Rat()}{Rat()}}
-{\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_a9f85b9566c072eb3148997b19dfd9eda} 
-com.\+example.\+Rat.\+Rat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}}}]{current\+Position}{}\end{DoxyParamCaption})}
+\doxysubsection{Detailed Description}
+A \doxyref{Rat}{p.}{classcom_1_1example_1_1_rat} osztály az egér pozícióját kezeli a játéktáblán. 
 
-A \doxylink{classcom_1_1example_1_1_rat}{Rat} osztály konstruktora. Beállítja a jelenlegi és célpozíciót is a paraméterként megkapottra
+A \doxyref{Rat}{p.}{classcom_1_1example_1_1_rat} objetum a \doxyref{Rat}{p.}{classcom_1_1example_1_1_rat} játékmód esetén fogs szerepelni a játék tábláján. Az osztály tárolja az egér jelenlegi pozícióját és a célpozícióját. A konstruktorral beállított kezdőpozíció lesz a kezdeti célpont is. Tartalmaz getter és setter metódusokat mindkét pozíció kezelésére. 
+
+\label{doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{com.example.Rat@{com.example.Rat}!Rat@{Rat}}
+\index{Rat@{Rat}!com.example.Rat@{com.example.Rat}}
+\doxysubsubsection{Rat()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_a9f85b9566c072eb3148997b19dfd9eda} 
+com.\+example.\+Rat.\+Rat (\begin{DoxyParamCaption}\item[{\textbf{ Position}}]{current\+Position}{}\end{DoxyParamCaption})}
+
+A \doxyref{Rat}{p.}{classcom_1_1example_1_1_rat} osztály konstruktora. Beállítja a jelenlegi és célpozíciót is a paraméterként megkapottra
 
 
 \begin{DoxyParams}{Parameters}
@@ -34,35 +43,34 @@ A \doxylink{classcom_1_1example_1_1_rat}{Rat} osztály konstruktora. Beállítja
 
 
 \label{doc-func-members}
-\Hypertarget{classcom_1_1example_1_1_rat_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classcom_1_1example_1_1_rat_ae5c28a7f394113537145e79d8aef4fe0}\index{com.example.Rat@{com.example.Rat}!getCurrentPosition@{getCurrentPosition}}
+\index{com.example.Rat@{com.example.Rat}!getCurrentPosition@{getCurrentPosition}}
 \index{getCurrentPosition@{getCurrentPosition}!com.example.Rat@{com.example.Rat}}
-\doxysubsubsection{\texorpdfstring{getCurrentPosition()}{getCurrentPosition()}}
+\doxysubsubsection{getCurrentPosition()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_ae5c28a7f394113537145e79d8aef4fe0} 
-\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} com.\+example.\+Rat.\+get\+Current\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+\textbf{ Position} com.\+example.\+Rat.\+get\+Current\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 isszatéríti a jelenlegi pozícióval.
 
 \begin{DoxyReturn}{Returns}
 jelenlegi pozíció 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_rat_a2de3cc2eef3f83e3f377c43fa137233a}\index{com.example.Rat@{com.example.Rat}!getGoalPosition@{getGoalPosition}}
+\index{com.example.Rat@{com.example.Rat}!getGoalPosition@{getGoalPosition}}
 \index{getGoalPosition@{getGoalPosition}!com.example.Rat@{com.example.Rat}}
-\doxysubsubsection{\texorpdfstring{getGoalPosition()}{getGoalPosition()}}
+\doxysubsubsection{getGoalPosition()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_a2de3cc2eef3f83e3f377c43fa137233a} 
-\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} com.\+example.\+Rat.\+get\+Goal\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+\textbf{ Position} com.\+example.\+Rat.\+get\+Goal\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 Visszatéríti a célpozícióval.
 
 \begin{DoxyReturn}{Returns}
 célpozíció 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_rat_a03363782b87752ab25bd2d60c836d251}\index{com.example.Rat@{com.example.Rat}!setCurrentPosition@{setCurrentPosition}}
+\index{com.example.Rat@{com.example.Rat}!setCurrentPosition@{setCurrentPosition}}
 \index{setCurrentPosition@{setCurrentPosition}!com.example.Rat@{com.example.Rat}}
-\doxysubsubsection{\texorpdfstring{setCurrentPosition()}{setCurrentPosition()}}
+\doxysubsubsection{setCurrentPosition()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_a03363782b87752ab25bd2d60c836d251} 
-void com.\+example.\+Rat.\+set\+Current\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}}}]{current\+Position}{}\end{DoxyParamCaption})}
+void com.\+example.\+Rat.\+set\+Current\+Position (\begin{DoxyParamCaption}\item[{\textbf{ Position}}]{current\+Position}{}\end{DoxyParamCaption})}
 
 Beállítja a jelenlegi pozíció értékét.
 
@@ -71,11 +79,11 @@ Beállítja a jelenlegi pozíció értékét.
 {\em current\+Position-\/} & jelenlegi pozíció értéke \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classcom_1_1example_1_1_rat_aa12538ae0e57c22245c735987826b35f}\index{com.example.Rat@{com.example.Rat}!setGoal@{setGoal}}
+\index{com.example.Rat@{com.example.Rat}!setGoal@{setGoal}}
 \index{setGoal@{setGoal}!com.example.Rat@{com.example.Rat}}
-\doxysubsubsection{\texorpdfstring{setGoal()}{setGoal()}}
+\doxysubsubsection{setGoal()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_aa12538ae0e57c22245c735987826b35f} 
-void com.\+example.\+Rat.\+set\+Goal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}}}]{goal\+Position}{}\end{DoxyParamCaption})}
+void com.\+example.\+Rat.\+set\+Goal (\begin{DoxyParamCaption}\item[{\textbf{ Position}}]{goal\+Position}{}\end{DoxyParamCaption})}
 
 Beállítja a célpozíció értékét.
 

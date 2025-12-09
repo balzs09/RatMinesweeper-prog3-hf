@@ -91,16 +91,74 @@ $(function(){initNavTree('classcom_1_1example_1_1_position_test.html','','classc
   <div class="headertitle"><div class="title">com.example.PositionTest Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A <a class="el" href="classcom_1_1example_1_1_position.html" title="A Position osztály a játéktábla egy mezőjének koordinátáit reprezentálja.">Position</a> osztály működését ellenőrző JUnit tesztosztály.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6d84d2b66005be20118d3efc0f036f8b" id="r_a6d84d2b66005be20118d3efc0f036f8b"><td class="memItemLeft" align="right" valign="top"><a id="a6d84d2b66005be20118d3efc0f036f8b" name="a6d84d2b66005be20118d3efc0f036f8b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>testPositionConstructorInitialValues</b> ()</td></tr>
-<tr class="memitem:a5928997532491d750e5c7c793bae40f6" id="r_a5928997532491d750e5c7c793bae40f6"><td class="memItemLeft" align="right" valign="top"><a id="a5928997532491d750e5c7c793bae40f6" name="a5928997532491d750e5c7c793bae40f6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>testEquals</b> ()</td></tr>
-<tr class="memitem:a117e945aa6098ed0c013665bfd87d38b" id="r_a117e945aa6098ed0c013665bfd87d38b"><td class="memItemLeft" align="right" valign="top"><a id="a117e945aa6098ed0c013665bfd87d38b" name="a117e945aa6098ed0c013665bfd87d38b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>testHashCode</b> ()</td></tr>
+<tr class="memitem:a6d84d2b66005be20118d3efc0f036f8b" id="r_a6d84d2b66005be20118d3efc0f036f8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d84d2b66005be20118d3efc0f036f8b">testPositionConstructorInitialValues</a> ()</td></tr>
+<tr class="memitem:a5928997532491d750e5c7c793bae40f6" id="r_a5928997532491d750e5c7c793bae40f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5928997532491d750e5c7c793bae40f6">testEquals</a> ()</td></tr>
+<tr class="memitem:a117e945aa6098ed0c013665bfd87d38b" id="r_a117e945aa6098ed0c013665bfd87d38b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a117e945aa6098ed0c013665bfd87d38b">testHashCode</a> ()</td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A <a class="el" href="classcom_1_1example_1_1_position.html" title="A Position osztály a játéktábla egy mezőjének koordinátáit reprezentálja.">Position</a> osztály működését ellenőrző JUnit tesztosztály. </p>
+<p>Teszteli a <a class="el" href="classcom_1_1example_1_1_position.html" title="A Position osztály a játéktábla egy mezőjének koordinátáit reprezentálja.">Position</a> konstruktorát, az equals metódust és a hashCode metódust. Ellenőrzi, hogy a sor- és oszlopszámok helyesen kerülnek beállításra, azonos koordinátájú pozíciók egyenlőek legyenek, és a hashCode értékek megfeleljenek az equals metódus logikájának. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a5928997532491d750e5c7c793bae40f6" name="a5928997532491d750e5c7c793bae40f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5928997532491d750e5c7c793bae40f6">&#9670;&#160;</a></span>testEquals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.PositionTest.testEquals </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Teszteli a <a class="el" href="classcom_1_1example_1_1_position.html" title="A Position osztály a játéktábla egy mezőjének koordinátáit reprezentálja.">Position</a> equals metódusát. Azonos koordinátákkal rendelkező pozíciók legyenek egyenlőek, eltérők pedig ne. </p>
+
+</div>
+</div>
+<a id="a117e945aa6098ed0c013665bfd87d38b" name="a117e945aa6098ed0c013665bfd87d38b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a117e945aa6098ed0c013665bfd87d38b">&#9670;&#160;</a></span>testHashCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.PositionTest.testHashCode </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Teszteli, hogy azonos pozíciók azonos hashCode értéket kapnak, míg különböző pozíciók különbözőt. </p>
+
+</div>
+</div>
+<a id="a6d84d2b66005be20118d3efc0f036f8b" name="a6d84d2b66005be20118d3efc0f036f8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d84d2b66005be20118d3efc0f036f8b">&#9670;&#160;</a></span>testPositionConstructorInitialValues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.PositionTest.testPositionConstructorInitialValues </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Teszteli, hogy a <a class="el" href="classcom_1_1example_1_1_position.html" title="A Position osztály a játéktábla egy mezőjének koordinátáit reprezentálja.">Position</a> konstruktor a megadott sor- és oszlopszámot helyesen állítja be. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>demo/src/test/java/com/example/<b>PositionTest.java</b></li>
 </ul>

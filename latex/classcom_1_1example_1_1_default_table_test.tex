@@ -1,30 +1,79 @@
 \doxysection{com.\+example.\+Default\+Table\+Test Class Reference}
-\hypertarget{classcom_1_1example_1_1_default_table_test}{}\label{classcom_1_1example_1_1_default_table_test}\index{com.example.DefaultTableTest@{com.example.DefaultTableTest}}
+\label{classcom_1_1example_1_1_default_table_test}\index{com.example.DefaultTableTest@{com.example.DefaultTableTest}}
+
+
+A \doxyref{Default\+Table}{p.}{classcom_1_1example_1_1_default_table} osztály működését ellenőrző JUnit tesztosztály.  
+
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classcom_1_1example_1_1_default_table_test_ad945239705c1fc181302f5088acea1d4}\label{classcom_1_1example_1_1_default_table_test_ad945239705c1fc181302f5088acea1d4} 
-void {\bfseries test\+Default\+Table\+Constructor} ()
+void \textbf{ test\+Default\+Table\+Constructor} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_default_table_test_a06bad3acf15e8600733ae39f558a682a}\label{classcom_1_1example_1_1_default_table_test_a06bad3acf15e8600733ae39f558a682a} 
-void {\bfseries test\+Get\+Available\+Fields} ()
+void \textbf{ test\+Get\+Available\+Fields} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_default_table_test_a1fd4d007cd061855762b25593ae453f7}\label{classcom_1_1example_1_1_default_table_test_a1fd4d007cd061855762b25593ae453f7} 
-void {\bfseries test\+Selecting\+Mines} ()
+void \textbf{ test\+Selecting\+Mines} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_default_table_test_aff3505415587f766022bbf60dc43039f}\label{classcom_1_1example_1_1_default_table_test_aff3505415587f766022bbf60dc43039f} 
-void {\bfseries test\+Check\+Neighbors} ()
+void \textbf{ test\+Check\+Neighbors} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_default_table_test_ade23ec362e8d16737bc780c19f346a5b}\label{classcom_1_1example_1_1_default_table_test_ade23ec362e8d16737bc780c19f346a5b} 
-void {\bfseries test\+Get\+Neighbor\+Positions} ()
+void \textbf{ test\+Get\+Neighbor\+Positions} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_default_table_test_afd950871b96b0952d878a841f2363825}\label{classcom_1_1example_1_1_default_table_test_afd950871b96b0952d878a841f2363825} 
-void {\bfseries test\+Get\+Field\+By\+Position} ()
+void \textbf{ test\+Get\+Field\+By\+Position} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_default_table_test_aa0b266634ec5c80ee16550ed88b8a4fe}\label{classcom_1_1example_1_1_default_table_test_aa0b266634ec5c80ee16550ed88b8a4fe} 
-void {\bfseries test\+Get\+Position\+By\+Field} ()
+void \textbf{ test\+Get\+Position\+By\+Field} ()
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A \doxyref{Default\+Table}{p.}{classcom_1_1example_1_1_default_table} osztály működését ellenőrző JUnit tesztosztály. 
+
+Teszteli többek között a konstruktor működését, a bombák helyes kiválasztását, a szomszédszámolást és a pozíció-\/mező kapcsolat helyes működését. 
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{com.example.DefaultTableTest@{com.example.DefaultTableTest}!testCheckNeighbors@{testCheckNeighbors}}
+\index{testCheckNeighbors@{testCheckNeighbors}!com.example.DefaultTableTest@{com.example.DefaultTableTest}}
+\doxysubsubsection{testCheckNeighbors()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_default_table_test_aff3505415587f766022bbf60dc43039f} 
+void com.\+example.\+Default\+Table\+Test.\+test\+Check\+Neighbors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy a selecting\+Mines a megadott elérhető mezők közül pontosan a kívánt számú mezőt jelöl ki bányaként. \index{com.example.DefaultTableTest@{com.example.DefaultTableTest}!testDefaultTableConstructor@{testDefaultTableConstructor}}
+\index{testDefaultTableConstructor@{testDefaultTableConstructor}!com.example.DefaultTableTest@{com.example.DefaultTableTest}}
+\doxysubsubsection{testDefaultTableConstructor()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_default_table_test_ad945239705c1fc181302f5088acea1d4} 
+void com.\+example.\+Default\+Table\+Test.\+test\+Default\+Table\+Constructor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy a \doxyref{Default\+Table}{p.}{classcom_1_1example_1_1_default_table} konstruktora helyesen állítja be a sorok, oszlopok, összes bánya és az egyaknás mezők számát. \index{com.example.DefaultTableTest@{com.example.DefaultTableTest}!testGetAvailableFields@{testGetAvailableFields}}
+\index{testGetAvailableFields@{testGetAvailableFields}!com.example.DefaultTableTest@{com.example.DefaultTableTest}}
+\doxysubsubsection{testGetAvailableFields()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_default_table_test_a06bad3acf15e8600733ae39f558a682a} 
+void com.\+example.\+Default\+Table\+Test.\+test\+Get\+Available\+Fields (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy a get\+Available\+Fields nem ad vissza olyan mezőt, amely a kiválasztott pozícióban van, vagy annak szomszédja. \index{com.example.DefaultTableTest@{com.example.DefaultTableTest}!testGetFieldByPosition@{testGetFieldByPosition}}
+\index{testGetFieldByPosition@{testGetFieldByPosition}!com.example.DefaultTableTest@{com.example.DefaultTableTest}}
+\doxysubsubsection{testGetFieldByPosition()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_default_table_test_afd950871b96b0952d878a841f2363825} 
+void com.\+example.\+Default\+Table\+Test.\+test\+Get\+Field\+By\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy különböző pozíciókhoz külön \doxyref{Field}{p.}{classcom_1_1example_1_1_field} objektum tartozik, vagyis nem ugyanazt az példányt adja vissza. \index{com.example.DefaultTableTest@{com.example.DefaultTableTest}!testGetNeighborPositions@{testGetNeighborPositions}}
+\index{testGetNeighborPositions@{testGetNeighborPositions}!com.example.DefaultTableTest@{com.example.DefaultTableTest}}
+\doxysubsubsection{testGetNeighborPositions()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_default_table_test_ade23ec362e8d16737bc780c19f346a5b} 
+void com.\+example.\+Default\+Table\+Test.\+test\+Get\+Neighbor\+Positions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy a get\+Neighbor\+Positions megfelelő számú szomszédos pozíciót ad vissza sarok-\/, szél-\/ és belső mezőre. \index{com.example.DefaultTableTest@{com.example.DefaultTableTest}!testGetPositionByField@{testGetPositionByField}}
+\index{testGetPositionByField@{testGetPositionByField}!com.example.DefaultTableTest@{com.example.DefaultTableTest}}
+\doxysubsubsection{testGetPositionByField()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_default_table_test_aa0b266634ec5c80ee16550ed88b8a4fe} 
+void com.\+example.\+Default\+Table\+Test.\+test\+Get\+Position\+By\+Field (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy különböző pozíciókhoz külön \doxyref{Field}{p.}{classcom_1_1example_1_1_field} objektum tartozik, vagyis nem ugyanazt az instance-\/t adja vissza. \index{com.example.DefaultTableTest@{com.example.DefaultTableTest}!testSelectingMines@{testSelectingMines}}
+\index{testSelectingMines@{testSelectingMines}!com.example.DefaultTableTest@{com.example.DefaultTableTest}}
+\doxysubsubsection{testSelectingMines()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_default_table_test_a1fd4d007cd061855762b25593ae453f7} 
+void com.\+example.\+Default\+Table\+Test.\+test\+Selecting\+Mines (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy a selecting\+Mines a megadott elérhető mezők közül pontosan a kívánt számú mezőt jelöl ki bombaként. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

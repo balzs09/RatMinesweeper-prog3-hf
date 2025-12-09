@@ -4,6 +4,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * @brief A Rat osztály működését ellenőrző JUnit tesztosztály.
+ * 
+ * Teszteli a Rat konstruktorát és a pozíciók kezelését.  
+ * Ellenőrzi, hogy a kezdőpozíció helyesen kerül beállításra, 
+ * és hogy a currentPosition és goalPosition pozíciók helye megfelelően 
+ * módosítható a setter metódusok segítségével.
+ */
 public class RatTest {
 
     /**

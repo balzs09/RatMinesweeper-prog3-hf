@@ -1,5 +1,10 @@
 \doxysection{com.\+example.\+Game\+Board Class Reference}
-\hypertarget{classcom_1_1example_1_1_game_board}{}\label{classcom_1_1example_1_1_game_board}\index{com.example.GameBoard@{com.example.GameBoard}}
+\label{classcom_1_1example_1_1_game_board}\index{com.example.GameBoard@{com.example.GameBoard}}
+
+
+A \doxyref{Game\+Board}{p.}{classcom_1_1example_1_1_game_board} osztály felelős a játéktábla vizuális megjelenítéséért.  
+
+
 Inheritance diagram for com.\+example.\+Game\+Board\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,48 +14,290 @@ Inheritance diagram for com.\+example.\+Game\+Board\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_board_a59c00071d7d1b3fa4ecebf9a4b993025}\label{classcom_1_1example_1_1_game_board_a59c00071d7d1b3fa4ecebf9a4b993025} 
-void {\bfseries set\+Game\+Controller} (\mbox{\hyperlink{classcom_1_1example_1_1_game_controller}{Game\+Controller}} controller)
+\textbf{ Game\+Board} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_board_a1cba524b7ede10b96de283d44d65fcb3}\label{classcom_1_1example_1_1_game_board_a1cba524b7ede10b96de283d44d65fcb3} 
-\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} {\bfseries get\+Cell\+From\+Coordinates} (int x, int y)
+void \textbf{ set\+Game\+Controller} (\textbf{ Game\+Controller} controller)
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_board_ab55a03b0846087c4b81ec1b2937f6343}\label{classcom_1_1example_1_1_game_board_ab55a03b0846087c4b81ec1b2937f6343} 
-void {\bfseries re\+Paint\+Cell} (\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} pos)
+\textbf{ Position} \textbf{ get\+Cell\+From\+Coordinates} (int x, int y)
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_board_af5375e8de86e80c57e80f8acdb399b66}\label{classcom_1_1example_1_1_game_board_af5375e8de86e80c57e80f8acdb399b66} 
-void {\bfseries draw\+Borders} (Graphics g)
+void \textbf{ re\+Paint\+Cell} (\textbf{ Position} pos)
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_board_a8486063e25a3d804614f05623282362c}\label{classcom_1_1example_1_1_game_board_a8486063e25a3d804614f05623282362c} 
-void {\bfseries initialize\+Board} (Graphics g)
+void \textbf{ draw\+Borders} (Graphics g)
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_board_a31223f942499c3b653f58749072884ce}\label{classcom_1_1example_1_1_game_board_a31223f942499c3b653f58749072884ce} 
-void {\bfseries paint\+Component} (Graphics g)
+void \textbf{ initialize\+Board} (Graphics g)
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_board_a65d3639f1b64e6a6fd1a7350a4a096d2}\label{classcom_1_1example_1_1_game_board_a65d3639f1b64e6a6fd1a7350a4a096d2} 
-void {\bfseries draw\+Number} (Graphics g, int number, int board\+PositionX, int board\+PositionY)
+void \textbf{ paint\+Component} (Graphics g)
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_board_a71b67727f8e4aa87af48641fda63210f}\label{classcom_1_1example_1_1_game_board_a71b67727f8e4aa87af48641fda63210f} 
-void {\bfseries draw\+Number\+Cell} (Graphics g, int neighbor\+Number, int board\+PositionX, int board\+PositionY)
+void \textbf{ draw\+Number} (Graphics g, int number, int board\+PositionX, int board\+PositionY)
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_board_a59b2014e9ef32660d4048db31d667f15}\label{classcom_1_1example_1_1_game_board_a59b2014e9ef32660d4048db31d667f15} 
-void {\bfseries draw\+Flags} (Graphics g, int flag\+Number, int board\+PositionX, int board\+PositionY, Color background)
+void \textbf{ draw\+Number\+Cell} (Graphics g, int neighbor\+Number, int board\+PositionX, int board\+PositionY)
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_board_aa2c1a304b312e0163f1ee87b38e2e05c}\label{classcom_1_1example_1_1_game_board_aa2c1a304b312e0163f1ee87b38e2e05c} 
-void {\bfseries draw\+Bomb} (Graphics g, int board\+PositionX, int board\+PositionY, Color background, int mine\+Number)
+void \textbf{ draw\+Flags} (Graphics g, int flag\+Number, int board\+PositionX, int board\+PositionY, Color background)
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_board_a7c65c61cf2390baa37ea4c51e5198778}\label{classcom_1_1example_1_1_game_board_a7c65c61cf2390baa37ea4c51e5198778} 
-void {\bfseries draw\+Cheese} (Graphics g, int x, int y)
+void \textbf{ draw\+Bomb} (Graphics g, int board\+PositionX, int board\+PositionY, Color background, int mine\+Number)
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_board_a421b0a1c30061465b53a8a6f76418af4}\label{classcom_1_1example_1_1_game_board_a421b0a1c30061465b53a8a6f76418af4} 
-void {\bfseries draw\+Mouse} (Graphics g, int x, int y)
+void \textbf{ draw\+Cheese} (Graphics g, int x, int y)
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_board_a0caa3bb7102e64554d3e82b33094b353}\label{classcom_1_1example_1_1_game_board_a0caa3bb7102e64554d3e82b33094b353} 
-void {\bfseries draw\+Cell} (int row, int column, Graphics g, \mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} field)
+void \textbf{ draw\+Mouse} (Graphics g, int x, int y)
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_board_a0562b6fc8f1f681c0bbc6032b11734be}\label{classcom_1_1example_1_1_game_board_a0562b6fc8f1f681c0bbc6032b11734be} 
-\mbox{\hyperlink{classcom_1_1example_1_1_game_controller}{Game\+Controller}} {\bfseries get\+Controller} ()
+void \textbf{ draw\+Cell} (int row, int column, Graphics g, \textbf{ Field} field)
+\item 
+\textbf{ Game\+Controller} \textbf{ get\+Controller} ()
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \doxyref{Game\+Board}{p.}{classcom_1_1example_1_1_game_board} osztály felelős a játéktábla vizuális megjelenítéséért. 
+
+Feladata a cellák, szomszédos bombák száma, zászlók, bombák, egér és sajt kirajzolása a panelen. Kezeli a repaint-\/et a változások szerint, és a felhasználó kattintásaira reagál, a \doxyref{Game\+Controller}{p.}{classcom_1_1example_1_1_game_controller} logikáját használva.
+
+Kapcsolódó osztályok\+:
+\begin{DoxyItemize}
+\item \doxyref{Game\+Mouse\+Adapter}{p.}{classcom_1_1example_1_1_game_mouse_adapter}\+: Az egérkattintásra való reagálás
+\item \doxyref{Game\+Controller}{p.}{classcom_1_1example_1_1_game_controller}\+: a játék logikájának kezelése
+\item \doxyref{Field}{p.}{classcom_1_1example_1_1_field}\+: a játéktábla mezői
+\item \doxyref{Position}{p.}{classcom_1_1example_1_1_position}\+: a mezők pozícióinak kezelése
+\item \doxyref{Rat\+Table}{p.}{classcom_1_1example_1_1_rat_table}, \doxyref{Rat}{p.}{classcom_1_1example_1_1_rat}\+: RAT játékmódhoz tartozó egér és célpozíció
+\item \doxyref{Game\+Modes}{p.}{enumcom_1_1example_1_1_game_modes}, \doxyref{Difficulties}{p.}{enumcom_1_1example_1_1_difficulties}\+: játékmód és nehézségi szint információk 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{com.example.GameBoard@{com.example.GameBoard}!GameBoard@{GameBoard}}
+\index{GameBoard@{GameBoard}!com.example.GameBoard@{com.example.GameBoard}}
+\doxysubsubsection{GameBoard()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_board_ae38ca1fb8d36d0fafd4bfb466db86cf3} 
+com.\+example.\+Game\+Board.\+Game\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Gameboard osztály konstruktora Hozzáadja az egérkattintások kezelését. 
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{com.example.GameBoard@{com.example.GameBoard}!drawBomb@{drawBomb}}
+\index{drawBomb@{drawBomb}!com.example.GameBoard@{com.example.GameBoard}}
+\doxysubsubsection{drawBomb()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_board_aa2c1a304b312e0163f1ee87b38e2e05c} 
+void com.\+example.\+Game\+Board.\+draw\+Bomb (\begin{DoxyParamCaption}\item[{Graphics}]{g}{, }\item[{int}]{board\+PositionX}{, }\item[{int}]{board\+PositionY}{, }\item[{Color}]{background}{, }\item[{int}]{mine\+Number}{}\end{DoxyParamCaption})}
+
+Ez a metódus kirajzol egy bomba mezőt. Erre akkor van szükség, ha egy bomba helytelenül biztonságos mezőnek lett bejelölve. Minden esetben egy bomba van a cellába berajzolva. A bombák belsejében szerepel, hogy a cella hány bombát tartalmaz. A cella háttérszíne a paraméterként megkapott szín lesz.
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & a grafikus objektum, amire rajzolunk \\
+\hline
+{\em board\+PositionX} & a cella X-\/koordinátája a panelen \\
+\hline
+{\em board\+PositionY} & a cella Y-\/koordinátája a panelen \\
+\hline
+{\em background} & a cella hátterének színe \\
+\hline
+{\em mine\+Number} & a cellában szereplő bombák száma \\
+\hline
+\end{DoxyParams}
+\index{com.example.GameBoard@{com.example.GameBoard}!drawBorders@{drawBorders}}
+\index{drawBorders@{drawBorders}!com.example.GameBoard@{com.example.GameBoard}}
+\doxysubsubsection{drawBorders()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_board_af5375e8de86e80c57e80f8acdb399b66} 
+void com.\+example.\+Game\+Board.\+draw\+Borders (\begin{DoxyParamCaption}\item[{Graphics}]{g}{}\end{DoxyParamCaption})}
+
+Ez a metódus berajzolja a panelen a cellák széleit fekete színúre.
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & a grafikus objektum, amire rajzolunk \\
+\hline
+\end{DoxyParams}
+\index{com.example.GameBoard@{com.example.GameBoard}!drawCell@{drawCell}}
+\index{drawCell@{drawCell}!com.example.GameBoard@{com.example.GameBoard}}
+\doxysubsubsection{drawCell()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_board_a0caa3bb7102e64554d3e82b33094b353} 
+void com.\+example.\+Game\+Board.\+draw\+Cell (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{column}{, }\item[{Graphics}]{g}{, }\item[{\textbf{ Field}}]{field}{}\end{DoxyParamCaption})}
+
+Ez a metódus választja ki, hogy mi igaz a megadott mezőre és ez alapján, mit kell a panelre felrajzolni. Ha a játékos vesztett, a biztonságos mezőnek nézett bomba és a helytelen számú zászlóval bejelölt mező piros színű hátteret kapnak.
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & a kijelölt mező sora \\
+\hline
+{\em column} & a kijelölt mező oszlopa \\
+\hline
+{\em g} & a grafikus objeltum amire rajzolunk \\
+\hline
+{\em field} & a kijelölt mező \\
+\hline
+\end{DoxyParams}
+\index{com.example.GameBoard@{com.example.GameBoard}!drawCheese@{drawCheese}}
+\index{drawCheese@{drawCheese}!com.example.GameBoard@{com.example.GameBoard}}
+\doxysubsubsection{drawCheese()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_board_a7c65c61cf2390baa37ea4c51e5198778} 
+void com.\+example.\+Game\+Board.\+draw\+Cheese (\begin{DoxyParamCaption}\item[{Graphics}]{g}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+Ez a metódus sajtot rajzol arra a pozícióra, ami a RAT objektumnak a célpozíciója. A sajt kirajzolásához 2D-\/s grafika van alkalmazva.
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & a grafikus objektum, amire rajzolunk \\
+\hline
+{\em x} & a cella X-\/koordinátája a panelen \\
+\hline
+{\em y} & a cella Y-\/koordinátája a panelen \\
+\hline
+\end{DoxyParams}
+\index{com.example.GameBoard@{com.example.GameBoard}!drawFlags@{drawFlags}}
+\index{drawFlags@{drawFlags}!com.example.GameBoard@{com.example.GameBoard}}
+\doxysubsubsection{drawFlags()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_board_a59b2014e9ef32660d4048db31d667f15} 
+void com.\+example.\+Game\+Board.\+draw\+Flags (\begin{DoxyParamCaption}\item[{Graphics}]{g}{, }\item[{int}]{flag\+Number}{, }\item[{int}]{board\+PositionX}{, }\item[{int}]{board\+PositionY}{, }\item[{Color}]{background}{}\end{DoxyParamCaption})}
+
+Ez a metódus kirajzolja mezőkhöz tartozó zászlókat. Ha több zászló is van egy mezőben, a zászlók színe különbözik. A zászlóhoz tartozik egy fekete tartórúd is. A cella háttérszíne a paraméterként megkapott szín lesz.
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & a grafikus objektum, amire rajzolunk \\
+\hline
+{\em flag\+Number} & a zászlók száma \\
+\hline
+{\em board\+PositionX} & a cella X-\/koordinátája a panelen \\
+\hline
+{\em board\+PositionY} & a cella Y-\/koordinátája a panelen \\
+\hline
+{\em background} & a cella hátterének színe \\
+\hline
+\end{DoxyParams}
+\index{com.example.GameBoard@{com.example.GameBoard}!drawMouse@{drawMouse}}
+\index{drawMouse@{drawMouse}!com.example.GameBoard@{com.example.GameBoard}}
+\doxysubsubsection{drawMouse()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_board_a421b0a1c30061465b53a8a6f76418af4} 
+void com.\+example.\+Game\+Board.\+draw\+Mouse (\begin{DoxyParamCaption}\item[{Graphics}]{g}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+Ez a metódus az egeret rajzolja ki, a RAT objektum jelenlegi pozíciójára Az egér feje, fülei, szemei és orra van a panelre felrajzolva. 
+\begin{DoxyParams}{Parameters}
+{\em g} & a grafikus objektum, amire rajzolunk \\
+\hline
+{\em x} & a cella X-\/koordinátája a panelen \\
+\hline
+{\em y} & a cella Y-\/koordinátája a panelen \\
+\hline
+\end{DoxyParams}
+\index{com.example.GameBoard@{com.example.GameBoard}!drawNumber@{drawNumber}}
+\index{drawNumber@{drawNumber}!com.example.GameBoard@{com.example.GameBoard}}
+\doxysubsubsection{drawNumber()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_board_a65d3639f1b64e6a6fd1a7350a4a096d2} 
+void com.\+example.\+Game\+Board.\+draw\+Number (\begin{DoxyParamCaption}\item[{Graphics}]{g}{, }\item[{int}]{number}{, }\item[{int}]{board\+PositionX}{, }\item[{int}]{board\+PositionY}{}\end{DoxyParamCaption})}
+
+Ez a metódus felrajzolja a mező szomszédos bombáinak számát a panelre.
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & a grafikus objektum, amire rajzolunk \\
+\hline
+{\em number} & a szomszédos bombák száma \\
+\hline
+{\em board\+PositionX} & a cella X-\/koordinátája a panelen \\
+\hline
+{\em board\+PositionY} & a cella Y-\/koordinátája a panelen \\
+\hline
+\end{DoxyParams}
+\index{com.example.GameBoard@{com.example.GameBoard}!drawNumberCell@{drawNumberCell}}
+\index{drawNumberCell@{drawNumberCell}!com.example.GameBoard@{com.example.GameBoard}}
+\doxysubsubsection{drawNumberCell()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_board_a71b67727f8e4aa87af48641fda63210f} 
+void com.\+example.\+Game\+Board.\+draw\+Number\+Cell (\begin{DoxyParamCaption}\item[{Graphics}]{g}{, }\item[{int}]{neighbor\+Number}{, }\item[{int}]{board\+PositionX}{, }\item[{int}]{board\+PositionY}{}\end{DoxyParamCaption})}
+
+Ez a metódus abban az esetben, ha a szomszédos bombák száma legalább 1, kirajzolja a panelre a számot. A szám színe a get\+Number\+Color metódus által visszaadott lesz.
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & a grafikus objektum, amire rajzolunk \\
+\hline
+{\em neighbor\+Number} & a szomszédos bombák száma \\
+\hline
+{\em board\+PositionX} & a cella X-\/koordinátája a panelen \\
+\hline
+{\em board\+PositionY} & a cella Y-\/koordinátája a panelen \\
+\hline
+\end{DoxyParams}
+\index{com.example.GameBoard@{com.example.GameBoard}!getCellFromCoordinates@{getCellFromCoordinates}}
+\index{getCellFromCoordinates@{getCellFromCoordinates}!com.example.GameBoard@{com.example.GameBoard}}
+\doxysubsubsection{getCellFromCoordinates()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_board_a1cba524b7ede10b96de283d44d65fcb3} 
+\textbf{ Position} com.\+example.\+Game\+Board.\+get\+Cell\+From\+Coordinates (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+Ez a metódus visszatér azzal a pozícióval, ami a panelen belüli koordinátákhoz tartozik.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & az X-\/koordináta panelen belül \\
+\hline
+{\em y} & az Y-\/koordináta panelen belül \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a koordinátákhoz tartozó pozíció 
+\end{DoxyReturn}
+\index{com.example.GameBoard@{com.example.GameBoard}!getController@{getController}}
+\index{getController@{getController}!com.example.GameBoard@{com.example.GameBoard}}
+\doxysubsubsection{getController()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_board_a0562b6fc8f1f681c0bbc6032b11734be} 
+\textbf{ Game\+Controller} com.\+example.\+Game\+Board.\+get\+Controller (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Visszatéríti a játékpanelhez tartozó játékvezérlőt.
+
+\begin{DoxyReturn}{Returns}
+játékpanelhez tartozó játékvezérlő 
+\end{DoxyReturn}
+\index{com.example.GameBoard@{com.example.GameBoard}!initializeBoard@{initializeBoard}}
+\index{initializeBoard@{initializeBoard}!com.example.GameBoard@{com.example.GameBoard}}
+\doxysubsubsection{initializeBoard()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_board_a8486063e25a3d804614f05623282362c} 
+void com.\+example.\+Game\+Board.\+initialize\+Board (\begin{DoxyParamCaption}\item[{Graphics}]{g}{}\end{DoxyParamCaption})}
+
+Ez a metódus berajzol minden mezőt a panelre a kezdeti állapot alapján.
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & a grafikus objektum, amire rajzolunk \\
+\hline
+\end{DoxyParams}
+\index{com.example.GameBoard@{com.example.GameBoard}!paintComponent@{paintComponent}}
+\index{paintComponent@{paintComponent}!com.example.GameBoard@{com.example.GameBoard}}
+\doxysubsubsection{paintComponent()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_board_a31223f942499c3b653f58749072884ce} 
+void com.\+example.\+Game\+Board.\+paint\+Component (\begin{DoxyParamCaption}\item[{Graphics}]{g}{}\end{DoxyParamCaption})}
+
+Ez a metódus felel a komponensek kirajzolásáért. Elsőnek meghívja a JPanel paint\+Component metódusát. Ezután ha panel nem volt még inicializálva minden mezőt berajzol. Ha a panel már inicializálva van csak azokat cellákat rajzolja meg. amelyek a repaint által érintett területbe beleesnek.
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & a grafikus objektum, amire rajzolunk \\
+\hline
+\end{DoxyParams}
+\index{com.example.GameBoard@{com.example.GameBoard}!rePaintCell@{rePaintCell}}
+\index{rePaintCell@{rePaintCell}!com.example.GameBoard@{com.example.GameBoard}}
+\doxysubsubsection{rePaintCell()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_board_ab55a03b0846087c4b81ec1b2937f6343} 
+void com.\+example.\+Game\+Board.\+re\+Paint\+Cell (\begin{DoxyParamCaption}\item[{\textbf{ Position}}]{pos}{}\end{DoxyParamCaption})}
+
+Egy pozícióhoz tartozó cellát újrafest.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & mező pozíciója a táblán \\
+\hline
+\end{DoxyParams}
+\index{com.example.GameBoard@{com.example.GameBoard}!setGameController@{setGameController}}
+\index{setGameController@{setGameController}!com.example.GameBoard@{com.example.GameBoard}}
+\doxysubsubsection{setGameController()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_board_a59c00071d7d1b3fa4ecebf9a4b993025} 
+void com.\+example.\+Game\+Board.\+set\+Game\+Controller (\begin{DoxyParamCaption}\item[{\textbf{ Game\+Controller}}]{controller}{}\end{DoxyParamCaption})}
+
+Beállítja a játéktábla panelhez tartozó játékvezérlőt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em controller} & játékvezérlő \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

@@ -91,13 +91,16 @@ $(function(){initNavTree('classcom_1_1example_1_1_rat_table.html','','classcom_1
   <div class="headertitle"><div class="title">com.example.RatTable Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A wrap-around logikával működő aknakereső tábla, amelyet a <a class="el" href="classcom_1_1example_1_1_rat.html" title="A Rat osztály az egér pozícióját kezeli a játéktáblán.">Rat</a> játékmód használ.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for com.example.RatTable:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classcom_1_1example_1_1_rat_table.png" usemap="#com_2Eexample_2ERatTable_map" alt=""/>
   <map id="com_2Eexample_2ERatTable_map" name="com_2Eexample_2ERatTable_map">
-<area href="classcom_1_1example_1_1_table.html" alt="com.example.Table" shape="rect" coords="0,0,138,24"/>
+<area href="classcom_1_1example_1_1_table.html" title="Absztrakt táblaosztály az aknakereső játékhoz." alt="com.example.Table" shape="rect" coords="0,0,138,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -139,7 +142,12 @@ List&lt; <a class="el" href="classcom_1_1example_1_1_field.html">Field</a> &gt;&
 <tr class="memitem:a47849dd9367427edbf6c3480535a9365 inherit pro_attribs_classcom_1_1example_1_1_table" id="r_a47849dd9367427edbf6c3480535a9365"><td class="memItemLeft" align="right" valign="top">
 int&#160;</td><td class="memItemRight" valign="bottom"><b>allMines</b></td></tr>
 </table>
-<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A wrap-around logikával működő aknakereső tábla, amelyet a <a class="el" href="classcom_1_1example_1_1_rat.html" title="A Rat osztály az egér pozícióját kezeli a játéktáblán.">Rat</a> játékmód használ. </p>
+<p>A <a class="el" href="classcom_1_1example_1_1_rat_table.html" title="A wrap-around logikával működő aknakereső tábla, amelyet a Rat játékmód használ.">RatTable</a> a <a class="el" href="classcom_1_1example_1_1_table.html" title="Absztrakt táblaosztály az aknakereső játékhoz.">Table</a> absztrakt osztály speciális implementációja, ahol a tábla szélei összeérnek (wrap-around), így minden mezőnek nyolc szomszédja van akkor is, ha a tábla szélén található. A mezőkben lehet akár több darab bomba is(1, 2 vagy 3 lehet), és ezek arányai az összes bombamező számától függően vannak kiosztva.</p>
+<p>Az osztály tartalmaz egy <a class="el" href="classcom_1_1example_1_1_rat.html" title="A Rat osztály az egér pozícióját kezeli a játéktáblán.">Rat</a> objektumot, amelynek célpozíciójához a tábla képes meghatározni a legrövidebb utat BFS algoritmus segítségével. <br  />
+ A legrövidebb út meghatározása figyelembe veszi a cél felé "helyes irányban" található szomszédos pozíciókat is. </p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5a3dc1bb54f6742725cd429324e7a085" name="a5a3dc1bb54f6742725cd429324e7a085"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5a3dc1bb54f6742725cd429324e7a085">&#9670;&#160;</a></span>RatTable()</h2>
 
@@ -163,7 +171,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>allMines</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>A <a class="el" href="classcom_1_1example_1_1_rat_table.html">RatTable</a> meghívja az ősosztálya, a <a class="el" href="classcom_1_1example_1_1_table.html">Table</a> konstruktorát. Az egyetlen bombát tartalmazó mezők száma az összes bomba felével lesz egyenlő. A két bombát tartalmazó mezők száma az összes bomba/4-el egyenlő. Ugyanaz igaz a 3 bombát tartalmazó mezőkre, mint a 2 bombásokra.</p>
+<p>A <a class="el" href="classcom_1_1example_1_1_rat_table.html" title="A wrap-around logikával működő aknakereső tábla, amelyet a Rat játékmód használ.">RatTable</a> meghívja az ősosztálya, a <a class="el" href="classcom_1_1example_1_1_table.html" title="Absztrakt táblaosztály az aknakereső játékhoz.">Table</a> konstruktorát. Az egyetlen bombát tartalmazó mezők száma az összes bomba felével lesz egyenlő. A két bombát tartalmazó mezők száma az összes bomba/4-el egyenlő. Ugyanaz igaz a 3 bombát tartalmazó mezőkre, mint a 2 bombásokra.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rows</td><td>sorok száma </td></tr>
@@ -282,8 +290,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>allMines</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Visszatéríti a táblához tartozó <a class="el" href="classcom_1_1example_1_1_rat.html">Rat</a> objektumot.</p>
-<dl class="section return"><dt>Returns</dt><dd>táblához tartozó <a class="el" href="classcom_1_1example_1_1_rat.html">Rat</a> objektum </dd></dl>
+<p>Visszatéríti a táblához tartozó <a class="el" href="classcom_1_1example_1_1_rat.html" title="A Rat osztály az egér pozícióját kezeli a játéktáblán.">Rat</a> objektumot.</p>
+<dl class="section return"><dt>Returns</dt><dd>táblához tartozó <a class="el" href="classcom_1_1example_1_1_rat.html" title="A Rat osztály az egér pozícióját kezeli a játéktáblán.">Rat</a> objektum </dd></dl>
 
 </div>
 </div>
@@ -434,10 +442,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>allMines</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>A tábla <a class="el" href="classcom_1_1example_1_1_rat.html">Rat</a> objektuma megkapja egy új, létrehozott <a class="el" href="classcom_1_1example_1_1_rat.html">Rat</a> értékét. A <a class="el" href="classcom_1_1example_1_1_rat.html">Rat</a> konstruktorában a kezdőpozíciót kapja meg.</p>
+<p>A tábla <a class="el" href="classcom_1_1example_1_1_rat.html" title="A Rat osztály az egér pozícióját kezeli a játéktáblán.">Rat</a> objektuma megkapja egy új, létrehozott <a class="el" href="classcom_1_1example_1_1_rat.html" title="A Rat osztály az egér pozícióját kezeli a játéktáblán.">Rat</a> értékét. A <a class="el" href="classcom_1_1example_1_1_rat.html" title="A Rat osztály az egér pozícióját kezeli a játéktáblán.">Rat</a> konstruktorában a kezdőpozíciót kapja meg.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">firstPosition</td><td>a <a class="el" href="classcom_1_1example_1_1_rat.html">Rat</a> kezdőpozíciója </td></tr>
+    <tr><td class="paramname">firstPosition</td><td>a <a class="el" href="classcom_1_1example_1_1_rat.html" title="A Rat osztály az egér pozícióját kezeli a játéktáblán.">Rat</a> kezdőpozíciója </td></tr>
   </table>
   </dd>
 </dl>

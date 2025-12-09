@@ -1,5 +1,10 @@
 \doxysection{com.\+example.\+Rat\+Table Class Reference}
-\hypertarget{classcom_1_1example_1_1_rat_table}{}\label{classcom_1_1example_1_1_rat_table}\index{com.example.RatTable@{com.example.RatTable}}
+\label{classcom_1_1example_1_1_rat_table}\index{com.example.RatTable@{com.example.RatTable}}
+
+
+A wrap-\/around logikával működő aknakereső tábla, amelyet a \doxyref{Rat}{p.}{classcom_1_1example_1_1_rat} játékmód használ.  
+
+
 Inheritance diagram for com.\+example.\+Rat\+Table\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,77 +14,84 @@ Inheritance diagram for com.\+example.\+Rat\+Table\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classcom_1_1example_1_1_rat_table_a5a3dc1bb54f6742725cd429324e7a085}{Rat\+Table}} (int rownumber, int columnumber, int mine\+Number)
+\textbf{ Rat\+Table} (int rownumber, int columnumber, int mine\+Number)
 \item 
-void \mbox{\hyperlink{classcom_1_1example_1_1_rat_table_a65c4f6b6d0306caf982e1a812f156c22}{set\+Rat}} (\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} first\+Position)
+void \textbf{ set\+Rat} (\textbf{ Position} first\+Position)
 \item 
-List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1_rat_table_abad6be44ce265863e54257fa75c40bdf}{get\+Neighbor\+Positions}} (\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} p)
+List$<$ \textbf{ Position} $>$ \textbf{ get\+Neighbor\+Positions} (\textbf{ Position} p)
 \item 
-void \mbox{\hyperlink{classcom_1_1example_1_1_rat_table_aacfc8c709163735c7869c527fc6ed217}{check\+Neighbors}} ()
+void \textbf{ check\+Neighbors} ()
 \item 
-void \mbox{\hyperlink{classcom_1_1example_1_1_rat_table_a4dcd5884fbfeba885494bd3aeb57112c}{selecting\+Mines}} (Array\+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} $>$ available\+Fields)
+void \textbf{ selecting\+Mines} (Array\+List$<$ \textbf{ Field} $>$ available\+Fields)
 \item 
-List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1_rat_table_a8a7889e503c47769063bbde5bfff9369}{reconstruct\+Path}} (Map$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}}, \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$ parent)
+List$<$ \textbf{ Position} $>$ \textbf{ reconstruct\+Path} (Map$<$ \textbf{ Position}, \textbf{ Position} $>$ parent)
 \item 
-List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1_rat_table_af9c45ec979a7051856e13eb4bfe6ad45}{get\+Right\+Direction\+Neighbors}} (\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} current)
+List$<$ \textbf{ Position} $>$ \textbf{ get\+Right\+Direction\+Neighbors} (\textbf{ Position} current)
 \item 
-List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1_rat_table_af37581d00821a6f7a125d97cba39ad23}{find\+Shortest\+Path}} ()
+List$<$ \textbf{ Position} $>$ \textbf{ find\+Shortest\+Path} ()
 \item 
-void \mbox{\hyperlink{classcom_1_1example_1_1_rat_table_a16de872c2ab284eb8daf9dadc6a3c837}{set\+Shortest\+Path}} ()
+void \textbf{ set\+Shortest\+Path} ()
 \item 
-List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1_rat_table_a558064eef5610dfb93f1820215e9a576}{get\+Shortest\+Path}} ()
+List$<$ \textbf{ Position} $>$ \textbf{ get\+Shortest\+Path} ()
 \item 
-\mbox{\hyperlink{classcom_1_1example_1_1_rat}{Rat}} \mbox{\hyperlink{classcom_1_1example_1_1_rat_table_a25d712c5cc349f25da1a82f5f7f24f6f}{get\+Rat}} ()
+\textbf{ Rat} \textbf{ get\+Rat} ()
 \item 
-int \mbox{\hyperlink{classcom_1_1example_1_1_rat_table_a33ecae22587c2ee0287e01e86f254b08}{get\+One\+Mine\+Fields}} ()
+int \textbf{ get\+One\+Mine\+Fields} ()
 \item 
-int \mbox{\hyperlink{classcom_1_1example_1_1_rat_table_aeed219101e72e1e5b28f4a36a379ebc7}{get\+Two\+Mine\+Fields}} ()
+int \textbf{ get\+Two\+Mine\+Fields} ()
 \item 
-int \mbox{\hyperlink{classcom_1_1example_1_1_rat_table_a837c58ecc899ca46a2b51b322990282b}{get\+Three\+Mine\+Fields}} ()
+int \textbf{ get\+Three\+Mine\+Fields} ()
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcom_1_1example_1_1_table}{com.\+example.\+Table}}}
+\doxysubsection*{Public Member Functions inherited from \textbf{ com.\+example.\+Table}}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classcom_1_1example_1_1_table_aca3fb295482ecb671a668d8ce596fbf3}{Table}} (int row\+Number, int column\+Number, int mine\+Number)
+\textbf{ Table} (int row\+Number, int column\+Number, int mine\+Number)
 \item 
-\mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} \mbox{\hyperlink{classcom_1_1example_1_1_table_a13ec713266f8a5e5ffef6861f3096e34}{get\+Field\+By\+Position}} (\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} p)
+\textbf{ Field} \textbf{ get\+Field\+By\+Position} (\textbf{ Position} p)
 \item 
-\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} \mbox{\hyperlink{classcom_1_1example_1_1_table_aa103ec03fa8a5c0436c00dfd91b40ff6}{get\+Position\+By\+Field}} (\mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} f)
+\textbf{ Position} \textbf{ get\+Position\+By\+Field} (\textbf{ Field} f)
 \item 
-List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1_table_aef00d073fb940e0b4fa32d099477fa86}{get\+Neighbors}} (\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} current\+Position)
+List$<$ \textbf{ Position} $>$ \textbf{ get\+Neighbors} (\textbf{ Position} current\+Position)
 \item 
-Array\+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1_table_acbeb695a048871d3d601208186df3813}{getavailable\+Fields}} (\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} selected\+Position)
+Array\+List$<$ \textbf{ Field} $>$ \textbf{ getavailable\+Fields} (\textbf{ Position} selected\+Position)
 \item 
-int \mbox{\hyperlink{classcom_1_1example_1_1_table_a677b91f59215f21cc9ed63ec1679fe9c}{get\+All\+Mines}} ()
+int \textbf{ get\+All\+Mines} ()
 \item 
-int \mbox{\hyperlink{classcom_1_1example_1_1_table_acecf074149118a48bccf0965177cf188}{get\+Rows}} ()
+int \textbf{ get\+Rows} ()
 \item 
-int \mbox{\hyperlink{classcom_1_1example_1_1_table_a3d080b93fd89ee4740ed08557937b427}{get\+Columns}} ()
+int \textbf{ get\+Columns} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
-\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classcom_1_1example_1_1_table}{com.\+example.\+Table}}}
+\doxysubsection*{Protected Attributes inherited from \textbf{ com.\+example.\+Table}}
 \begin{DoxyCompactItemize}
 \item 
 int {\bfseries rows}
 \item 
 int {\bfseries columns}
 \item 
-List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} $>$ {\bfseries fields} = new Array\+List$<$\mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}}$>$()
+List$<$ \textbf{ Field} $>$ {\bfseries fields} = new Array\+List$<$\textbf{ Field}$>$()
 \item 
 int {\bfseries all\+Mines}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+A wrap-\/around logikával működő aknakereső tábla, amelyet a \doxyref{Rat}{p.}{classcom_1_1example_1_1_rat} játékmód használ. 
+
+A \doxyref{Rat\+Table}{p.}{classcom_1_1example_1_1_rat_table} a \doxyref{Table}{p.}{classcom_1_1example_1_1_table} absztrakt osztály speciális implementációja, ahol a tábla szélei összeérnek (wrap-\/around), így minden mezőnek nyolc szomszédja van akkor is, ha a tábla szélén található. A mezőkben lehet akár több darab bomba is(1, 2 vagy 3 lehet), és ezek arányai az összes bombamező számától függően vannak kiosztva.
+
+Az osztály tartalmaz egy \doxyref{Rat}{p.}{classcom_1_1example_1_1_rat} objektumot, amelynek célpozíciójához a tábla képes meghatározni a legrövidebb utat BFS algoritmus segítségével. ~\newline
+ A legrövidebb út meghatározása figyelembe veszi a cél felé "{}helyes irányban"{} található szomszédos pozíciókat is. 
+
 \label{doc-constructors}
-\Hypertarget{classcom_1_1example_1_1_rat_table_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classcom_1_1example_1_1_rat_table_a5a3dc1bb54f6742725cd429324e7a085}\index{com.example.RatTable@{com.example.RatTable}!RatTable@{RatTable}}
+\index{com.example.RatTable@{com.example.RatTable}!RatTable@{RatTable}}
 \index{RatTable@{RatTable}!com.example.RatTable@{com.example.RatTable}}
-\doxysubsubsection{\texorpdfstring{RatTable()}{RatTable()}}
+\doxysubsubsection{RatTable()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_a5a3dc1bb54f6742725cd429324e7a085} 
 com.\+example.\+Rat\+Table.\+Rat\+Table (\begin{DoxyParamCaption}\item[{int}]{rownumber}{, }\item[{int}]{columnumber}{, }\item[{int}]{mine\+Number}{}\end{DoxyParamCaption})}
 
-A \doxylink{classcom_1_1example_1_1_rat_table}{Rat\+Table} meghívja az ősosztálya, a \doxylink{classcom_1_1example_1_1_table}{Table} konstruktorát. Az egyetlen bombát tartalmazó mezők száma az összes bomba felével lesz egyenlő. A két bombát tartalmazó mezők száma az összes bomba/4-\/el egyenlő. Ugyanaz igaz a 3 bombát tartalmazó mezőkre, mint a 2 bombásokra.
+A \doxyref{Rat\+Table}{p.}{classcom_1_1example_1_1_rat_table} meghívja az ősosztálya, a \doxyref{Table}{p.}{classcom_1_1example_1_1_table} konstruktorát. Az egyetlen bombát tartalmazó mezők száma az összes bomba felével lesz egyenlő. A két bombát tartalmazó mezők száma az összes bomba/4-\/el egyenlő. Ugyanaz igaz a 3 bombát tartalmazó mezőkre, mint a 2 bombásokra.
 
 
 \begin{DoxyParams}{Parameters}
@@ -93,23 +105,22 @@ A \doxylink{classcom_1_1example_1_1_rat_table}{Rat\+Table} meghívja az ősoszt�
 
 
 \label{doc-func-members}
-\Hypertarget{classcom_1_1example_1_1_rat_table_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classcom_1_1example_1_1_rat_table_aacfc8c709163735c7869c527fc6ed217}\index{com.example.RatTable@{com.example.RatTable}!checkNeighbors@{checkNeighbors}}
+\index{com.example.RatTable@{com.example.RatTable}!checkNeighbors@{checkNeighbors}}
 \index{checkNeighbors@{checkNeighbors}!com.example.RatTable@{com.example.RatTable}}
-\doxysubsubsection{\texorpdfstring{checkNeighbors()}{checkNeighbors()}}
+\doxysubsubsection{checkNeighbors()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_aacfc8c709163735c7869c527fc6ed217} 
 void com.\+example.\+Rat\+Table.\+check\+Neighbors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 Ellenőrzi, hogy egy mező szomszédjaiban összesen hány bomba található. Azon mezők vannak ellenőrizve, amelyek nem tartalmaznak bombák. Ha egy mező szomszédja tartalmaz bombát növeli a mezővel szomszédos bombák számlálóját annyival amennyi bombát tartalmaz a szomszédos mező. A mező szomszédos bombáinak száma a számláló értéke lesz. A szomszédok között ebben a számításban is beletartoznak a szélső pozíciókhoz tartozó másik oldalon lévő pozíciók. 
 
-Reimplemented from \mbox{\hyperlink{classcom_1_1example_1_1_table_adfc24d157a8a24c766f01a56d2cec062}{com.\+example.\+Table}}.
+Reimplemented from \textbf{ com.\+example.\+Table} \doxyref{}{p.}{classcom_1_1example_1_1_table_adfc24d157a8a24c766f01a56d2cec062}.
 
-\Hypertarget{classcom_1_1example_1_1_rat_table_af37581d00821a6f7a125d97cba39ad23}\index{com.example.RatTable@{com.example.RatTable}!findShortestPath@{findShortestPath}}
+\index{com.example.RatTable@{com.example.RatTable}!findShortestPath@{findShortestPath}}
 \index{findShortestPath@{findShortestPath}!com.example.RatTable@{com.example.RatTable}}
-\doxysubsubsection{\texorpdfstring{findShortestPath()}{findShortestPath()}}
+\doxysubsubsection{findShortestPath()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_af37581d00821a6f7a125d97cba39ad23} 
-List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$ com.\+example.\+Rat\+Table.\+find\+Shortest\+Path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+List$<$ \textbf{ Position} $>$ com.\+example.\+Rat\+Table.\+find\+Shortest\+Path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 A legrövidebb út megtalálása BFS algoritmust használva. Az egér jelenlegi pozíciójához képest keresi meg a célpozícióhoz a legrövidebb utat.
 
@@ -123,11 +134,11 @@ A metódus működése\+:
 \begin{DoxyReturn}{Returns}
 A célpozícióhoz vezető út legrövidebb út pozíciónak listája vagy üres lista, ha nem létezik elérhető út 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_rat_table_abad6be44ce265863e54257fa75c40bdf}\index{com.example.RatTable@{com.example.RatTable}!getNeighborPositions@{getNeighborPositions}}
+\index{com.example.RatTable@{com.example.RatTable}!getNeighborPositions@{getNeighborPositions}}
 \index{getNeighborPositions@{getNeighborPositions}!com.example.RatTable@{com.example.RatTable}}
-\doxysubsubsection{\texorpdfstring{getNeighborPositions()}{getNeighborPositions()}}
+\doxysubsubsection{getNeighborPositions()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_abad6be44ce265863e54257fa75c40bdf} 
-List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$ com.\+example.\+Rat\+Table.\+get\+Neighbor\+Positions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}}}]{p}{}\end{DoxyParamCaption})}
+List$<$ \textbf{ Position} $>$ com.\+example.\+Rat\+Table.\+get\+Neighbor\+Positions (\begin{DoxyParamCaption}\item[{\textbf{ Position}}]{p}{}\end{DoxyParamCaption})}
 
 Ez a metódus visszatér egy mező szomszédjainak listájával. A get\+Neighbors\+Wrap\+Around metódust hívja meg a szomszédok listájának eléréséhez.
 
@@ -141,11 +152,11 @@ szomszédpozíciók listája
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classcom_1_1example_1_1_table_ab65ff2b944b2e8723a9f949f772a1f57}{com.\+example.\+Table}}.
+Reimplemented from \textbf{ com.\+example.\+Table} \doxyref{}{p.}{classcom_1_1example_1_1_table_ab65ff2b944b2e8723a9f949f772a1f57}.
 
-\Hypertarget{classcom_1_1example_1_1_rat_table_a33ecae22587c2ee0287e01e86f254b08}\index{com.example.RatTable@{com.example.RatTable}!getOneMineFields@{getOneMineFields}}
+\index{com.example.RatTable@{com.example.RatTable}!getOneMineFields@{getOneMineFields}}
 \index{getOneMineFields@{getOneMineFields}!com.example.RatTable@{com.example.RatTable}}
-\doxysubsubsection{\texorpdfstring{getOneMineFields()}{getOneMineFields()}}
+\doxysubsubsection{getOneMineFields()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_a33ecae22587c2ee0287e01e86f254b08} 
 int com.\+example.\+Rat\+Table.\+get\+One\+Mine\+Fields (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
@@ -156,24 +167,24 @@ az egyetlen bombát tartalmazó mezők száma
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{classcom_1_1example_1_1_table_aaffef83ce1f24f09dbc48a1ef13cd6e1}{com.\+example.\+Table}}.
+Reimplemented from \textbf{ com.\+example.\+Table} \doxyref{}{p.}{classcom_1_1example_1_1_table_aaffef83ce1f24f09dbc48a1ef13cd6e1}.
 
-\Hypertarget{classcom_1_1example_1_1_rat_table_a25d712c5cc349f25da1a82f5f7f24f6f}\index{com.example.RatTable@{com.example.RatTable}!getRat@{getRat}}
+\index{com.example.RatTable@{com.example.RatTable}!getRat@{getRat}}
 \index{getRat@{getRat}!com.example.RatTable@{com.example.RatTable}}
-\doxysubsubsection{\texorpdfstring{getRat()}{getRat()}}
+\doxysubsubsection{getRat()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_a25d712c5cc349f25da1a82f5f7f24f6f} 
-\mbox{\hyperlink{classcom_1_1example_1_1_rat}{Rat}} com.\+example.\+Rat\+Table.\+get\+Rat (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+\textbf{ Rat} com.\+example.\+Rat\+Table.\+get\+Rat (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-Visszatéríti a táblához tartozó \doxylink{classcom_1_1example_1_1_rat}{Rat} objektumot.
+Visszatéríti a táblához tartozó \doxyref{Rat}{p.}{classcom_1_1example_1_1_rat} objektumot.
 
 \begin{DoxyReturn}{Returns}
-táblához tartozó \doxylink{classcom_1_1example_1_1_rat}{Rat} objektum 
+táblához tartozó \doxyref{Rat}{p.}{classcom_1_1example_1_1_rat} objektum 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_rat_table_af9c45ec979a7051856e13eb4bfe6ad45}\index{com.example.RatTable@{com.example.RatTable}!getRightDirectionNeighbors@{getRightDirectionNeighbors}}
+\index{com.example.RatTable@{com.example.RatTable}!getRightDirectionNeighbors@{getRightDirectionNeighbors}}
 \index{getRightDirectionNeighbors@{getRightDirectionNeighbors}!com.example.RatTable@{com.example.RatTable}}
-\doxysubsubsection{\texorpdfstring{getRightDirectionNeighbors()}{getRightDirectionNeighbors()}}
+\doxysubsubsection{getRightDirectionNeighbors()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_af9c45ec979a7051856e13eb4bfe6ad45} 
-List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$ com.\+example.\+Rat\+Table.\+get\+Right\+Direction\+Neighbors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}}}]{current}{}\end{DoxyParamCaption})}
+List$<$ \textbf{ Position} $>$ com.\+example.\+Rat\+Table.\+get\+Right\+Direction\+Neighbors (\begin{DoxyParamCaption}\item[{\textbf{ Position}}]{current}{}\end{DoxyParamCaption})}
 
 Ez a függvény visszaadja egy pozíció olyan szomszédjait amelyek nincsenek egyik irányból távolabb az egér célpozíciójától. Ez azért fontos, hogy a legrövidebb útba ne kerüljenek olyan pozíciók, amelyek az azelőtti pozícióhoz képest távolabb vannak a céltól valamelyik irányban.
 
@@ -185,20 +196,20 @@ Ez a függvény visszaadja egy pozíció olyan szomszédjait amelyek nincsenek e
 \begin{DoxyReturn}{Returns}
 szomszédos pozíciók listája, amelyek nincsenek távolabb a céltól egyik irányból se 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_rat_table_a558064eef5610dfb93f1820215e9a576}\index{com.example.RatTable@{com.example.RatTable}!getShortestPath@{getShortestPath}}
+\index{com.example.RatTable@{com.example.RatTable}!getShortestPath@{getShortestPath}}
 \index{getShortestPath@{getShortestPath}!com.example.RatTable@{com.example.RatTable}}
-\doxysubsubsection{\texorpdfstring{getShortestPath()}{getShortestPath()}}
+\doxysubsubsection{getShortestPath()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_a558064eef5610dfb93f1820215e9a576} 
-List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$ com.\+example.\+Rat\+Table.\+get\+Shortest\+Path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+List$<$ \textbf{ Position} $>$ com.\+example.\+Rat\+Table.\+get\+Shortest\+Path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 Visszatéríti a legrövidebb utat
 
 \begin{DoxyReturn}{Returns}
 legrövidebb út pozícióinak listája 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_rat_table_a837c58ecc899ca46a2b51b322990282b}\index{com.example.RatTable@{com.example.RatTable}!getThreeMineFields@{getThreeMineFields}}
+\index{com.example.RatTable@{com.example.RatTable}!getThreeMineFields@{getThreeMineFields}}
 \index{getThreeMineFields@{getThreeMineFields}!com.example.RatTable@{com.example.RatTable}}
-\doxysubsubsection{\texorpdfstring{getThreeMineFields()}{getThreeMineFields()}}
+\doxysubsubsection{getThreeMineFields()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_a837c58ecc899ca46a2b51b322990282b} 
 int com.\+example.\+Rat\+Table.\+get\+Three\+Mine\+Fields (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
@@ -207,9 +218,9 @@ A metódus visszatér a három bombát tartalmazó mezők számával
 \begin{DoxyReturn}{Returns}
 a három bombát tartalmazó mezők száma 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_rat_table_aeed219101e72e1e5b28f4a36a379ebc7}\index{com.example.RatTable@{com.example.RatTable}!getTwoMineFields@{getTwoMineFields}}
+\index{com.example.RatTable@{com.example.RatTable}!getTwoMineFields@{getTwoMineFields}}
 \index{getTwoMineFields@{getTwoMineFields}!com.example.RatTable@{com.example.RatTable}}
-\doxysubsubsection{\texorpdfstring{getTwoMineFields()}{getTwoMineFields()}}
+\doxysubsubsection{getTwoMineFields()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_aeed219101e72e1e5b28f4a36a379ebc7} 
 int com.\+example.\+Rat\+Table.\+get\+Two\+Mine\+Fields (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
@@ -218,11 +229,11 @@ A metódus visszatér a két bombát tartalmazó mezők számával
 \begin{DoxyReturn}{Returns}
 a két bombát tartalmazó mezők száma 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_rat_table_a8a7889e503c47769063bbde5bfff9369}\index{com.example.RatTable@{com.example.RatTable}!reconstructPath@{reconstructPath}}
+\index{com.example.RatTable@{com.example.RatTable}!reconstructPath@{reconstructPath}}
 \index{reconstructPath@{reconstructPath}!com.example.RatTable@{com.example.RatTable}}
-\doxysubsubsection{\texorpdfstring{reconstructPath()}{reconstructPath()}}
+\doxysubsubsection{reconstructPath()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_a8a7889e503c47769063bbde5bfff9369} 
-List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$ com.\+example.\+Rat\+Table.\+reconstruct\+Path (\begin{DoxyParamCaption}\item[{Map$<$ \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}}, \mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}} $>$}]{parent}{}\end{DoxyParamCaption})}
+List$<$ \textbf{ Position} $>$ com.\+example.\+Rat\+Table.\+reconstruct\+Path (\begin{DoxyParamCaption}\item[{Map$<$ \textbf{ Position}, \textbf{ Position} $>$}]{parent}{}\end{DoxyParamCaption})}
 
 Viszaépíti a find\+Shortest\+Path által megkeresett legrövidebb utat. A parent Hash\+Mapban minden pozíció kulcsa az előtte lévőknek. így ezt végigjárva hozzáadhatjuk a pozíciókat az úthoz. A végén meg kell fordítani az utat, hogy a megfelelő sorrendben legyenek benne a pozíciók.
 
@@ -234,11 +245,11 @@ Viszaépíti a find\+Shortest\+Path által megkeresett legrövidebb utat. A pare
 \begin{DoxyReturn}{Returns}
 a legrövidebb út pozícióinak listája 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_rat_table_a4dcd5884fbfeba885494bd3aeb57112c}\index{com.example.RatTable@{com.example.RatTable}!selectingMines@{selectingMines}}
+\index{com.example.RatTable@{com.example.RatTable}!selectingMines@{selectingMines}}
 \index{selectingMines@{selectingMines}!com.example.RatTable@{com.example.RatTable}}
-\doxysubsubsection{\texorpdfstring{selectingMines()}{selectingMines()}}
+\doxysubsubsection{selectingMines()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_a4dcd5884fbfeba885494bd3aeb57112c} 
-void com.\+example.\+Rat\+Table.\+selecting\+Mines (\begin{DoxyParamCaption}\item[{Array\+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_field}{Field}} $>$}]{available\+Fields}{}\end{DoxyParamCaption})}
+void com.\+example.\+Rat\+Table.\+selecting\+Mines (\begin{DoxyParamCaption}\item[{Array\+List$<$ \textbf{ Field} $>$}]{available\+Fields}{}\end{DoxyParamCaption})}
 
 Kiválasztja azokat a mezőket, amelyek bombát tartalmaznak. A bombát tartalmazó mezők között nem lehet olyan, ami az elsőként kiválasztott pozíció szomszédja. Az elérhető mezők össze vannak keverve annak érdekében , hogy a táblán véletlenszerűen szerepljenek a bombák. A táblához tartozó bombák számával egyenlő mezőnek felének beállítja a hozzá tartozó bombák számát 1-\/re, a negyedét 2-\/re és az utolsó negyedét 3-\/ra.
 
@@ -249,24 +260,24 @@ Kiválasztja azokat a mezőket, amelyek bombát tartalmaznak. A bombát tartalma
 \end{DoxyParams}
 
 
-Reimplemented from \mbox{\hyperlink{classcom_1_1example_1_1_table_a9e11dd7b6a7fcbcb4e1d03329634ca44}{com.\+example.\+Table}}.
+Reimplemented from \textbf{ com.\+example.\+Table} \doxyref{}{p.}{classcom_1_1example_1_1_table_a9e11dd7b6a7fcbcb4e1d03329634ca44}.
 
-\Hypertarget{classcom_1_1example_1_1_rat_table_a65c4f6b6d0306caf982e1a812f156c22}\index{com.example.RatTable@{com.example.RatTable}!setRat@{setRat}}
+\index{com.example.RatTable@{com.example.RatTable}!setRat@{setRat}}
 \index{setRat@{setRat}!com.example.RatTable@{com.example.RatTable}}
-\doxysubsubsection{\texorpdfstring{setRat()}{setRat()}}
+\doxysubsubsection{setRat()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_a65c4f6b6d0306caf982e1a812f156c22} 
-void com.\+example.\+Rat\+Table.\+set\+Rat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1_position}{Position}}}]{first\+Position}{}\end{DoxyParamCaption})}
+void com.\+example.\+Rat\+Table.\+set\+Rat (\begin{DoxyParamCaption}\item[{\textbf{ Position}}]{first\+Position}{}\end{DoxyParamCaption})}
 
-A tábla \doxylink{classcom_1_1example_1_1_rat}{Rat} objektuma megkapja egy új, létrehozott \doxylink{classcom_1_1example_1_1_rat}{Rat} értékét. A \doxylink{classcom_1_1example_1_1_rat}{Rat} konstruktorában a kezdőpozíciót kapja meg.
+A tábla \doxyref{Rat}{p.}{classcom_1_1example_1_1_rat} objektuma megkapja egy új, létrehozott \doxyref{Rat}{p.}{classcom_1_1example_1_1_rat} értékét. A \doxyref{Rat}{p.}{classcom_1_1example_1_1_rat} konstruktorában a kezdőpozíciót kapja meg.
 
 
 \begin{DoxyParams}{Parameters}
-{\em first\+Position} & a \doxylink{classcom_1_1example_1_1_rat}{Rat} kezdőpozíciója \\
+{\em first\+Position} & a \doxyref{Rat}{p.}{classcom_1_1example_1_1_rat} kezdőpozíciója \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classcom_1_1example_1_1_rat_table_a16de872c2ab284eb8daf9dadc6a3c837}\index{com.example.RatTable@{com.example.RatTable}!setShortestPath@{setShortestPath}}
+\index{com.example.RatTable@{com.example.RatTable}!setShortestPath@{setShortestPath}}
 \index{setShortestPath@{setShortestPath}!com.example.RatTable@{com.example.RatTable}}
-\doxysubsubsection{\texorpdfstring{setShortestPath()}{setShortestPath()}}
+\doxysubsubsection{setShortestPath()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_rat_table_a16de872c2ab284eb8daf9dadc6a3c837} 
 void com.\+example.\+Rat\+Table.\+set\+Shortest\+Path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 

@@ -1,5 +1,16 @@
 package com.example;
 
+/**
+ * @brief A Field osztály a játék egy mezőjét reprezentálja.
+ *
+ * Egy mező tárolja, hogy tartalmaz-e bombát, hány szomszédja tartalmaz bombát,
+ * hány zászlóval van megjelölve, illetve hogy fel van-e fedve.
+ * A mező kezeli a zászlók számának növelését, visszaállítását,
+ * valamint a bomba- és szomszédinformációkat.
+ *
+ * A Field objektumok a játéktábla elemi egységei, amelyeken keresztül
+ * a játékos jelölhet, felfedhet és információt kaphat a környező mezőkről.
+ */
 public class Field {
   private boolean isMineField = false;
   private int numberOfNeighbors = 0;

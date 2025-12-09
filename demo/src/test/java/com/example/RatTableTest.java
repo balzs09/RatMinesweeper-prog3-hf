@@ -6,6 +6,15 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @brief A RatTable osztály múködését ellenőrző JUnit tesztosztály.
+ * 
+ *  Teszteli többek között a konstruktor működését, a bombák
+ *  helyes kiválasztását, a wrap-around működő szomszédszámlálást.
+ *  Emellett teszteli a táblához tartozó egér helyes elhelyezését 
+ *  és a legegyszerűbb egérmozgás helyességét, beleértve a célhoz 
+ *  vezető útvonal helyes kiszámítását.
+ */
 public class RatTableTest {
   /**
    * Teszteli, hogy a RatTable konstruktora helyesen állítja be
@@ -90,8 +99,8 @@ public class RatTableTest {
   }
 
   /**
-   * Teszteli, hogy a bányák kiválasztása megfelelően történik:
-   * a mezők aknaszámai és a mezők száma helyesen alakul.
+   * Teszteli, hogy az egér cél irányába eső szomszédos pozíciók
+   * valóban közelebb kerülnek a célhoz sor- és oszlopirányban.
    */
   @Test
   public void testGetRightDirectionNeighbors() {
@@ -108,8 +117,8 @@ public class RatTableTest {
   }
 
   /**
-   * Teszteli, hogy a bányák kiválasztása megfelelően történik:
-   * a mezők aknaszámai és a mezők száma helyesen alakul.
+   * Teszteli, hogy az egér cél irányába eső szomszédos pozíciók
+   * valóban közelebb kerülnek a célhoz sor- és oszlopirányban.
    */
   @Test
   public void testRatMovementSimple() {

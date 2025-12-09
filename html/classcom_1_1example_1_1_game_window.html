@@ -91,6 +91,9 @@ $(function(){initNavTree('classcom_1_1example_1_1_game_window.html','','classcom
   <div class="headertitle"><div class="title">com.example.GameWindow Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A játék főablaka, amely tartalmazza a menüt, a játékpanelt, az információs panelt és a ranglistát.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for com.example.GameWindow:</div>
 <div class="dyncontent">
@@ -100,25 +103,254 @@ Inheritance diagram for com.example.GameWindow:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3792c1568a6a7fb40e0ba8648e908f13" id="r_a3792c1568a6a7fb40e0ba8648e908f13"><td class="memItemLeft" align="right" valign="top"><a id="a3792c1568a6a7fb40e0ba8648e908f13" name="a3792c1568a6a7fb40e0ba8648e908f13"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setInfoPanel</b> (<a class="el" href="enumcom_1_1example_1_1_game_modes.html">GameModes</a> mode)</td></tr>
-<tr class="memitem:ac9432fa8053d5b7cd069f75c57bac7de" id="r_ac9432fa8053d5b7cd069f75c57bac7de"><td class="memItemLeft" align="right" valign="top"><a id="ac9432fa8053d5b7cd069f75c57bac7de" name="ac9432fa8053d5b7cd069f75c57bac7de"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>refreshHighscoreArea</b> ()</td></tr>
-<tr class="memitem:a9f14710afdd32f3c1f91b39fa7c3cd1c" id="r_a9f14710afdd32f3c1f91b39fa7c3cd1c"><td class="memItemLeft" align="right" valign="top"><a id="a9f14710afdd32f3c1f91b39fa7c3cd1c" name="a9f14710afdd32f3c1f91b39fa7c3cd1c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>saveHighscoreAfterWin</b> (int timePassed, File outputFile)</td></tr>
-<tr class="memitem:a7ba7319ff55eec0e7e578cd84440bd24" id="r_a7ba7319ff55eec0e7e578cd84440bd24"><td class="memItemLeft" align="right" valign="top"><a id="a7ba7319ff55eec0e7e578cd84440bd24" name="a7ba7319ff55eec0e7e578cd84440bd24"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>writeMessageAfterLosing</b> ()</td></tr>
-<tr class="memitem:ae820a56bfb3f9860e1346eb7d521fed8" id="r_ae820a56bfb3f9860e1346eb7d521fed8"><td class="memItemLeft" align="right" valign="top"><a id="ae820a56bfb3f9860e1346eb7d521fed8" name="ae820a56bfb3f9860e1346eb7d521fed8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>stopTimer</b> ()</td></tr>
-<tr class="memitem:a5ce5f16b44cd646a604fe2a9a73a487e" id="r_a5ce5f16b44cd646a604fe2a9a73a487e"><td class="memItemLeft" align="right" valign="top"><a id="a5ce5f16b44cd646a604fe2a9a73a487e" name="a5ce5f16b44cd646a604fe2a9a73a487e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>updateMines</b> (int remainingMines, int flagnumber)</td></tr>
-<tr class="memitem:aa3a6def4ebb0fb2c21a93636f9a0d967" id="r_aa3a6def4ebb0fb2c21a93636f9a0d967"><td class="memItemLeft" align="right" valign="top"><a id="aa3a6def4ebb0fb2c21a93636f9a0d967" name="aa3a6def4ebb0fb2c21a93636f9a0d967"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>startNewGame</b> (<a class="el" href="enumcom_1_1example_1_1_game_modes.html">GameModes</a> mode, <a class="el" href="enumcom_1_1example_1_1_difficulties.html">Difficulties</a> dif)</td></tr>
-<tr class="memitem:a60598ea4e29bcaf154f1ac1e8901dbbe" id="r_a60598ea4e29bcaf154f1ac1e8901dbbe"><td class="memItemLeft" align="right" valign="top"><a id="a60598ea4e29bcaf154f1ac1e8901dbbe" name="a60598ea4e29bcaf154f1ac1e8901dbbe"></a>
-<a class="el" href="classcom_1_1example_1_1_highscore_manager.html">HighscoreManager</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getHighscoreManager</b> ()</td></tr>
-<tr class="memitem:a5f937782f603a39a72f6808cc09f222b" id="r_a5f937782f603a39a72f6808cc09f222b"><td class="memItemLeft" align="right" valign="top"><a id="a5f937782f603a39a72f6808cc09f222b" name="a5f937782f603a39a72f6808cc09f222b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getTimePassed</b> ()</td></tr>
+<tr class="memitem:a3792c1568a6a7fb40e0ba8648e908f13" id="r_a3792c1568a6a7fb40e0ba8648e908f13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3792c1568a6a7fb40e0ba8648e908f13">setInfoPanel</a> (<a class="el" href="enumcom_1_1example_1_1_game_modes.html">GameModes</a> mode)</td></tr>
+<tr class="memitem:ac9432fa8053d5b7cd069f75c57bac7de" id="r_ac9432fa8053d5b7cd069f75c57bac7de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9432fa8053d5b7cd069f75c57bac7de">refreshHighscoreArea</a> ()</td></tr>
+<tr class="memitem:a9f14710afdd32f3c1f91b39fa7c3cd1c" id="r_a9f14710afdd32f3c1f91b39fa7c3cd1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f14710afdd32f3c1f91b39fa7c3cd1c">saveHighscoreAfterWin</a> (int timePassed, File outputFile)</td></tr>
+<tr class="memitem:a7ba7319ff55eec0e7e578cd84440bd24" id="r_a7ba7319ff55eec0e7e578cd84440bd24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ba7319ff55eec0e7e578cd84440bd24">writeMessageAfterLosing</a> ()</td></tr>
+<tr class="memitem:a3e108560f20bafe750560bd8861e48ee" id="r_a3e108560f20bafe750560bd8861e48ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e108560f20bafe750560bd8861e48ee">GameWindow</a> ()</td></tr>
+<tr class="memitem:ae820a56bfb3f9860e1346eb7d521fed8" id="r_ae820a56bfb3f9860e1346eb7d521fed8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae820a56bfb3f9860e1346eb7d521fed8">stopTimer</a> ()</td></tr>
+<tr class="memitem:a5ce5f16b44cd646a604fe2a9a73a487e" id="r_a5ce5f16b44cd646a604fe2a9a73a487e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ce5f16b44cd646a604fe2a9a73a487e">updateMines</a> (int remainingMines, int flagnumber)</td></tr>
+<tr class="memitem:aa3a6def4ebb0fb2c21a93636f9a0d967" id="r_aa3a6def4ebb0fb2c21a93636f9a0d967"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3a6def4ebb0fb2c21a93636f9a0d967">startNewGame</a> (<a class="el" href="enumcom_1_1example_1_1_game_modes.html">GameModes</a> mode, <a class="el" href="enumcom_1_1example_1_1_difficulties.html">Difficulties</a> dif)</td></tr>
+<tr class="memitem:a60598ea4e29bcaf154f1ac1e8901dbbe" id="r_a60598ea4e29bcaf154f1ac1e8901dbbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcom_1_1example_1_1_highscore_manager.html">HighscoreManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60598ea4e29bcaf154f1ac1e8901dbbe">getHighscoreManager</a> ()</td></tr>
+<tr class="memitem:a5f937782f603a39a72f6808cc09f222b" id="r_a5f937782f603a39a72f6808cc09f222b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f937782f603a39a72f6808cc09f222b">getTimePassed</a> ()</td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A játék főablaka, amely tartalmazza a menüt, a játékpanelt, az információs panelt és a ranglistát. </p>
+<p>Feladata:</p><ul>
+<li>A <a class="el" href="classcom_1_1example_1_1_game_board.html" title="A GameBoard osztály felelős a játéktábla vizuális megjelenítéséért.">GameBoard</a> és <a class="el" href="classcom_1_1example_1_1_game_controller.html" title="A GameController osztály kezeli a játék logikáját és a játéktábla állapotát.">GameController</a> összekapcsolása.</li>
+<li>Az eltelt idő és a be nem jelölt bombák számának megjelenítése.</li>
+<li>A <a class="el" href="classcom_1_1example_1_1_highscore_manager.html" title="A játék ranglistáinak kezelése.">HighscoreManager</a> kezelése, játékos eredmények mentése és megjelenítése.</li>
+<li>Új játék indítása a kiválasztott nehézségi szint és játékmód alapján.</li>
+</ul>
+<p>Kapcsolódó osztályok:</p><ul>
+<li><a class="el" href="classcom_1_1example_1_1_game_board.html" title="A GameBoard osztály felelős a játéktábla vizuális megjelenítéséért.">GameBoard</a>: a játékmezők kirajzolása.</li>
+<li><a class="el" href="classcom_1_1example_1_1_game_controller.html" title="A GameController osztály kezeli a játék logikáját és a játéktábla állapotát.">GameController</a>: a játék logikájának vezérlése.</li>
+<li><a class="el" href="classcom_1_1example_1_1_game_menu_bar.html" title="A GameMenuBar kezeli a játék ablak menüsávját.">GameMenuBar</a>: a játék menüje, innen lehet indítani új játékot.</li>
+<li><a class="el" href="classcom_1_1example_1_1_highscore_manager.html" title="A játék ranglistáinak kezelése.">HighscoreManager</a>: a legjobb eredmények kezelése. </li>
+</ul>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a3e108560f20bafe750560bd8861e48ee" name="a3e108560f20bafe750560bd8861e48ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e108560f20bafe750560bd8861e48ee">&#9670;&#160;</a></span>GameWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.example.GameWindow.GameWindow </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A <a class="el" href="classcom_1_1example_1_1_game_window.html" title="A játék főablaka, amely tartalmazza a menüt, a játékpanelt, az információs panelt és a ranglistát.">GameWindow</a> osztály konstruktora. Hozzáadja az ablakhoz a gameMenuBar, infopanel, sidePanel és gameBoard objektumokat. Az ablak nagy részét a játékpanel teszi ki. Az infopanel a felső részre kerül, a sidePanel az ablak jobb oldalára. Kilépést az X-et megnyomva lehet végrehajtani. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a60598ea4e29bcaf154f1ac1e8901dbbe" name="a60598ea4e29bcaf154f1ac1e8901dbbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60598ea4e29bcaf154f1ac1e8901dbbe">&#9670;&#160;</a></span>getHighscoreManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classcom_1_1example_1_1_highscore_manager.html">HighscoreManager</a> com.example.GameWindow.getHighscoreManager </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ez a metódus visszatéríti az ablakhoz tartozó HighScoreManager objektumot.</p>
+<dl class="section return"><dt>Returns</dt><dd>jelenlegi játékhoz tartozó HighScoreManager objektum </dd></dl>
+
+</div>
+</div>
+<a id="a5f937782f603a39a72f6808cc09f222b" name="a5f937782f603a39a72f6808cc09f222b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f937782f603a39a72f6808cc09f222b">&#9670;&#160;</a></span>getTimePassed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.example.GameWindow.getTimePassed </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ez a metódus visszatéríti az eltelt időt másodpercben</p>
+<dl class="section return"><dt>Returns</dt><dd>az eltelt idő másodpercben </dd></dl>
+
+</div>
+</div>
+<a id="ac9432fa8053d5b7cd069f75c57bac7de" name="ac9432fa8053d5b7cd069f75c57bac7de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9432fa8053d5b7cd069f75c57bac7de">&#9670;&#160;</a></span>refreshHighscoreArea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.GameWindow.refreshHighscoreArea </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ez a metódus frissíti a ranglista megjelenítését. Általa az új játékos eredménye is bekerül. </p>
+
+</div>
+</div>
+<a id="a9f14710afdd32f3c1f91b39fa7c3cd1c" name="a9f14710afdd32f3c1f91b39fa7c3cd1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f14710afdd32f3c1f91b39fa7c3cd1c">&#9670;&#160;</a></span>saveHighscoreAfterWin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.GameWindow.saveHighscoreAfterWin </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>timePassed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">File</td>          <td class="paramname"><span class="paramname"><em>outputFile</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ez a metódus elmenti a nyertes eredmlnyt, ha az benne van a legjobb 10-ben. Ha nincs név beírva akkor a név helyére Anonymus kerül. Meghívja a legjobb eredmények hozzáadási metódusát. Ez akkor adja hozzá, ha a legjobb 10 idő között van. Ha hozzáadás után szerepel az új eredmény a legjobb eredmények listájában a legjobb eredmények frissülnek az ablakban és elmenti az eredményeket egy bináris fájlban. Más eredmény jelenik meg, ha bekerül a játékos a top 10-be, mint ha nem kerülne be.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timePassed</td><td>az eltelt idő másodpercben </td></tr>
+    <tr><td class="paramname">outputFile</td><td>a kimeneti bináris fájl </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3792c1568a6a7fb40e0ba8648e908f13" name="a3792c1568a6a7fb40e0ba8648e908f13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3792c1568a6a7fb40e0ba8648e908f13">&#9670;&#160;</a></span>setInfoPanel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.GameWindow.setInfoPanel </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1example_1_1_game_modes.html">GameModes</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ez a metódus beállítja az infoPanelt, ezen szerepel az eltelt idő és a bejelöletlen bombák száma. RAT játékmód esetén az is felkerül, hogy hány két és három bombát tartalmazó bejelöletlen mező van.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>a kiválasztott játékmód </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa3a6def4ebb0fb2c21a93636f9a0d967" name="aa3a6def4ebb0fb2c21a93636f9a0d967"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3a6def4ebb0fb2c21a93636f9a0d967">&#9670;&#160;</a></span>startNewGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.GameWindow.startNewGame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1example_1_1_game_modes.html">GameModes</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="enumcom_1_1example_1_1_difficulties.html">Difficulties</a></td>          <td class="paramname"><span class="paramname"><em>dif</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ez a metódus elindít egy új játékot Felrajzolja a játékpanel kezdeti állapotát Elkezdi az idő számolását. Beolvassa az eddigi eredményeket ebben a játékmódban és nehézségben</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>a játékmód </td></tr>
+    <tr><td class="paramname">dif</td><td>a játék nehézsége </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae820a56bfb3f9860e1346eb7d521fed8" name="ae820a56bfb3f9860e1346eb7d521fed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae820a56bfb3f9860e1346eb7d521fed8">&#9670;&#160;</a></span>stopTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.GameWindow.stopTimer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ez a metódus megállítja az eltelt idő számítását. </p>
+
+</div>
+</div>
+<a id="a5ce5f16b44cd646a604fe2a9a73a487e" name="a5ce5f16b44cd646a604fe2a9a73a487e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ce5f16b44cd646a604fe2a9a73a487e">&#9670;&#160;</a></span>updateMines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.GameWindow.updateMines </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>remainingMines</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>flagnumber</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Frissiti a be nem jelölt bombát tartalmazó mezők számát az ablakban.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">remainingMines</td><td>be nem jelölt bombák száma </td></tr>
+    <tr><td class="paramname">flagnumber</td><td>bomba típusa(1-normál, 2-dupla, 3-tripla) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7ba7319ff55eec0e7e578cd84440bd24" name="a7ba7319ff55eec0e7e578cd84440bd24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ba7319ff55eec0e7e578cd84440bd24">&#9670;&#160;</a></span>writeMessageAfterLosing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.GameWindow.writeMessageAfterLosing </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ez a metódus vesztes játék után ír ki üzenetet. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>demo/src/main/java/com/example/<b>GameWindow.java</b></li>
 </ul>

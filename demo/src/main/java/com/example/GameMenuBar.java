@@ -3,6 +3,19 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JMenu;
+
+/**
+ * @brief A GameMenuBar kezeli a játék ablak menüsávját.
+ *
+ * Feladata, hogy a felhasználó kiválaszthassa a nehézségi szintet, 
+ * játékmódot, valamint új játékot indíthasson.
+ *
+ * Kapcsolódó osztályok:
+ * - GameWindow: az ablak, amelyhez a menüsáv tartozik
+ * - Difficulties: az elérhető nehézségi szinteket tartalmazó enum
+ * - GameModes: az elérhető játékmódokat tartalmazó enum
+ * - JMenuBar, JMenu, JMenuItem: a Swing komponensek, amiket a menüsáv használ
+ */
 public class GameMenuBar extends JMenuBar {
     private Difficulties selectedDifficulty = null;
     private GameModes selectedGameMode = null;

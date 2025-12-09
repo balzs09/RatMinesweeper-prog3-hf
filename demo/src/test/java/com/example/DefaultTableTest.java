@@ -6,6 +6,12 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @brief A DefaultTable osztály működését ellenőrző JUnit tesztosztály.
+ * 
+ * Teszteli többek között a konstruktor működését, a bombák helyes
+ * kiválasztását, a szomszédszámolást és a pozíció-mező kapcsolat helyes működését.
+ */
 public class DefaultTableTest {
 
   /**

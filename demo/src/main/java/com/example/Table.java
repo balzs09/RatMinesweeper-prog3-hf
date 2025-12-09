@@ -2,7 +2,19 @@ package com.example;
 
 import java.util.List;
 import java.util.ArrayList;
-
+/**
+ * @brief Absztrakt táblaosztály az aknakereső játékhoz.
+ *
+ * A Table osztály reprezentál egy játékteret, amely sorokból és oszlopokból áll,  
+ * és mezőket (Field) tartalmaz. Emellett tartalmazza azt is, hogy hány bombamező
+ * szerepel a táblában.
+ * Az osztály felelős a mezők tárolásáért,
+ * szomszédsági viszonyok kezeléséért, valamint a bombák elhelyezésének
+ * logikájáért.
+ * A konkrét játékmódok (DefaultTable, RatTable) ebből az osztályból származnak,
+ * és megvalósítják a játékmód-specifikus funkciókat,
+ * mint például a szomszédpozíciók meghatározása vagy a bombák kijelölése.
+ */
 public abstract class Table {
     protected int rows;
     protected int columns;

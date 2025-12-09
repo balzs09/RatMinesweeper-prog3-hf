@@ -4,6 +4,17 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * @brief A klasszikus aknakereső játékmód tábláját megvalósító osztály.
+ *
+ * A DefaultTable a Table absztrakt osztály konkrét implementációja,
+ * amely a hagyományos aknakereső szabályai szerint kezeli a mezőket.
+ * Feladata a bombák véletlenszerű elhelyezése, a szomszédos bombák 
+ * számának kiszámítása, valamint a szomszédos pozíciók meghatározása.
+ *
+ * Ez az osztály felel a "normál" játékmód működéséért, ahol minden bomba
+ * egyetlen egységnyi értékkel szerepel a mezőkön.
+ */
 public class DefaultTable extends Table {
 
     /**

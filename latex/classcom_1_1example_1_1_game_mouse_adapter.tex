@@ -1,5 +1,10 @@
 \doxysection{com.\+example.\+Game\+Mouse\+Adapter Class Reference}
-\hypertarget{classcom_1_1example_1_1_game_mouse_adapter}{}\label{classcom_1_1example_1_1_game_mouse_adapter}\index{com.example.GameMouseAdapter@{com.example.GameMouseAdapter}}
+\label{classcom_1_1example_1_1_game_mouse_adapter}\index{com.example.GameMouseAdapter@{com.example.GameMouseAdapter}}
+
+
+A \doxyref{Game\+Mouse\+Adapter}{p.}{classcom_1_1example_1_1_game_mouse_adapter} kezeli az egér kattintásokat a játéktáblán.  
+
+
 Inheritance diagram for com.\+example.\+Game\+Mouse\+Adapter\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,12 +14,56 @@ Inheritance diagram for com.\+example.\+Game\+Mouse\+Adapter\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_mouse_adapter_a6337c1b892e242e9c454b04e0aa4f2ae}\label{classcom_1_1example_1_1_game_mouse_adapter_a6337c1b892e242e9c454b04e0aa4f2ae} 
-{\bfseries Game\+Mouse\+Adapter} (\mbox{\hyperlink{classcom_1_1example_1_1_game_board}{Game\+Board}} board)
+\textbf{ Game\+Mouse\+Adapter} (\textbf{ Game\+Board} board)
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_mouse_adapter_a8f0222803419bb224a47da0b5d9bd37a}\label{classcom_1_1example_1_1_game_mouse_adapter_a8f0222803419bb224a47da0b5d9bd37a} 
-void {\bfseries mouse\+Pressed} (Mouse\+Event e)
+void \textbf{ mouse\+Pressed} (Mouse\+Event e)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \doxyref{Game\+Mouse\+Adapter}{p.}{classcom_1_1example_1_1_game_mouse_adapter} kezeli az egér kattintásokat a játéktáblán. 
+
+Feladata, hogy a \doxyref{Game\+Board}{p.}{classcom_1_1example_1_1_game_board} panelen történt egér eseményeket a \doxyref{Game\+Controller}{p.}{classcom_1_1example_1_1_game_controller} megfelelő metódusaihoz továbbítsa.
+
+Kapcsolódó osztályok\+:
+\begin{DoxyItemize}
+\item \doxyref{Game\+Board}{p.}{classcom_1_1example_1_1_game_board}\+: a panel, amin az adapter figyeli az egér eseményeket
+\item \doxyref{Mouse\+Clicks}{p.}{enumcom_1_1example_1_1_mouse_clicks}\+: az egérgombok típusát reprezentáló enum
+\item \doxyref{Position}{p.}{classcom_1_1example_1_1_position}\+: a kattintás helyének táblabeli koordinátái 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{com.example.GameMouseAdapter@{com.example.GameMouseAdapter}!GameMouseAdapter@{GameMouseAdapter}}
+\index{GameMouseAdapter@{GameMouseAdapter}!com.example.GameMouseAdapter@{com.example.GameMouseAdapter}}
+\doxysubsubsection{GameMouseAdapter()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_mouse_adapter_a6337c1b892e242e9c454b04e0aa4f2ae} 
+com.\+example.\+Game\+Mouse\+Adapter.\+Game\+Mouse\+Adapter (\begin{DoxyParamCaption}\item[{\textbf{ Game\+Board}}]{board}{}\end{DoxyParamCaption})}
+
+A \doxyref{Game\+Mouse\+Adapter}{p.}{classcom_1_1example_1_1_game_mouse_adapter} osztály konstruktora, megkapja a hozzá tartozó játékpanelt.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & a játékpanel \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{com.example.GameMouseAdapter@{com.example.GameMouseAdapter}!mousePressed@{mousePressed}}
+\index{mousePressed@{mousePressed}!com.example.GameMouseAdapter@{com.example.GameMouseAdapter}}
+\doxysubsubsection{mousePressed()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_mouse_adapter_a8f0222803419bb224a47da0b5d9bd37a} 
+void com.\+example.\+Game\+Mouse\+Adapter.\+mouse\+Pressed (\begin{DoxyParamCaption}\item[{Mouse\+Event}]{e}{}\end{DoxyParamCaption})}
+
+Felülírja a gombnyomás műveletét, úgy, hogy a játékvezérlő mouse\+Choser metódusát hívja meg, azzal a gombbal ami meg lett nyomva
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & az egérrel történt esemény \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

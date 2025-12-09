@@ -14,6 +14,24 @@ import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.io.File;
 
+/**
+ * @brief A játék főablaka, amely tartalmazza a menüt, a játékpanelt,
+ *        az információs panelt és a ranglistát.
+ *
+ *        Feladata:
+ *        - A GameBoard és GameController összekapcsolása.
+ *        - Az eltelt idő és a be nem jelölt bombák számának megjelenítése.
+ *        - A HighscoreManager kezelése, játékos eredmények mentése és
+ *        megjelenítése.
+ *        - Új játék indítása a kiválasztott nehézségi szint és játékmód
+ *        alapján.
+ *
+ *        Kapcsolódó osztályok:
+ *        - GameBoard: a játékmezők kirajzolása.
+ *        - GameController: a játék logikájának vezérlése.
+ *        - GameMenuBar: a játék menüje, innen lehet indítani új játékot.
+ *        - HighscoreManager: a legjobb eredmények kezelése.
+ */
 public class GameWindow extends JFrame {
     private GameMenuBar gameMenuBar;
     private GameBoard gameBoard;
@@ -171,8 +189,11 @@ public class GameWindow extends JFrame {
         timer = new Timer(1000, e -> {
             timePassed++;
             timerLabel.setText("Time:" + timePassed);
+            infoPanel.revalidate();
+            infoPanel.repaint();
         });
         timer.start();
+
     }
 
     /**

@@ -8,6 +8,18 @@ import java.util.ArrayList;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 
+/**
+ * @brief A játék ranglistáinak kezelése.
+ *
+ * Feladata:
+ * - a játékosok eredményeinek tárolása,
+ * - eredmények betöltése és mentése bináris fájlokba,
+ * - legjobb eredmények listájának karbantartása.
+ *
+ * Kapcsolódó osztályok:
+ * - HighscoreEntry: az egyes eredményeket tárolja.
+ * - GameWindow: az eredmények megjelenítése az ablakban.
+ */
 public class HighscoreManager {
     private ArrayList<HighscoreEntry> highscores;
     private int maxEntrynumber;
@@ -60,6 +72,7 @@ public class HighscoreManager {
      * 
      * @param readableHighscores az erdményeket tartalmazó bináris fájl
      */
+    @SuppressWarnings("unchecked")
     public void loadHighScores(File readableHighscores) {
         if (!readableHighscores.exists())
             return;

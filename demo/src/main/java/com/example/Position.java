@@ -1,5 +1,15 @@
 package com.example;
 
+/**
+ * @brief A Position osztály a játéktábla egy mezőjének koordinátáit reprezentálja.
+ * 
+ * Tárolja a mező sor- és oszlopszámát, és biztosítja ezek lekérését
+ * getter metódusokon keresztül.
+ * Felülírja az equals és hashCode metódusokat, hogy 
+ * a pozíciók objektumként is összehasonlíthatók
+ * legyenek, illetve használhatók legyenek  HashMap kulcsként.
+ */
+
 public class Position {
   private final int  row;
   private final int column;

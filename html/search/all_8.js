@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['numberchoser_0',['numberChoser',['../classcom_1_1example_1_1_game_controller.html#acd2f31435104c227c38c2b535ba20da3',1,'com::example::GameController']]]
+  ['loadhighscores_0',['loadHighScores',['../classcom_1_1example_1_1_highscore_manager.html#a75aa3a1075cef4649ee6d1a788b381cf',1,'com::example::HighscoreManager']]]
 ];

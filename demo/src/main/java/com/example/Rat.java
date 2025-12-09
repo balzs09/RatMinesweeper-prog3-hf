@@ -1,5 +1,14 @@
 package com.example;
 
+/**
+ * @brief A Rat osztály az egér pozícióját kezeli a játéktáblán.
+ * 
+ * A Rat objetum a Rat játékmód esetén fogs szerepelni
+ * a játék tábláján.
+ * Az osztály tárolja az egér jelenlegi pozícióját és a célpozícióját.
+ * A konstruktorral beállított kezdőpozíció lesz a kezdeti célpont is.
+ * Tartalmaz getter és setter metódusokat mindkét pozíció kezelésére.
+ */
 public class Rat {
     private Position currentPosition;
     private Position goalPosition;

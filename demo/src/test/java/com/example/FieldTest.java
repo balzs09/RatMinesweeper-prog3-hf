@@ -2,7 +2,13 @@ package com.example;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
+/**
+ * @brief A Field osztály metódusainak tesztelésért felelős osztály.
+ * 
+ * Ez az osztály a Field osztály metódusainak helyes működését vizsgálja,
+ * beleértve a zászlókezelést, a szomszédos bombák számát és a mezők állapotát
+ * meghatározó logikát.
+ */
 public class FieldTest {
     /**
      * Teszteli a Field konstruktorát alapértelmezett értékekkel.

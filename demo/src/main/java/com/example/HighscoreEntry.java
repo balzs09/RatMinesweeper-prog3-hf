@@ -2,6 +2,13 @@ package com.example;
 
 import java.io.Serializable;
 
+/**
+ * @brief Egy játékos egyetlen eredményét tárolja a ranglistában.
+ *
+ * Tartalmazza:
+ * - a játékos nevét,
+ * - az elért időt másodpercben.
+ */
 public class HighscoreEntry implements Serializable {
   private int time;
   private String name;

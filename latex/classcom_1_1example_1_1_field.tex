@@ -1,48 +1,59 @@
 \doxysection{com.\+example.\+Field Class Reference}
-\hypertarget{classcom_1_1example_1_1_field}{}\label{classcom_1_1example_1_1_field}\index{com.example.Field@{com.example.Field}}
+\label{classcom_1_1example_1_1_field}\index{com.example.Field@{com.example.Field}}
+
+
+A \doxyref{Field}{p.}{classcom_1_1example_1_1_field} osztály a játék egy mezőjét reprezentálja.  
+
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classcom_1_1example_1_1_field_a6541eefe85d8410362d017b92f9b6ec5}{Field}} (boolean is\+Mine)
+\textbf{ Field} (boolean is\+Mine)
 \item 
-void \mbox{\hyperlink{classcom_1_1example_1_1_field_aa19fb4abe685329da9208bfcba31097d}{increment\+Flags}} (\mbox{\hyperlink{enumcom_1_1example_1_1_game_modes}{Game\+Modes}} mode)
+void \textbf{ increment\+Flags} (\textbf{ Game\+Modes} mode)
 \item 
-void \mbox{\hyperlink{classcom_1_1example_1_1_field_ac822688d62579dc00031bb9a0c40f212}{reset\+Flags}} ()
+void \textbf{ reset\+Flags} ()
 \item 
-int \mbox{\hyperlink{classcom_1_1example_1_1_field_a6673cbc3516e305bb4f1a55725a24602}{max\+Flag}} (\mbox{\hyperlink{enumcom_1_1example_1_1_game_modes}{Game\+Modes}} mode)
+int \textbf{ max\+Flag} (\textbf{ Game\+Modes} mode)
 \item 
-void \mbox{\hyperlink{classcom_1_1example_1_1_field_a995e394ab0b1ea86a9758b8a14b9b680}{set\+Mine\+Number}} (int number)
+void \textbf{ set\+Mine\+Number} (int number)
 \item 
-int \mbox{\hyperlink{classcom_1_1example_1_1_field_aeedac587ffdf3b1dd79b9b44124cf265}{get\+Mine\+Number}} ()
+int \textbf{ get\+Mine\+Number} ()
 \item 
-void \mbox{\hyperlink{classcom_1_1example_1_1_field_ab160dd702e22bc0a5ca03197239202b6}{set\+Number\+Of\+Neighbors}} (int number)
+void \textbf{ set\+Number\+Of\+Neighbors} (int number)
 \item 
-int \mbox{\hyperlink{classcom_1_1example_1_1_field_a8947eb8718c1904e5bedb8a3837086fd}{get\+Number\+Of\+Neighbors}} ()
+int \textbf{ get\+Number\+Of\+Neighbors} ()
 \item 
-boolean \mbox{\hyperlink{classcom_1_1example_1_1_field_aa412d2fa6ce8462cec87fb6fbd76e7c6}{get\+Is\+Mine}} ()
+boolean \textbf{ get\+Is\+Mine} ()
 \item 
-int \mbox{\hyperlink{classcom_1_1example_1_1_field_ad5c2103a66ae05f962e2480919886039}{get\+Flags}} ()
+int \textbf{ get\+Flags} ()
 \item 
-boolean \mbox{\hyperlink{classcom_1_1example_1_1_field_a97f24d21ac840c96c7184c222906b71c}{get\+Flagged}} ()
+boolean \textbf{ get\+Flagged} ()
 \item 
-boolean \mbox{\hyperlink{classcom_1_1example_1_1_field_ae3929dabb9ab9555cd6cd2ed591f99b3}{get\+Revealed}} ()
+boolean \textbf{ get\+Revealed} ()
 \item 
-void \mbox{\hyperlink{classcom_1_1example_1_1_field_a9a8c6da9b52a565b8919df9494106931}{set\+Revealed}} (boolean revealed)
+void \textbf{ set\+Revealed} (boolean revealed)
 \item 
-void \mbox{\hyperlink{classcom_1_1example_1_1_field_a4f1c5bbd76017dc0dd271a572f4c4d32}{set\+Flagged}} (boolean flagged)
+void \textbf{ set\+Flagged} (boolean flagged)
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+A \doxyref{Field}{p.}{classcom_1_1example_1_1_field} osztály a játék egy mezőjét reprezentálja. 
+
+Egy mező tárolja, hogy tartalmaz-\/e bombát, hány szomszédja tartalmaz bombát, hány zászlóval van megjelölve, illetve hogy fel van-\/e fedve. A mező kezeli a zászlók számának növelését, visszaállítását, valamint a bomba-\/ és szomszédinformációkat.
+
+A \doxyref{Field}{p.}{classcom_1_1example_1_1_field} objektumok a játéktábla elemi egységei, amelyeken keresztül a játékos jelölhet, felfedhet és információt kaphat a környező mezőkről. 
+
 \label{doc-constructors}
-\Hypertarget{classcom_1_1example_1_1_field_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classcom_1_1example_1_1_field_a6541eefe85d8410362d017b92f9b6ec5}\index{com.example.Field@{com.example.Field}!Field@{Field}}
+\index{com.example.Field@{com.example.Field}!Field@{Field}}
 \index{Field@{Field}!com.example.Field@{com.example.Field}}
-\doxysubsubsection{\texorpdfstring{Field()}{Field()}}
+\doxysubsubsection{Field()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_a6541eefe85d8410362d017b92f9b6ec5} 
 com.\+example.\+Field.\+Field (\begin{DoxyParamCaption}\item[{boolean}]{is\+Mine}{}\end{DoxyParamCaption})}
 
-A \doxylink{classcom_1_1example_1_1_field}{Field} osztály konstruktora.
+A \doxyref{Field}{p.}{classcom_1_1example_1_1_field} osztály konstruktora.
 
 
 \begin{DoxyParams}{Parameters}
@@ -52,11 +63,10 @@ A \doxylink{classcom_1_1example_1_1_field}{Field} osztály konstruktora.
 
 
 \label{doc-func-members}
-\Hypertarget{classcom_1_1example_1_1_field_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classcom_1_1example_1_1_field_a97f24d21ac840c96c7184c222906b71c}\index{com.example.Field@{com.example.Field}!getFlagged@{getFlagged}}
+\index{com.example.Field@{com.example.Field}!getFlagged@{getFlagged}}
 \index{getFlagged@{getFlagged}!com.example.Field@{com.example.Field}}
-\doxysubsubsection{\texorpdfstring{getFlagged()}{getFlagged()}}
+\doxysubsubsection{getFlagged()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_a97f24d21ac840c96c7184c222906b71c} 
 boolean com.\+example.\+Field.\+get\+Flagged (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
@@ -65,9 +75,9 @@ Visszatér azzal a logikai értékkel, hogy a mező be van e jelölve zászlók�
 \begin{DoxyReturn}{Returns}
 bejelölt-\/e 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_field_ad5c2103a66ae05f962e2480919886039}\index{com.example.Field@{com.example.Field}!getFlags@{getFlags}}
+\index{com.example.Field@{com.example.Field}!getFlags@{getFlags}}
 \index{getFlags@{getFlags}!com.example.Field@{com.example.Field}}
-\doxysubsubsection{\texorpdfstring{getFlags()}{getFlags()}}
+\doxysubsubsection{getFlags()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_ad5c2103a66ae05f962e2480919886039} 
 int com.\+example.\+Field.\+get\+Flags (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
@@ -76,9 +86,9 @@ Visszatér a mezőhöz tartozó zászlók számával.
 \begin{DoxyReturn}{Returns}
 zászlók száma. 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_field_aa412d2fa6ce8462cec87fb6fbd76e7c6}\index{com.example.Field@{com.example.Field}!getIsMine@{getIsMine}}
+\index{com.example.Field@{com.example.Field}!getIsMine@{getIsMine}}
 \index{getIsMine@{getIsMine}!com.example.Field@{com.example.Field}}
-\doxysubsubsection{\texorpdfstring{getIsMine()}{getIsMine()}}
+\doxysubsubsection{getIsMine()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_aa412d2fa6ce8462cec87fb6fbd76e7c6} 
 boolean com.\+example.\+Field.\+get\+Is\+Mine (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
@@ -87,9 +97,9 @@ Visszatér azzal a logikai értékkel, hogy a mező tartalmaz-\/e bombát vagy s
 \begin{DoxyReturn}{Returns}
 bomba-\/e 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_field_aeedac587ffdf3b1dd79b9b44124cf265}\index{com.example.Field@{com.example.Field}!getMineNumber@{getMineNumber}}
+\index{com.example.Field@{com.example.Field}!getMineNumber@{getMineNumber}}
 \index{getMineNumber@{getMineNumber}!com.example.Field@{com.example.Field}}
-\doxysubsubsection{\texorpdfstring{getMineNumber()}{getMineNumber()}}
+\doxysubsubsection{getMineNumber()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_aeedac587ffdf3b1dd79b9b44124cf265} 
 int com.\+example.\+Field.\+get\+Mine\+Number (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
@@ -98,9 +108,9 @@ A függvény a bombák számát téríti vissza.
 \begin{DoxyReturn}{Returns}
 bombák száma 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_field_a8947eb8718c1904e5bedb8a3837086fd}\index{com.example.Field@{com.example.Field}!getNumberOfNeighbors@{getNumberOfNeighbors}}
+\index{com.example.Field@{com.example.Field}!getNumberOfNeighbors@{getNumberOfNeighbors}}
 \index{getNumberOfNeighbors@{getNumberOfNeighbors}!com.example.Field@{com.example.Field}}
-\doxysubsubsection{\texorpdfstring{getNumberOfNeighbors()}{getNumberOfNeighbors()}}
+\doxysubsubsection{getNumberOfNeighbors()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_a8947eb8718c1904e5bedb8a3837086fd} 
 int com.\+example.\+Field.\+get\+Number\+Of\+Neighbors (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
@@ -109,9 +119,9 @@ Visszatér a mezővel szomszédos, bombát tartalmazó mezők számával.
 \begin{DoxyReturn}{Returns}
 bombát tartlmazó szomszédok száma 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_field_ae3929dabb9ab9555cd6cd2ed591f99b3}\index{com.example.Field@{com.example.Field}!getRevealed@{getRevealed}}
+\index{com.example.Field@{com.example.Field}!getRevealed@{getRevealed}}
 \index{getRevealed@{getRevealed}!com.example.Field@{com.example.Field}}
-\doxysubsubsection{\texorpdfstring{getRevealed()}{getRevealed()}}
+\doxysubsubsection{getRevealed()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_ae3929dabb9ab9555cd6cd2ed591f99b3} 
 boolean com.\+example.\+Field.\+get\+Revealed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
@@ -120,11 +130,11 @@ Visszatér azzal a logikai értékkel, hogy a mező fel van e fedve már.
 \begin{DoxyReturn}{Returns}
 felfedve-\/e 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_field_aa19fb4abe685329da9208bfcba31097d}\index{com.example.Field@{com.example.Field}!incrementFlags@{incrementFlags}}
+\index{com.example.Field@{com.example.Field}!incrementFlags@{incrementFlags}}
 \index{incrementFlags@{incrementFlags}!com.example.Field@{com.example.Field}}
-\doxysubsubsection{\texorpdfstring{incrementFlags()}{incrementFlags()}}
+\doxysubsubsection{incrementFlags()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_aa19fb4abe685329da9208bfcba31097d} 
-void com.\+example.\+Field.\+increment\+Flags (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumcom_1_1example_1_1_game_modes}{Game\+Modes}}}]{mode}{}\end{DoxyParamCaption})}
+void com.\+example.\+Field.\+increment\+Flags (\begin{DoxyParamCaption}\item[{\textbf{ Game\+Modes}}]{mode}{}\end{DoxyParamCaption})}
 
 Ez a metódus növeli a mezőhöz tartozó zászlók számát. Abban az esetben ha eléri a zászlók maximum lehetséges számát, visszatéríti a mezőt az eredeti állapotba.
 
@@ -133,11 +143,11 @@ Ez a metódus növeli a mezőhöz tartozó zászlók számát. Abban az esetben 
 {\em mode} & A játékmód amelyben történik a zászló növelés, ez azért szükséges mert függ a játékmódtól a zászlók maximum száma. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classcom_1_1example_1_1_field_a6673cbc3516e305bb4f1a55725a24602}\index{com.example.Field@{com.example.Field}!maxFlag@{maxFlag}}
+\index{com.example.Field@{com.example.Field}!maxFlag@{maxFlag}}
 \index{maxFlag@{maxFlag}!com.example.Field@{com.example.Field}}
-\doxysubsubsection{\texorpdfstring{maxFlag()}{maxFlag()}}
+\doxysubsubsection{maxFlag()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_a6673cbc3516e305bb4f1a55725a24602} 
-int com.\+example.\+Field.\+max\+Flag (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumcom_1_1example_1_1_game_modes}{Game\+Modes}}}]{mode}{}\end{DoxyParamCaption})}
+int com.\+example.\+Field.\+max\+Flag (\begin{DoxyParamCaption}\item[{\textbf{ Game\+Modes}}]{mode}{}\end{DoxyParamCaption})}
 
 A függvény a játékmódhoz tartozó maximum zászló számmal tér vissza.
 
@@ -149,15 +159,15 @@ A függvény a játékmódhoz tartozó maximum zászló számmal tér vissza.
 \begin{DoxyReturn}{Returns}
 1, ha a mode default; 3, ha a mód rat. 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_field_ac822688d62579dc00031bb9a0c40f212}\index{com.example.Field@{com.example.Field}!resetFlags@{resetFlags}}
+\index{com.example.Field@{com.example.Field}!resetFlags@{resetFlags}}
 \index{resetFlags@{resetFlags}!com.example.Field@{com.example.Field}}
-\doxysubsubsection{\texorpdfstring{resetFlags()}{resetFlags()}}
+\doxysubsubsection{resetFlags()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_ac822688d62579dc00031bb9a0c40f212} 
 void com.\+example.\+Field.\+reset\+Flags (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-A függvény a mezőket visszatéríti eredeti állapotába, a zászlók száma 0 lesz, és a flagged változó hamis lesz. \Hypertarget{classcom_1_1example_1_1_field_a4f1c5bbd76017dc0dd271a572f4c4d32}\index{com.example.Field@{com.example.Field}!setFlagged@{setFlagged}}
+A függvény a mezőket visszatéríti eredeti állapotába, a zászlók száma 0 lesz, és a flagged változó hamis lesz. \index{com.example.Field@{com.example.Field}!setFlagged@{setFlagged}}
 \index{setFlagged@{setFlagged}!com.example.Field@{com.example.Field}}
-\doxysubsubsection{\texorpdfstring{setFlagged()}{setFlagged()}}
+\doxysubsubsection{setFlagged()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_a4f1c5bbd76017dc0dd271a572f4c4d32} 
 void com.\+example.\+Field.\+set\+Flagged (\begin{DoxyParamCaption}\item[{boolean}]{flagged}{}\end{DoxyParamCaption})}
 
@@ -168,9 +178,9 @@ A függvény a mező zászlóként beállítottságát változatja meg.
 {\em flagged} & A mező zászlóként van-\/e bejelölve. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classcom_1_1example_1_1_field_a995e394ab0b1ea86a9758b8a14b9b680}\index{com.example.Field@{com.example.Field}!setMineNumber@{setMineNumber}}
+\index{com.example.Field@{com.example.Field}!setMineNumber@{setMineNumber}}
 \index{setMineNumber@{setMineNumber}!com.example.Field@{com.example.Field}}
-\doxysubsubsection{\texorpdfstring{setMineNumber()}{setMineNumber()}}
+\doxysubsubsection{setMineNumber()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_a995e394ab0b1ea86a9758b8a14b9b680} 
 void com.\+example.\+Field.\+set\+Mine\+Number (\begin{DoxyParamCaption}\item[{int}]{number}{}\end{DoxyParamCaption})}
 
@@ -181,9 +191,9 @@ A függvény beállítja a mezőhöz tartozó bombák számát Az is\+Mine\+Fiel
 {\em number-\/} & Bombák száma. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classcom_1_1example_1_1_field_ab160dd702e22bc0a5ca03197239202b6}\index{com.example.Field@{com.example.Field}!setNumberOfNeighbors@{setNumberOfNeighbors}}
+\index{com.example.Field@{com.example.Field}!setNumberOfNeighbors@{setNumberOfNeighbors}}
 \index{setNumberOfNeighbors@{setNumberOfNeighbors}!com.example.Field@{com.example.Field}}
-\doxysubsubsection{\texorpdfstring{setNumberOfNeighbors()}{setNumberOfNeighbors()}}
+\doxysubsubsection{setNumberOfNeighbors()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_ab160dd702e22bc0a5ca03197239202b6} 
 void com.\+example.\+Field.\+set\+Number\+Of\+Neighbors (\begin{DoxyParamCaption}\item[{int}]{number}{}\end{DoxyParamCaption})}
 
@@ -194,9 +204,9 @@ Beállítja a mező numberof\+Neighbors változóját.
 {\em number} & A mezővel szomszédos, bombát tartalmazó mezők száma. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classcom_1_1example_1_1_field_a9a8c6da9b52a565b8919df9494106931}\index{com.example.Field@{com.example.Field}!setRevealed@{setRevealed}}
+\index{com.example.Field@{com.example.Field}!setRevealed@{setRevealed}}
 \index{setRevealed@{setRevealed}!com.example.Field@{com.example.Field}}
-\doxysubsubsection{\texorpdfstring{setRevealed()}{setRevealed()}}
+\doxysubsubsection{setRevealed()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_field_a9a8c6da9b52a565b8919df9494106931} 
 void com.\+example.\+Field.\+set\+Revealed (\begin{DoxyParamCaption}\item[{boolean}]{revealed}{}\end{DoxyParamCaption})}
 

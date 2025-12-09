@@ -1,26 +1,130 @@
 \doxysection{com.\+example.\+Highscore\+Manager Class Reference}
-\hypertarget{classcom_1_1example_1_1_highscore_manager}{}\label{classcom_1_1example_1_1_highscore_manager}\index{com.example.HighscoreManager@{com.example.HighscoreManager}}
+\label{classcom_1_1example_1_1_highscore_manager}\index{com.example.HighscoreManager@{com.example.HighscoreManager}}
+
+
+A játék ranglistáinak kezelése.  
+
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classcom_1_1example_1_1_highscore_manager_a389543a508ca521ca907c2cd0a6622db}\label{classcom_1_1example_1_1_highscore_manager_a389543a508ca521ca907c2cd0a6622db} 
-{\bfseries Highscore\+Manager} (int max\+Entry)
+\textbf{ Highscore\+Manager} (int max\+Entry)
 \item 
-\Hypertarget{classcom_1_1example_1_1_highscore_manager_a9629900e57ceb0fa96217e307c91946e}\label{classcom_1_1example_1_1_highscore_manager_a9629900e57ceb0fa96217e307c91946e} 
-File {\bfseries get\+Text\+File\+By\+Mode\+And\+Difficulty} (\mbox{\hyperlink{enumcom_1_1example_1_1_game_modes}{Game\+Modes}} mode, \mbox{\hyperlink{enumcom_1_1example_1_1_difficulties}{Difficulties}} difficulty)
+File \textbf{ get\+Text\+File\+By\+Mode\+And\+Difficulty} (\textbf{ Game\+Modes} mode, \textbf{ Difficulties} difficulty)
 \item 
-\Hypertarget{classcom_1_1example_1_1_highscore_manager_a75aa3a1075cef4649ee6d1a788b381cf}\label{classcom_1_1example_1_1_highscore_manager_a75aa3a1075cef4649ee6d1a788b381cf} 
-void {\bfseries load\+High\+Scores} (File readable\+Highscores)
+void \textbf{ load\+High\+Scores} (File readable\+Highscores)
 \item 
-\Hypertarget{classcom_1_1example_1_1_highscore_manager_ad10b3b2f10bef3fc458b0f029de45f4e}\label{classcom_1_1example_1_1_highscore_manager_ad10b3b2f10bef3fc458b0f029de45f4e} 
-void {\bfseries save\+Highscore} (File writeable\+Highscores)
+void \textbf{ save\+Highscore} (File writeable\+Highscores)
 \item 
-\Hypertarget{classcom_1_1example_1_1_highscore_manager_a4b1f54ca5ac4c522ba46d76128cb418e}\label{classcom_1_1example_1_1_highscore_manager_a4b1f54ca5ac4c522ba46d76128cb418e} 
-void {\bfseries add\+Score} (\mbox{\hyperlink{classcom_1_1example_1_1_highscore_entry}{Highscore\+Entry}} entry)
+void \textbf{ add\+Score} (\textbf{ Highscore\+Entry} entry)
 \item 
-\Hypertarget{classcom_1_1example_1_1_highscore_manager_a3e424fbad3fe9917178276faeeb723a3}\label{classcom_1_1example_1_1_highscore_manager_a3e424fbad3fe9917178276faeeb723a3} 
-Array\+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1_highscore_entry}{Highscore\+Entry}} $>$ {\bfseries get\+Highscore\+Entries} ()
+Array\+List$<$ \textbf{ Highscore\+Entry} $>$ \textbf{ get\+Highscore\+Entries} ()
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A játék ranglistáinak kezelése. 
+
+Feladata\+:
+\begin{DoxyItemize}
+\item a játékosok eredményeinek tárolása,
+\item eredmények betöltése és mentése bináris fájlokba,
+\item legjobb eredmények listájának karbantartása.
+\end{DoxyItemize}
+
+Kapcsolódó osztályok\+:
+\begin{DoxyItemize}
+\item \doxyref{Highscore\+Entry}{p.}{classcom_1_1example_1_1_highscore_entry}\+: az egyes eredményeket tárolja.
+\item \doxyref{Game\+Window}{p.}{classcom_1_1example_1_1_game_window}\+: az eredmények megjelenítése az ablakban. 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{com.example.HighscoreManager@{com.example.HighscoreManager}!HighscoreManager@{HighscoreManager}}
+\index{HighscoreManager@{HighscoreManager}!com.example.HighscoreManager@{com.example.HighscoreManager}}
+\doxysubsubsection{HighscoreManager()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_highscore_manager_a389543a508ca521ca907c2cd0a6622db} 
+com.\+example.\+Highscore\+Manager.\+Highscore\+Manager (\begin{DoxyParamCaption}\item[{int}]{max\+Entry}{}\end{DoxyParamCaption})}
+
+A \doxyref{Highscore\+Manager}{p.}{classcom_1_1example_1_1_highscore_manager} osztály konstruktora. Létrehoz egy listát és beállítja a lista maximális tárolható eredményszámot a paraméterként megkapottal
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Entry} & maximum eredmény szám, amennyi benne lehet a listában. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{com.example.HighscoreManager@{com.example.HighscoreManager}!addScore@{addScore}}
+\index{addScore@{addScore}!com.example.HighscoreManager@{com.example.HighscoreManager}}
+\doxysubsubsection{addScore()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_highscore_manager_a4b1f54ca5ac4c522ba46d76128cb418e} 
+void com.\+example.\+Highscore\+Manager.\+add\+Score (\begin{DoxyParamCaption}\item[{\textbf{ Highscore\+Entry}}]{entry}{}\end{DoxyParamCaption})}
+
+Ez a metódus hozzáadja a paraméterként megkapott eredményt, ha annak ideje a megengedett számú legjobb idő között szerepel. Ha már volt előtte a listában maximális számú eredmény és az új eredmény is bekerült az utolsó a listából törlődik. A listában az eredmények idő szerinti növekvő sorrendben szerepelnek.
+
+
+\begin{DoxyParams}{Parameters}
+{\em entry} & az új eredmény \\
+\hline
+\end{DoxyParams}
+\index{com.example.HighscoreManager@{com.example.HighscoreManager}!getHighscoreEntries@{getHighscoreEntries}}
+\index{getHighscoreEntries@{getHighscoreEntries}!com.example.HighscoreManager@{com.example.HighscoreManager}}
+\doxysubsubsection{getHighscoreEntries()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_highscore_manager_a3e424fbad3fe9917178276faeeb723a3} 
+Array\+List$<$ \textbf{ Highscore\+Entry} $>$ com.\+example.\+Highscore\+Manager.\+get\+Highscore\+Entries (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Ez a metódus visszatéríti az legjobb eredmények listáját
+
+\begin{DoxyReturn}{Returns}
+legjobb eredmények listája 
+\end{DoxyReturn}
+\index{com.example.HighscoreManager@{com.example.HighscoreManager}!getTextFileByModeAndDifficulty@{getTextFileByModeAndDifficulty}}
+\index{getTextFileByModeAndDifficulty@{getTextFileByModeAndDifficulty}!com.example.HighscoreManager@{com.example.HighscoreManager}}
+\doxysubsubsection{getTextFileByModeAndDifficulty()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_highscore_manager_a9629900e57ceb0fa96217e307c91946e} 
+File com.\+example.\+Highscore\+Manager.\+get\+Text\+File\+By\+Mode\+And\+Difficulty (\begin{DoxyParamCaption}\item[{\textbf{ Game\+Modes}}]{mode}{, }\item[{\textbf{ Difficulties}}]{difficulty}{}\end{DoxyParamCaption})}
+
+Ez a metódus meghatározza a játékhoz tartozó bináris fájlt. Ezt a játékmód és a nehézség alapján teszi meg. Ezt a fájlt téríti vissza eredményként.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & játékmód \\
+\hline
+{\em difficulty} & játék nehézsége \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a metódus által meghatározott fájl 
+\end{DoxyReturn}
+\index{com.example.HighscoreManager@{com.example.HighscoreManager}!loadHighScores@{loadHighScores}}
+\index{loadHighScores@{loadHighScores}!com.example.HighscoreManager@{com.example.HighscoreManager}}
+\doxysubsubsection{loadHighScores()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_highscore_manager_a75aa3a1075cef4649ee6d1a788b381cf} 
+void com.\+example.\+Highscore\+Manager.\+load\+High\+Scores (\begin{DoxyParamCaption}\item[{File}]{readable\+Highscores}{}\end{DoxyParamCaption})}
+
+Ez a metódus kiolvassa a bináris fájlban szereplő eredményeket. Ha a fájl nem létezik visszatér, ha pedig hiba történik az olvasás közben, a hibát elkapja.
+
+
+\begin{DoxyParams}{Parameters}
+{\em readable\+Highscores} & az erdményeket tartalmazó bináris fájl \\
+\hline
+\end{DoxyParams}
+\index{com.example.HighscoreManager@{com.example.HighscoreManager}!saveHighscore@{saveHighscore}}
+\index{saveHighscore@{saveHighscore}!com.example.HighscoreManager@{com.example.HighscoreManager}}
+\doxysubsubsection{saveHighscore()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_highscore_manager_ad10b3b2f10bef3fc458b0f029de45f4e} 
+void com.\+example.\+Highscore\+Manager.\+save\+Highscore (\begin{DoxyParamCaption}\item[{File}]{writeable\+Highscores}{}\end{DoxyParamCaption})}
+
+Ez a metódus kiíratja egy bináris fájlba a játék legjobb eredményeit. Ha hiba történik fájlba írás közben, a hibát elkapja.
+
+
+\begin{DoxyParams}{Parameters}
+{\em writeable\+Highscores} & a fájl, amelybebe az eredményeket írjuk \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

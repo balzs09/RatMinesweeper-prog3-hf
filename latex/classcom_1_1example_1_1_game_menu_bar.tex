@@ -1,5 +1,10 @@
 \doxysection{com.\+example.\+Game\+Menu\+Bar Class Reference}
-\hypertarget{classcom_1_1example_1_1_game_menu_bar}{}\label{classcom_1_1example_1_1_game_menu_bar}\index{com.example.GameMenuBar@{com.example.GameMenuBar}}
+\label{classcom_1_1example_1_1_game_menu_bar}\index{com.example.GameMenuBar@{com.example.GameMenuBar}}
+
+
+A \doxyref{Game\+Menu\+Bar}{p.}{classcom_1_1example_1_1_game_menu_bar} kezeli a játék ablak menüsávját.  
+
+
 Inheritance diagram for com.\+example.\+Game\+Menu\+Bar\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,21 +14,94 @@ Inheritance diagram for com.\+example.\+Game\+Menu\+Bar\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_menu_bar_abefceaead85809b85cfc556253021909}\label{classcom_1_1example_1_1_game_menu_bar_abefceaead85809b85cfc556253021909} 
-JMenu {\bfseries get\+Difficulty\+Menu} ()
+JMenu \textbf{ get\+Difficulty\+Menu} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_menu_bar_a0453ea7175ad44b10615dc8550090fd7}\label{classcom_1_1example_1_1_game_menu_bar_a0453ea7175ad44b10615dc8550090fd7} 
-JMenu {\bfseries get\+Game\+Mode\+Menu} ()
+JMenu \textbf{ get\+Game\+Mode\+Menu} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_menu_bar_af17f7901e675e618c0264a35dc5cee15}\label{classcom_1_1example_1_1_game_menu_bar_af17f7901e675e618c0264a35dc5cee15} 
-boolean {\bfseries mode\+Or\+Difficulty\+Is\+Not\+Selected} ()
+boolean \textbf{ mode\+Or\+Difficulty\+Is\+Not\+Selected} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_menu_bar_a313376403bf6deb398b681f18d63386c}\label{classcom_1_1example_1_1_game_menu_bar_a313376403bf6deb398b681f18d63386c} 
-JMenu\+Item {\bfseries get\+New\+Game\+Menu\+Item} ()
+JMenu\+Item \textbf{ get\+New\+Game\+Menu\+Item} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_game_menu_bar_ad6c79f2e1ccf9e4fdbf283f6fbca00d3}\label{classcom_1_1example_1_1_game_menu_bar_ad6c79f2e1ccf9e4fdbf283f6fbca00d3} 
-{\bfseries Game\+Menu\+Bar} (\mbox{\hyperlink{classcom_1_1example_1_1_game_window}{Game\+Window}} window)
+\textbf{ Game\+Menu\+Bar} (\textbf{ Game\+Window} window)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A \doxyref{Game\+Menu\+Bar}{p.}{classcom_1_1example_1_1_game_menu_bar} kezeli a játék ablak menüsávját. 
+
+Feladata, hogy a felhasználó kiválaszthassa a nehézségi szintet, játékmódot, valamint új játékot indíthasson.
+
+Kapcsolódó osztályok\+:
+\begin{DoxyItemize}
+\item \doxyref{Game\+Window}{p.}{classcom_1_1example_1_1_game_window}\+: az ablak, amelyhez a menüsáv tartozik
+\item \doxyref{Difficulties}{p.}{enumcom_1_1example_1_1_difficulties}\+: az elérhető nehézségi szinteket tartalmazó enum
+\item \doxyref{Game\+Modes}{p.}{enumcom_1_1example_1_1_game_modes}\+: az elérhető játékmódokat tartalmazó enum
+\item JMenu\+Bar, JMenu, JMenu\+Item\+: a Swing komponensek, amiket a menüsáv használ 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\index{com.example.GameMenuBar@{com.example.GameMenuBar}!GameMenuBar@{GameMenuBar}}
+\index{GameMenuBar@{GameMenuBar}!com.example.GameMenuBar@{com.example.GameMenuBar}}
+\doxysubsubsection{GameMenuBar()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_menu_bar_ad6c79f2e1ccf9e4fdbf283f6fbca00d3} 
+com.\+example.\+Game\+Menu\+Bar.\+Game\+Menu\+Bar (\begin{DoxyParamCaption}\item[{\textbf{ Game\+Window}}]{window}{}\end{DoxyParamCaption})}
+
+Létrehozza a \doxyref{Game\+Menu\+Bar}{p.}{classcom_1_1example_1_1_game_menu_bar} objektumot és hozzáadja a menüpontokat.
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & az ablak amelyen szerepel a menü \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{com.example.GameMenuBar@{com.example.GameMenuBar}!getDifficultyMenu@{getDifficultyMenu}}
+\index{getDifficultyMenu@{getDifficultyMenu}!com.example.GameMenuBar@{com.example.GameMenuBar}}
+\doxysubsubsection{getDifficultyMenu()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_menu_bar_abefceaead85809b85cfc556253021909} 
+JMenu com.\+example.\+Game\+Menu\+Bar.\+get\+Difficulty\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Ez a metódus egy új JMenu-\/t generál, amely neve "{}\+Difficulties"{} Ehhez a könnyű, közepes és nehéz nehézségi szintek vannak hozzáadva. Minden menüponthoz hozzárendeli a megfelelő egérkattintás kezelést, amely beállítja a kiválasztott nehézséget.
+
+\begin{DoxyReturn}{Returns}
+a létrehozott JMenu objektum 
+\end{DoxyReturn}
+\index{com.example.GameMenuBar@{com.example.GameMenuBar}!getGameModeMenu@{getGameModeMenu}}
+\index{getGameModeMenu@{getGameModeMenu}!com.example.GameMenuBar@{com.example.GameMenuBar}}
+\doxysubsubsection{getGameModeMenu()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_menu_bar_a0453ea7175ad44b10615dc8550090fd7} 
+JMenu com.\+example.\+Game\+Menu\+Bar.\+get\+Game\+Mode\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Ez a metódus egy új JMenu-\/t generál, amely neve "{}\+Gamemode"{} Ehhez a default és rat játékmód van hozzáadva. Mindkettő menüponthoz hozzárendeli a megfelelő egérkattintás kezelést, amely beállítja a kiválasztott játékmódot.
+
+\begin{DoxyReturn}{Returns}
+a létrehozott JMenu objektum 
+\end{DoxyReturn}
+\index{com.example.GameMenuBar@{com.example.GameMenuBar}!getNewGameMenuItem@{getNewGameMenuItem}}
+\index{getNewGameMenuItem@{getNewGameMenuItem}!com.example.GameMenuBar@{com.example.GameMenuBar}}
+\doxysubsubsection{getNewGameMenuItem()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_menu_bar_a313376403bf6deb398b681f18d63386c} 
+JMenu\+Item com.\+example.\+Game\+Menu\+Bar.\+get\+New\+Game\+Menu\+Item (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Ez a metódus egy új JMenu\+Item-\/et generál, amely neve "{}\+Gamemode"{}. Ha a nehézségi szint és játékmód is ki van választva, a menüpontra kattintva elindul egy új játék.
+
+\begin{DoxyReturn}{Returns}
+a létrehozott JMenu\+Item objektum 
+\end{DoxyReturn}
+\index{com.example.GameMenuBar@{com.example.GameMenuBar}!modeOrDifficultyIsNotSelected@{modeOrDifficultyIsNotSelected}}
+\index{modeOrDifficultyIsNotSelected@{modeOrDifficultyIsNotSelected}!com.example.GameMenuBar@{com.example.GameMenuBar}}
+\doxysubsubsection{modeOrDifficultyIsNotSelected()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_game_menu_bar_af17f7901e675e618c0264a35dc5cee15} 
+boolean com.\+example.\+Game\+Menu\+Bar.\+mode\+Or\+Difficulty\+Is\+Not\+Selected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Ha a nehézségi szint, vagy a játékmód nincs kiválasztva megjelenik egy hibaüzenet. A metódus ebben az esetben true értékkel tér vissza. Ha mindkettő ki van választva false értékkel tér vissza.
+
+\begin{DoxyReturn}{Returns}
+true, ha valamelyik nincs kiválasztva false, ha mindkettő ki van választva 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

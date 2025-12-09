@@ -1,18 +1,47 @@
 \doxysection{com.\+example.\+Position\+Test Class Reference}
-\hypertarget{classcom_1_1example_1_1_position_test}{}\label{classcom_1_1example_1_1_position_test}\index{com.example.PositionTest@{com.example.PositionTest}}
+\label{classcom_1_1example_1_1_position_test}\index{com.example.PositionTest@{com.example.PositionTest}}
+
+
+A \doxyref{Position}{p.}{classcom_1_1example_1_1_position} osztály működését ellenőrző JUnit tesztosztály.  
+
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classcom_1_1example_1_1_position_test_a6d84d2b66005be20118d3efc0f036f8b}\label{classcom_1_1example_1_1_position_test_a6d84d2b66005be20118d3efc0f036f8b} 
-void {\bfseries test\+Position\+Constructor\+Initial\+Values} ()
+void \textbf{ test\+Position\+Constructor\+Initial\+Values} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_position_test_a5928997532491d750e5c7c793bae40f6}\label{classcom_1_1example_1_1_position_test_a5928997532491d750e5c7c793bae40f6} 
-void {\bfseries test\+Equals} ()
+void \textbf{ test\+Equals} ()
 \item 
-\Hypertarget{classcom_1_1example_1_1_position_test_a117e945aa6098ed0c013665bfd87d38b}\label{classcom_1_1example_1_1_position_test_a117e945aa6098ed0c013665bfd87d38b} 
-void {\bfseries test\+Hash\+Code} ()
+void \textbf{ test\+Hash\+Code} ()
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A \doxyref{Position}{p.}{classcom_1_1example_1_1_position} osztály működését ellenőrző JUnit tesztosztály. 
+
+Teszteli a \doxyref{Position}{p.}{classcom_1_1example_1_1_position} konstruktorát, az equals metódust és a hash\+Code metódust. Ellenőrzi, hogy a sor-\/ és oszlopszámok helyesen kerülnek beállításra, azonos koordinátájú pozíciók egyenlőek legyenek, és a hash\+Code értékek megfeleljenek az equals metódus logikájának. 
+
+\label{doc-func-members}
+\doxysubsection{Member Function Documentation}
+\index{com.example.PositionTest@{com.example.PositionTest}!testEquals@{testEquals}}
+\index{testEquals@{testEquals}!com.example.PositionTest@{com.example.PositionTest}}
+\doxysubsubsection{testEquals()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_position_test_a5928997532491d750e5c7c793bae40f6} 
+void com.\+example.\+Position\+Test.\+test\+Equals (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli a \doxyref{Position}{p.}{classcom_1_1example_1_1_position} equals metódusát. Azonos koordinátákkal rendelkező pozíciók legyenek egyenlőek, eltérők pedig ne. \index{com.example.PositionTest@{com.example.PositionTest}!testHashCode@{testHashCode}}
+\index{testHashCode@{testHashCode}!com.example.PositionTest@{com.example.PositionTest}}
+\doxysubsubsection{testHashCode()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_position_test_a117e945aa6098ed0c013665bfd87d38b} 
+void com.\+example.\+Position\+Test.\+test\+Hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy azonos pozíciók azonos hash\+Code értéket kapnak, míg különböző pozíciók különbözőt. \index{com.example.PositionTest@{com.example.PositionTest}!testPositionConstructorInitialValues@{testPositionConstructorInitialValues}}
+\index{testPositionConstructorInitialValues@{testPositionConstructorInitialValues}!com.example.PositionTest@{com.example.PositionTest}}
+\doxysubsubsection{testPositionConstructorInitialValues()}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1_position_test_a6d84d2b66005be20118d3efc0f036f8b} 
+void com.\+example.\+Position\+Test.\+test\+Position\+Constructor\+Initial\+Values (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Teszteli, hogy a \doxyref{Position}{p.}{classcom_1_1example_1_1_position} konstruktor a megadott sor-\/ és oszlopszámot helyesen állítja be. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

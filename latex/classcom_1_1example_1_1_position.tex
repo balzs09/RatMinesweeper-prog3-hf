@@ -1,26 +1,35 @@
 \doxysection{com.\+example.\+Position Class Reference}
-\hypertarget{classcom_1_1example_1_1_position}{}\label{classcom_1_1example_1_1_position}\index{com.example.Position@{com.example.Position}}
+\label{classcom_1_1example_1_1_position}\index{com.example.Position@{com.example.Position}}
+
+
+A \doxyref{Position}{p.}{classcom_1_1example_1_1_position} osztály a játéktábla egy mezőjének koordinátáit reprezentálja.  
+
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classcom_1_1example_1_1_position_a4b2f927503f8bab81002c89e070a02c1}{Position}} (int row, int column)
+\textbf{ Position} (int row, int column)
 \item 
-int \mbox{\hyperlink{classcom_1_1example_1_1_position_ac9472437f49e8c1bceed5132c450ddbc}{get\+Row}} ()
+int \textbf{ get\+Row} ()
 \item 
-int \mbox{\hyperlink{classcom_1_1example_1_1_position_a9a51a38e7aba452c6039c59be83514e2}{get\+Column}} ()
+int \textbf{ get\+Column} ()
 \item 
-boolean \mbox{\hyperlink{classcom_1_1example_1_1_position_ad61a91cd580d70c21db16b6f7bc3a1f4}{equals}} (Object obj)
+boolean \textbf{ equals} (Object obj)
 \item 
-int \mbox{\hyperlink{classcom_1_1example_1_1_position_a1be3fb6b9887b4d3758b671c0f57a1f2}{hash\+Code}} ()
+int \textbf{ hash\+Code} ()
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+A \doxyref{Position}{p.}{classcom_1_1example_1_1_position} osztály a játéktábla egy mezőjének koordinátáit reprezentálja. 
+
+Tárolja a mező sor-\/ és oszlopszámát, és biztosítja ezek lekérését getter metódusokon keresztül. Felülírja az equals és hash\+Code metódusokat, hogy a pozíciók objektumként is összehasonlíthatók legyenek, illetve használhatók legyenek Hash\+Map kulcsként. 
+
 \label{doc-constructors}
-\Hypertarget{classcom_1_1example_1_1_position_doc-constructors}
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{classcom_1_1example_1_1_position_a4b2f927503f8bab81002c89e070a02c1}\index{com.example.Position@{com.example.Position}!Position@{Position}}
+\index{com.example.Position@{com.example.Position}!Position@{Position}}
 \index{Position@{Position}!com.example.Position@{com.example.Position}}
-\doxysubsubsection{\texorpdfstring{Position()}{Position()}}
+\doxysubsubsection{Position()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_position_a4b2f927503f8bab81002c89e070a02c1} 
 com.\+example.\+Position.\+Position (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{column}{}\end{DoxyParamCaption})}
 
@@ -34,11 +43,10 @@ A pozíció osztály konstruktora. A pozíció sora és oszlopa kerül általa b
 
 
 \label{doc-func-members}
-\Hypertarget{classcom_1_1example_1_1_position_doc-func-members}
 \doxysubsection{Member Function Documentation}
-\Hypertarget{classcom_1_1example_1_1_position_ad61a91cd580d70c21db16b6f7bc3a1f4}\index{com.example.Position@{com.example.Position}!equals@{equals}}
+\index{com.example.Position@{com.example.Position}!equals@{equals}}
 \index{equals@{equals}!com.example.Position@{com.example.Position}}
-\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+\doxysubsubsection{equals()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_position_ad61a91cd580d70c21db16b6f7bc3a1f4} 
 boolean com.\+example.\+Position.\+equals (\begin{DoxyParamCaption}\item[{Object}]{obj}{}\end{DoxyParamCaption})}
 
@@ -50,29 +58,29 @@ Felülírja az equals metódust.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true, ha midnkét objektum a \doxylink{classcom_1_1example_1_1_position}{Position} osztály egy példánya és a sorok és oszlopok megegyeznek;false más esetben 
+true, ha midnkét objektum a \doxyref{Position}{p.}{classcom_1_1example_1_1_position} osztály egy példánya és a sorok és oszlopok megegyeznek;false más esetben 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_position_a9a51a38e7aba452c6039c59be83514e2}\index{com.example.Position@{com.example.Position}!getColumn@{getColumn}}
+\index{com.example.Position@{com.example.Position}!getColumn@{getColumn}}
 \index{getColumn@{getColumn}!com.example.Position@{com.example.Position}}
-\doxysubsubsection{\texorpdfstring{getColumn()}{getColumn()}}
+\doxysubsubsection{getColumn()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_position_a9a51a38e7aba452c6039c59be83514e2} 
 int com.\+example.\+Position.\+get\+Column (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 \begin{DoxyReturn}{Returns}
 a pozíció oszlopát téríti vissza 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_position_ac9472437f49e8c1bceed5132c450ddbc}\index{com.example.Position@{com.example.Position}!getRow@{getRow}}
+\index{com.example.Position@{com.example.Position}!getRow@{getRow}}
 \index{getRow@{getRow}!com.example.Position@{com.example.Position}}
-\doxysubsubsection{\texorpdfstring{getRow()}{getRow()}}
+\doxysubsubsection{getRow()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_position_ac9472437f49e8c1bceed5132c450ddbc} 
 int com.\+example.\+Position.\+get\+Row (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 \begin{DoxyReturn}{Returns}
 a pozíció sorát téríti vissza 
 \end{DoxyReturn}
-\Hypertarget{classcom_1_1example_1_1_position_a1be3fb6b9887b4d3758b671c0f57a1f2}\index{com.example.Position@{com.example.Position}!hashCode@{hashCode}}
+\index{com.example.Position@{com.example.Position}!hashCode@{hashCode}}
 \index{hashCode@{hashCode}!com.example.Position@{com.example.Position}}
-\doxysubsubsection{\texorpdfstring{hashCode()}{hashCode()}}
+\doxysubsubsection{hashCode()}
 {\footnotesize\ttfamily \label{classcom_1_1example_1_1_position_a1be3fb6b9887b4d3758b671c0f57a1f2} 
 int com.\+example.\+Position.\+hash\+Code (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 

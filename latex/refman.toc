@@ -1,0 +1,220 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Hierarchical Index}{1}{}%
+\contentsline {section}{\numberline {1.1}Class Hierarchy}{1}{}%
+\contentsline {chapter}{\numberline {2}Class Index}{3}{}%
+\contentsline {section}{\numberline {2.1}Class List}{3}{}%
+\contentsline {chapter}{\numberline {3}Class Documentation}{5}{}%
+\contentsline {section}{\numberline {3.1}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Default\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table Class Reference}{5}{}%
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{6}{}%
+\contentsline {subsection}{\numberline {3.1.2}Constructor \& Destructor Documentation}{6}{}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}DefaultTable()}{6}{}%
+\contentsline {subsection}{\numberline {3.1.3}Member Function Documentation}{6}{}%
+\contentsline {subsubsection}{\numberline {3.1.3.1}checkNeighbors()}{6}{}%
+\contentsline {subsubsection}{\numberline {3.1.3.2}getNeighborPositions()}{7}{}%
+\contentsline {subsubsection}{\numberline {3.1.3.3}getOneMineFields()}{8}{}%
+\contentsline {subsubsection}{\numberline {3.1.3.4}selectingMines()}{8}{}%
+\contentsline {section}{\numberline {3.2}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Default\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{8}{}%
+\contentsline {subsection}{\numberline {3.2.1}Detailed Description}{9}{}%
+\contentsline {subsection}{\numberline {3.2.2}Member Function Documentation}{9}{}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}testCheckNeighbors()}{9}{}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}testDefaultTableConstructor()}{9}{}%
+\contentsline {subsubsection}{\numberline {3.2.2.3}testGetAvailableFields()}{9}{}%
+\contentsline {subsubsection}{\numberline {3.2.2.4}testGetFieldByPosition()}{9}{}%
+\contentsline {subsubsection}{\numberline {3.2.2.5}testGetNeighborPositions()}{10}{}%
+\contentsline {subsubsection}{\numberline {3.2.2.6}testGetPositionByField()}{10}{}%
+\contentsline {subsubsection}{\numberline {3.2.2.7}testSelectingMines()}{10}{}%
+\contentsline {section}{\numberline {3.3}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Difficulties Enum Reference}{10}{}%
+\contentsline {subsection}{\numberline {3.3.1}Detailed Description}{10}{}%
+\contentsline {section}{\numberline {3.4}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Field Class Reference}{11}{}%
+\contentsline {subsection}{\numberline {3.4.1}Detailed Description}{11}{}%
+\contentsline {subsection}{\numberline {3.4.2}Constructor \& Destructor Documentation}{11}{}%
+\contentsline {subsubsection}{\numberline {3.4.2.1}Field()}{11}{}%
+\contentsline {subsection}{\numberline {3.4.3}Member Function Documentation}{12}{}%
+\contentsline {subsubsection}{\numberline {3.4.3.1}getFlagged()}{12}{}%
+\contentsline {subsubsection}{\numberline {3.4.3.2}getFlags()}{12}{}%
+\contentsline {subsubsection}{\numberline {3.4.3.3}getIsMine()}{12}{}%
+\contentsline {subsubsection}{\numberline {3.4.3.4}getMineNumber()}{12}{}%
+\contentsline {subsubsection}{\numberline {3.4.3.5}getNumberOfNeighbors()}{12}{}%
+\contentsline {subsubsection}{\numberline {3.4.3.6}getRevealed()}{13}{}%
+\contentsline {subsubsection}{\numberline {3.4.3.7}incrementFlags()}{13}{}%
+\contentsline {subsubsection}{\numberline {3.4.3.8}maxFlag()}{13}{}%
+\contentsline {subsubsection}{\numberline {3.4.3.9}resetFlags()}{13}{}%
+\contentsline {subsubsection}{\numberline {3.4.3.10}setFlagged()}{13}{}%
+\contentsline {subsubsection}{\numberline {3.4.3.11}setMineNumber()}{14}{}%
+\contentsline {subsubsection}{\numberline {3.4.3.12}setNumberOfNeighbors()}{14}{}%
+\contentsline {subsubsection}{\numberline {3.4.3.13}setRevealed()}{14}{}%
+\contentsline {section}{\numberline {3.5}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Field\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{14}{}%
+\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{15}{}%
+\contentsline {subsection}{\numberline {3.5.2}Member Function Documentation}{15}{}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}testFieldConstructor()}{15}{}%
+\contentsline {subsubsection}{\numberline {3.5.2.2}testIncrementFlagsDefaultMode()}{15}{}%
+\contentsline {subsubsection}{\numberline {3.5.2.3}testSetFlagged()}{15}{}%
+\contentsline {subsubsection}{\numberline {3.5.2.4}testSetMineNumber()}{15}{}%
+\contentsline {subsubsection}{\numberline {3.5.2.5}testSetNumberOfNeighbors()}{16}{}%
+\contentsline {subsubsection}{\numberline {3.5.2.6}testSetRevealed()}{16}{}%
+\contentsline {section}{\numberline {3.6}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Board Class Reference}{16}{}%
+\contentsline {subsection}{\numberline {3.6.1}Detailed Description}{17}{}%
+\contentsline {subsection}{\numberline {3.6.2}Constructor \& Destructor Documentation}{17}{}%
+\contentsline {subsubsection}{\numberline {3.6.2.1}GameBoard()}{17}{}%
+\contentsline {subsection}{\numberline {3.6.3}Member Function Documentation}{17}{}%
+\contentsline {subsubsection}{\numberline {3.6.3.1}drawBomb()}{17}{}%
+\contentsline {subsubsection}{\numberline {3.6.3.2}drawBorders()}{18}{}%
+\contentsline {subsubsection}{\numberline {3.6.3.3}drawCell()}{18}{}%
+\contentsline {subsubsection}{\numberline {3.6.3.4}drawCheese()}{18}{}%
+\contentsline {subsubsection}{\numberline {3.6.3.5}drawFlags()}{19}{}%
+\contentsline {subsubsection}{\numberline {3.6.3.6}drawMouse()}{19}{}%
+\contentsline {subsubsection}{\numberline {3.6.3.7}drawNumber()}{19}{}%
+\contentsline {subsubsection}{\numberline {3.6.3.8}drawNumberCell()}{20}{}%
+\contentsline {subsubsection}{\numberline {3.6.3.9}getCellFromCoordinates()}{20}{}%
+\contentsline {subsubsection}{\numberline {3.6.3.10}getController()}{20}{}%
+\contentsline {subsubsection}{\numberline {3.6.3.11}initializeBoard()}{21}{}%
+\contentsline {subsubsection}{\numberline {3.6.3.12}paintComponent()}{21}{}%
+\contentsline {subsubsection}{\numberline {3.6.3.13}rePaintCell()}{21}{}%
+\contentsline {subsubsection}{\numberline {3.6.3.14}setGameController()}{21}{}%
+\contentsline {section}{\numberline {3.7}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller Class Reference}{22}{}%
+\contentsline {subsection}{\numberline {3.7.1}Detailed Description}{22}{}%
+\contentsline {subsection}{\numberline {3.7.2}Constructor \& Destructor Documentation}{23}{}%
+\contentsline {subsubsection}{\numberline {3.7.2.1}GameController()}{23}{}%
+\contentsline {subsection}{\numberline {3.7.3}Member Function Documentation}{23}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.1}defaultMineChoser()}{23}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.2}generateTable()}{23}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.3}getBombActivated()}{24}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.4}getGameMode()}{24}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.5}getTable()}{24}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.6}getTableGenerated()}{24}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.7}getUnflaggedOneMines()}{25}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.8}getUnflaggedThreeMines()}{25}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.9}getUnflaggedTwoMines()}{25}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.10}getWinner()}{25}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.11}isEveryFieldSelected()}{25}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.12}mineChoser()}{26}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.13}mouseChoser()}{27}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.14}moveByOne()}{27}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.15}numberChoser()}{27}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.16}ratMineChoser()}{28}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.17}repaintMissingBombsAndWrongFlags()}{28}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.18}revealNeighborsOfEmptyFields()}{28}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.19}setGameTable()}{28}{}%
+\contentsline {subsubsection}{\numberline {3.7.3.20}setWinner()}{29}{}%
+\contentsline {section}{\numberline {3.8}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bar Class Reference}{29}{}%
+\contentsline {subsection}{\numberline {3.8.1}Detailed Description}{29}{}%
+\contentsline {subsection}{\numberline {3.8.2}Constructor \& Destructor Documentation}{29}{}%
+\contentsline {subsubsection}{\numberline {3.8.2.1}GameMenuBar()}{29}{}%
+\contentsline {subsection}{\numberline {3.8.3}Member Function Documentation}{30}{}%
+\contentsline {subsubsection}{\numberline {3.8.3.1}getDifficultyMenu()}{30}{}%
+\contentsline {subsubsection}{\numberline {3.8.3.2}getGameModeMenu()}{30}{}%
+\contentsline {subsubsection}{\numberline {3.8.3.3}getNewGameMenuItem()}{30}{}%
+\contentsline {subsubsection}{\numberline {3.8.3.4}modeOrDifficultyIsNotSelected()}{30}{}%
+\contentsline {section}{\numberline {3.9}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Modes Enum Reference}{31}{}%
+\contentsline {subsection}{\numberline {3.9.1}Detailed Description}{31}{}%
+\contentsline {section}{\numberline {3.10}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mouse\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Adapter Class Reference}{31}{}%
+\contentsline {subsection}{\numberline {3.10.1}Detailed Description}{31}{}%
+\contentsline {subsection}{\numberline {3.10.2}Constructor \& Destructor Documentation}{32}{}%
+\contentsline {subsubsection}{\numberline {3.10.2.1}GameMouseAdapter()}{32}{}%
+\contentsline {subsection}{\numberline {3.10.3}Member Function Documentation}{32}{}%
+\contentsline {subsubsection}{\numberline {3.10.3.1}mousePressed()}{32}{}%
+\contentsline {section}{\numberline {3.11}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window Class Reference}{32}{}%
+\contentsline {subsection}{\numberline {3.11.1}Detailed Description}{33}{}%
+\contentsline {subsection}{\numberline {3.11.2}Constructor \& Destructor Documentation}{33}{}%
+\contentsline {subsubsection}{\numberline {3.11.2.1}GameWindow()}{33}{}%
+\contentsline {subsection}{\numberline {3.11.3}Member Function Documentation}{34}{}%
+\contentsline {subsubsection}{\numberline {3.11.3.1}getHighscoreManager()}{34}{}%
+\contentsline {subsubsection}{\numberline {3.11.3.2}getTimePassed()}{34}{}%
+\contentsline {subsubsection}{\numberline {3.11.3.3}refreshHighscoreArea()}{34}{}%
+\contentsline {subsubsection}{\numberline {3.11.3.4}saveHighscoreAfterWin()}{34}{}%
+\contentsline {subsubsection}{\numberline {3.11.3.5}setInfoPanel()}{34}{}%
+\contentsline {subsubsection}{\numberline {3.11.3.6}startNewGame()}{35}{}%
+\contentsline {subsubsection}{\numberline {3.11.3.7}stopTimer()}{35}{}%
+\contentsline {subsubsection}{\numberline {3.11.3.8}updateMines()}{35}{}%
+\contentsline {subsubsection}{\numberline {3.11.3.9}writeMessageAfterLosing()}{35}{}%
+\contentsline {section}{\numberline {3.12}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Highscore\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entry Class Reference}{36}{}%
+\contentsline {subsection}{\numberline {3.12.1}Detailed Description}{36}{}%
+\contentsline {section}{\numberline {3.13}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Highscore\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Manager Class Reference}{36}{}%
+\contentsline {subsection}{\numberline {3.13.1}Detailed Description}{37}{}%
+\contentsline {subsection}{\numberline {3.13.2}Constructor \& Destructor Documentation}{37}{}%
+\contentsline {subsubsection}{\numberline {3.13.2.1}HighscoreManager()}{37}{}%
+\contentsline {subsection}{\numberline {3.13.3}Member Function Documentation}{37}{}%
+\contentsline {subsubsection}{\numberline {3.13.3.1}addScore()}{37}{}%
+\contentsline {subsubsection}{\numberline {3.13.3.2}getHighscoreEntries()}{38}{}%
+\contentsline {subsubsection}{\numberline {3.13.3.3}getTextFileByModeAndDifficulty()}{38}{}%
+\contentsline {subsubsection}{\numberline {3.13.3.4}loadHighScores()}{38}{}%
+\contentsline {subsubsection}{\numberline {3.13.3.5}saveHighscore()}{38}{}%
+\contentsline {section}{\numberline {3.14}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Main Class Reference}{39}{}%
+\contentsline {subsection}{\numberline {3.14.1}Detailed Description}{39}{}%
+\contentsline {subsection}{\numberline {3.14.2}Member Function Documentation}{39}{}%
+\contentsline {subsubsection}{\numberline {3.14.2.1}main()}{39}{}%
+\contentsline {section}{\numberline {3.15}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mouse\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Clicks Enum Reference}{40}{}%
+\contentsline {subsection}{\numberline {3.15.1}Detailed Description}{40}{}%
+\contentsline {section}{\numberline {3.16}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Position Class Reference}{40}{}%
+\contentsline {subsection}{\numberline {3.16.1}Detailed Description}{40}{}%
+\contentsline {subsection}{\numberline {3.16.2}Constructor \& Destructor Documentation}{40}{}%
+\contentsline {subsubsection}{\numberline {3.16.2.1}Position()}{40}{}%
+\contentsline {subsection}{\numberline {3.16.3}Member Function Documentation}{41}{}%
+\contentsline {subsubsection}{\numberline {3.16.3.1}equals()}{41}{}%
+\contentsline {subsubsection}{\numberline {3.16.3.2}getColumn()}{41}{}%
+\contentsline {subsubsection}{\numberline {3.16.3.3}getRow()}{41}{}%
+\contentsline {subsubsection}{\numberline {3.16.3.4}hashCode()}{41}{}%
+\contentsline {section}{\numberline {3.17}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Position\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{42}{}%
+\contentsline {subsection}{\numberline {3.17.1}Detailed Description}{42}{}%
+\contentsline {subsection}{\numberline {3.17.2}Member Function Documentation}{42}{}%
+\contentsline {subsubsection}{\numberline {3.17.2.1}testEquals()}{42}{}%
+\contentsline {subsubsection}{\numberline {3.17.2.2}testHashCode()}{42}{}%
+\contentsline {subsubsection}{\numberline {3.17.2.3}testPositionConstructorInitialValues()}{42}{}%
+\contentsline {section}{\numberline {3.18}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rat Class Reference}{42}{}%
+\contentsline {subsection}{\numberline {3.18.1}Detailed Description}{43}{}%
+\contentsline {subsection}{\numberline {3.18.2}Constructor \& Destructor Documentation}{43}{}%
+\contentsline {subsubsection}{\numberline {3.18.2.1}Rat()}{43}{}%
+\contentsline {subsection}{\numberline {3.18.3}Member Function Documentation}{43}{}%
+\contentsline {subsubsection}{\numberline {3.18.3.1}getCurrentPosition()}{43}{}%
+\contentsline {subsubsection}{\numberline {3.18.3.2}getGoalPosition()}{43}{}%
+\contentsline {subsubsection}{\numberline {3.18.3.3}setCurrentPosition()}{44}{}%
+\contentsline {subsubsection}{\numberline {3.18.3.4}setGoal()}{45}{}%
+\contentsline {section}{\numberline {3.19}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table Class Reference}{45}{}%
+\contentsline {subsection}{\numberline {3.19.1}Detailed Description}{46}{}%
+\contentsline {subsection}{\numberline {3.19.2}Constructor \& Destructor Documentation}{46}{}%
+\contentsline {subsubsection}{\numberline {3.19.2.1}RatTable()}{46}{}%
+\contentsline {subsection}{\numberline {3.19.3}Member Function Documentation}{47}{}%
+\contentsline {subsubsection}{\numberline {3.19.3.1}checkNeighbors()}{47}{}%
+\contentsline {subsubsection}{\numberline {3.19.3.2}findShortestPath()}{47}{}%
+\contentsline {subsubsection}{\numberline {3.19.3.3}getNeighborPositions()}{47}{}%
+\contentsline {subsubsection}{\numberline {3.19.3.4}getOneMineFields()}{48}{}%
+\contentsline {subsubsection}{\numberline {3.19.3.5}getRat()}{48}{}%
+\contentsline {subsubsection}{\numberline {3.19.3.6}getRightDirectionNeighbors()}{48}{}%
+\contentsline {subsubsection}{\numberline {3.19.3.7}getShortestPath()}{48}{}%
+\contentsline {subsubsection}{\numberline {3.19.3.8}getThreeMineFields()}{49}{}%
+\contentsline {subsubsection}{\numberline {3.19.3.9}getTwoMineFields()}{49}{}%
+\contentsline {subsubsection}{\numberline {3.19.3.10}reconstructPath()}{49}{}%
+\contentsline {subsubsection}{\numberline {3.19.3.11}selectingMines()}{49}{}%
+\contentsline {subsubsection}{\numberline {3.19.3.12}setRat()}{50}{}%
+\contentsline {subsubsection}{\numberline {3.19.3.13}setShortestPath()}{50}{}%
+\contentsline {section}{\numberline {3.20}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{50}{}%
+\contentsline {subsection}{\numberline {3.20.1}Detailed Description}{50}{}%
+\contentsline {subsection}{\numberline {3.20.2}Member Function Documentation}{51}{}%
+\contentsline {subsubsection}{\numberline {3.20.2.1}testCheckNeighbors()}{51}{}%
+\contentsline {subsubsection}{\numberline {3.20.2.2}testGetNeighborPositions()}{51}{}%
+\contentsline {subsubsection}{\numberline {3.20.2.3}testGetRightDirectionNeighbors()}{51}{}%
+\contentsline {subsubsection}{\numberline {3.20.2.4}testRatMovementSimple()}{51}{}%
+\contentsline {subsubsection}{\numberline {3.20.2.5}testRatTableConstructorInitialValues()}{51}{}%
+\contentsline {subsubsection}{\numberline {3.20.2.6}testSelectingMines()}{51}{}%
+\contentsline {subsubsection}{\numberline {3.20.2.7}testSetRat()}{52}{}%
+\contentsline {section}{\numberline {3.21}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Rat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Test Class Reference}{52}{}%
+\contentsline {subsection}{\numberline {3.21.1}Detailed Description}{52}{}%
+\contentsline {subsection}{\numberline {3.21.2}Member Function Documentation}{52}{}%
+\contentsline {subsubsection}{\numberline {3.21.2.1}testRatConstructorInitialValues()}{52}{}%
+\contentsline {subsubsection}{\numberline {3.21.2.2}testSetCurrentAndGoal()}{52}{}%
+\contentsline {section}{\numberline {3.22}com.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}example.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Table Class Reference}{53}{}%
+\contentsline {subsection}{\numberline {3.22.1}Detailed Description}{53}{}%
+\contentsline {subsection}{\numberline {3.22.2}Constructor \& Destructor Documentation}{54}{}%
+\contentsline {subsubsection}{\numberline {3.22.2.1}Table()}{54}{}%
+\contentsline {subsection}{\numberline {3.22.3}Member Function Documentation}{55}{}%
+\contentsline {subsubsection}{\numberline {3.22.3.1}checkNeighbors()}{55}{}%
+\contentsline {subsubsection}{\numberline {3.22.3.2}getAllMines()}{55}{}%
+\contentsline {subsubsection}{\numberline {3.22.3.3}getavailableFields()}{55}{}%
+\contentsline {subsubsection}{\numberline {3.22.3.4}getColumns()}{56}{}%
+\contentsline {subsubsection}{\numberline {3.22.3.5}getFieldByPosition()}{56}{}%
+\contentsline {subsubsection}{\numberline {3.22.3.6}getNeighborPositions()}{56}{}%
+\contentsline {subsubsection}{\numberline {3.22.3.7}getNeighbors()}{57}{}%
+\contentsline {subsubsection}{\numberline {3.22.3.8}getOneMineFields()}{58}{}%
+\contentsline {subsubsection}{\numberline {3.22.3.9}getPositionByField()}{58}{}%
+\contentsline {subsubsection}{\numberline {3.22.3.10}getRows()}{58}{}%
+\contentsline {subsubsection}{\numberline {3.22.3.11}selectingMines()}{58}{}%
