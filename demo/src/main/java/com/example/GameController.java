@@ -43,9 +43,9 @@ public class GameController {
   private boolean winner;
   private int remainingMines;
   // Hány bomba maradt bejelöletlenül, ha a bejelölés helyes volt:
-  private int unflaggedOneMines;
-  private int unflaggedTwoMines;
-  private int unflaggedThreeMines;
+  private int unflaggedOneMines=0;
+  private int unflaggedTwoMines=0;
+  private int unflaggedThreeMines=0;
 
   /**
    * A GameController osztály konstruktora, beállítja a megfelelő tagváltozókat
@@ -142,7 +142,16 @@ public class GameController {
         revealNeighborsOfEmptyFields(neighborField, visited);
     }
   }
-
+  /**
+   * A metódus a rosszul bejelölt zászlók számát módosítja
+   * 
+   * @param flagnumber a zászlók száma a mezőn
+   */
+  private  void modifyWrongFlags(int flagnumber){
+    if(flagnumber==1) unflaggedOneMines++;
+    if(flagnumber==2) unflaggedTwoMines++;
+    if(flagnumber==3) unflaggedThreeMines++;
+  }
   /**
    * A metódus által a táblán az egér lép egyet a paraméterként megadott úton.
    * Ha olyan mezőre lép, amely nem tartalmaz bombát és nem volt még felfedve, se
@@ -161,7 +170,11 @@ public class GameController {
       Rat rat = ((RatTable) gameTable).getRat();
       rat.setCurrentPosition(path.get(1));
       Field field = gameTable.getFieldByPosition(rat.getCurrentPosition());
-      if (field.getIsMine() && !field.getFlagged()) {
+      if (field.getIsMine()&&field.getMineNumber()!=field.getFlags() ) {
+        if(field.getFlagged()==true){
+          modifyWrongFlags(field.getFlags());
+          field.resetFlags();
+        }
         field.setFlagged(true);
         for (int i = 0; i < field.getMineNumber(); i++) {
           field.incrementFlags(GameModes.RAT);
@@ -170,6 +183,10 @@ public class GameController {
       }
       if (!field.getIsMine() && !field.getRevealed()) {
         field.setRevealed(true);
+        if(field.getFlagged()){
+          modifyWrongFlags(field.getFlags());
+          field.resetFlags();
+        }
         if (field.getNumberOfNeighbors() == 0)
           revealNeighborsOfEmptyFields(field, new HashSet<>());
       }
@@ -351,6 +368,7 @@ public class GameController {
           return false;
       }
     }
+    if(unflaggedOneMines<0||unflaggedTwoMines<0||unflaggedThreeMines<0) return false;
     return true;
   }
 
